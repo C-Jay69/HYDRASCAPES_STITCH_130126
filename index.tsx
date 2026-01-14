@@ -1,7 +1,10 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import logo from './assets/logo.svg?url';
+
+function App() {
+  return <img src={logo} alt="Hydrascapes logo" />;
+}
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
