@@ -1,0 +1,7 @@
+{
+  "name": "HYDRASCAPES - Elite Travel Booking Platform",
+  "description": "A high-performance travel booking platform for curated tropical getaways, luxury cruises, and river explorations, featuring a dynamic AI trip builder and comprehensive partner management portal.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
