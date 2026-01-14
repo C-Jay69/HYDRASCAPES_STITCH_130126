@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin: Manage Packages - HYDRASCAPES</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0dccf2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d191c] dark:text-white transition-colors duration-200">
+<div class="flex h-screen overflow-hidden">
+<!-- SideNavBar -->
+<aside class="w-72 flex flex-col bg-white dark:bg-[#152a2e] border-r border-[#cee4e8] dark:border-[#22444a] h-full p-6">
+<div class="flex flex-col h-full justify-between">
+<div class="flex flex-col gap-8">
+<!-- Brand Logo -->
+<div class="flex items-center gap-3">
+<div class="bg-primary rounded-full size-10 flex items-center justify-center text-white shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-[#0d191c] dark:text-white text-lg font-extrabold leading-none tracking-tight">HYDRASCAPES</h1>
+<p class="text-[#498e9c] text-xs font-semibold uppercase tracking-wider">Admin Panel</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 text-[#498e9c] dark:text-gray-400 hover:bg-background-light dark:hover:bg-white/5 rounded-full transition-all group" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:text-primary">explore</span>
+<span class="text-sm font-semibold">Destinations</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary/10 text-primary rounded-full transition-all" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">package_2</span>
+<span class="text-sm font-bold">Manage Packages</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#498e9c] dark:text-gray-400 hover:bg-background-light dark:hover:bg-white/5 rounded-full transition-all group" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:text-primary">calendar_month</span>
+<span class="text-sm font-semibold">Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#498e9c] dark:text-gray-400 hover:bg-background-light dark:hover:bg-white/5 rounded-full transition-all group" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:text-primary">article</span>
+<span class="text-sm font-semibold">Blog</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#498e9c] dark:text-gray-400 hover:bg-background-light dark:hover:bg-white/5 rounded-full transition-all group" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:text-primary">monitoring</span>
+<span class="text-sm font-semibold">SEO</span>
+</a>
+<div class="my-4 border-t border-[#cee4e8] dark:border-[#22444a]"></div>
+<a class="flex items-center gap-3 px-4 py-3 text-[#498e9c] dark:text-gray-400 hover:bg-background-light dark:hover:bg-white/5 rounded-full transition-all group" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:text-primary">settings</span>
+<span class="text-sm font-semibold">Settings</span>
+</a>
+</nav>
+</div>
+<!-- Logout -->
+<button class="flex items-center justify-center gap-2 w-full py-3 bg-background-light dark:bg-white/5 text-[#0d191c] dark:text-white text-sm font-bold rounded-full hover:bg-red-50 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-xl">logout</span>
+<span>Logout</span>
+</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col overflow-y-auto bg-background-light dark:bg-background-dark">
+<!-- PageHeading Section -->
+<header class="p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div>
+<h2 class="text-[#0d191c] dark:text-white text-4xl font-black tracking-tight">Manage Packages</h2>
+<p class="text-[#498e9c] dark:text-gray-400 mt-1 font-medium">Create and manage your agency's travel offerings</p>
+</div>
+<button class="flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-bold shadow-lg shadow-primary/30 hover:scale-[1.02] active:scale-95 transition-all">
+<span class="material-symbols-outlined">add_circle</span>
+<span>Create New Package</span>
+</button>
+</header>
+<!-- Table Controls -->
+<div class="px-8 pb-4">
+<div class="bg-white dark:bg-[#152a2e] p-2 rounded-2xl shadow-sm border border-[#cee4e8] dark:border-[#22444a] flex items-center gap-4">
+<!-- SearchBar -->
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#498e9c]">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-background-light dark:bg-background-dark border-none rounded-xl focus:ring-2 focus:ring-primary text-sm font-medium transition-all" placeholder="Search packages by name, destination or status..." type="text"/>
+</div>
+<button class="flex items-center gap-2 px-4 py-3 bg-background-light dark:bg-background-dark rounded-xl text-sm font-bold text-[#498e9c] dark:text-gray-300">
+<span class="material-symbols-outlined text-xl">filter_list</span>
+<span>Filters</span>
+</button>
+</div>
+</div>
+<!-- Table Container -->
+<div class="px-8 flex-1">
+<div class="bg-white dark:bg-[#152a2e] rounded-2xl border border-[#cee4e8] dark:border-[#22444a] shadow-sm overflow-hidden">
+<div class="overflow-x-auto @container">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-background-light/50 dark:bg-white/5 border-b border-[#cee4e8] dark:border-[#22444a]">
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-[#498e9c] dark:text-gray-400">Package Name</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-[#498e9c] dark:text-gray-400">Destination</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-[#498e9c] dark:text-gray-400">Price</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-[#498e9c] dark:text-gray-400">Status</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-[#498e9c] dark:text-gray-400 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#cee4e8] dark:divide-[#22444a]">
+<!-- Row 1 -->
+<tr class="hover:bg-background-light/30 dark:hover:bg-white/5 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-cover bg-center shrink-0 border border-[#cee4e8] dark:border-[#22444a]" data-alt="Crystal clear blue water maldives beach" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATISyNc_rcVHgh8lyvlx0VKIkGPpw--EMv3i9qzzO-FJ17pYnp1PXKYHlkd77p2awz0LTXNThxnO_3bY02HINHDwOSFwVJQgcDoB_c7BOB7UVUsz9HclYs-aOMfP2U90b-cGwm5tub4hFRejIBOHvbiErwOa6RSNP4vVXt1qJIWXzm13vfWlifWZfJD_l5iDOirGUah_UU8sHeAkD-9xQmUPgJEohuaBsjpenCDp8pvDeUGNwbZO05OtLLwcc-f6moJU_nIS9aM0I');"></div>
+<span class="font-bold text-[#0d191c] dark:text-white">Maldives Luxury Escape</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-semibold text-[#498e9c] dark:text-gray-400">Maldives</td>
+<td class="px-6 py-5 text-sm font-bold text-[#0d191c] dark:text-white">$2,400</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-600 dark:bg-green-500/10 dark:text-green-400">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                                            Active
+                                        </span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="p-2 text-red-400 hover:bg-red-50 dark:hover:bg-red-500/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-background-light/30 dark:hover:bg-white/5 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-cover bg-center shrink-0 border border-[#cee4e8] dark:border-[#22444a]" data-alt="Snowy mountain peaks swiss alps" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAOPkum9LW6u61kW7BCFHbLeyJDomEh5qtRXYs3fzKXnKH5k9h9zR3Z0zTOuuat5lQbqQTrQLy2bYWHRzYE7tmMUg7Dk6Q_dpXGfXP_gnovf8Ba8BmhiCu4YiWAtK3EXMKcG3y5IAFmGAPIZTBKLe1Om4JcADCbj2DPSaTayvtrp8mRlJ-fapGVl0if41zoNkXLESMoAV89FvzEsuUe-bkIB8u-G-3INj3vL1cXjjoAw3kyZmxNk5Kpz3nGzsqNE-pZYe0a1L04mOY');"></div>
+<span class="font-bold text-[#0d191c] dark:text-white">Swiss Alps Adventure</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-semibold text-[#498e9c] dark:text-gray-400">Switzerland</td>
+<td class="px-6 py-5 text-sm font-bold text-[#0d191c] dark:text-white">$1,850</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-600 dark:bg-green-500/10 dark:text-green-400">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                                            Active
+                                        </span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="p-2 text-red-400 hover:bg-red-50 dark:hover:bg-red-500/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-background-light/30 dark:hover:bg-white/5 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-cover bg-center shrink-0 border border-[#cee4e8] dark:border-[#22444a]" data-alt="Zen temple bali forest garden" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAf7kL1ktOaeExAzzo73_OnJnPs5egf1EUzhKwZ4OBml_VInTgyjiD-GZvScRQcV4Qo27lu3sZ8MhMjYzHkr5PsxtRHgs1FMyLyPifh6FYdSfzNOipxRvU9ifl0I_uxMUx86cnsdYRX0PR_ZDSs4LYa1L3pNh8HB3oEFHITJpPWCHLm-Gkns9Le8Xk45w5lDd7_pB1mtAeqvnSEI996anyqzLIlsDN4GRG3MXjc6O3XjCmSez1mqymNxpmNe-Tlvh2RDt4AsyxeAOg');"></div>
+<span class="font-bold text-[#0d191c] dark:text-white">Bali Zen Retreat</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-semibold text-[#498e9c] dark:text-gray-400">Indonesia</td>
+<td class="px-6 py-5 text-sm font-bold text-[#0d191c] dark:text-white">$1,200</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-gray-100 text-gray-500 dark:bg-white/5 dark:text-gray-400">
+<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+                                            Draft
+                                        </span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="p-2 text-red-400 hover:bg-red-50 dark:hover:bg-red-500/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-background-light/30 dark:hover:bg-white/5 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-cover bg-center shrink-0 border border-[#cee4e8] dark:border-[#22444a]" data-alt="Elephants walking on savannah safari" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAz_x11K_SddsJioBNjGVDkqHbQvrMpemOa5-qjjZmyoSL7wGMScrQBtOniwCpVFoOcVKosYnTgVifunW1uTpWKhA_dBsAtb6iPFMuj1wI2kgc3cQtlFKFUC2m5IoIJem-3qSU8yb9yOmWWrnlHd6Otnpv42GRVtHpdQNr2EHagWNic6SliRK8oVccbxh97U168BJLru3dNqZOaUgZ44STQUBSJCGHMIOAF48_W5_WJIk6eO_1zh2-5qKbio-E74f6_Qz77UhiWwxs');"></div>
+<span class="font-bold text-[#0d191c] dark:text-white">Safari Expedition</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-semibold text-[#498e9c] dark:text-gray-400">Kenya</td>
+<td class="px-6 py-5 text-sm font-bold text-[#0d191c] dark:text-white">$3,100</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-600 dark:bg-green-500/10 dark:text-green-400">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                                            Active
+                                        </span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="p-2 text-red-400 hover:bg-red-50 dark:hover:bg-red-500/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<footer class="p-8 mt-auto">
+<div class="flex items-center justify-between">
+<p class="text-sm font-medium text-[#498e9c] dark:text-gray-400">Showing 4 of 24 packages</p>
+<div class="flex items-center gap-2">
+<a class="w-10 h-10 flex items-center justify-center text-[#498e9c] hover:bg-white dark:hover:bg-white/5 rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined">chevron_left</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center font-bold text-white bg-primary rounded-full shadow-lg shadow-primary/20" href="#">1</a>
+<a class="w-10 h-10 flex items-center justify-center font-bold text-[#0d191c] dark:text-white hover:bg-white dark:hover:bg-white/5 rounded-full transition-colors" href="#">2</a>
+<a class="w-10 h-10 flex items-center justify-center font-bold text-[#0d191c] dark:text-white hover:bg-white dark:hover:bg-white/5 rounded-full transition-colors" href="#">3</a>
+<span class="text-[#498e9c] px-1">...</span>
+<a class="w-10 h-10 flex items-center justify-center font-bold text-[#0d191c] dark:text-white hover:bg-white dark:hover:bg-white/5 rounded-full transition-colors" href="#">6</a>
+<a class="w-10 h-10 flex items-center justify-center text-[#498e9c] hover:bg-white dark:hover:bg-white/5 rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

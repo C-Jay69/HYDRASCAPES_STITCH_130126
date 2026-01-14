@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HYDRASCAPES Admin - Customer Inquiry</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0dccf2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d191c] dark:text-white transition-colors duration-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7f1f4] dark:border-b-[#1f363a] px-10 py-3 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-[#0d191c] dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">HYDRASCAPES Admin</h2>
+</div>
+<label class="flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#498e9c] flex border-none bg-[#e7f1f4] dark:bg-[#1f363a] items-center justify-center pl-4 rounded-l-lg">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-[#e7f1f4] dark:bg-[#1f363a] text-[#0d191c] dark:text-white focus:ring-0 placeholder:text-[#498e9c] px-4 rounded-r-lg text-base" placeholder="Search inquiries..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="hidden lg:flex items-center gap-9">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-bold text-primary border-b-2 border-primary" href="#">Inquiries</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Shorex Database</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Clients</a>
+</nav>
+<div class="flex gap-2">
+<button class="flex size-10 items-center justify-center rounded-lg bg-[#e7f1f4] dark:bg-[#1f363a] text-[#0d191c] dark:text-white">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-lg bg-[#e7f1f4] dark:bg-[#1f363a] text-[#0d191c] dark:text-white">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary" data-alt="Admin user profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDL4_aqZ7EWnf6-CY71u86bFUgnScHOMUIHIjCU0iUe-sZvm4xdp0V0o5vPiAD12vO76d3Oqds8qPfhKIsv7vkgDOS1Fpj1bZra144gPxdAOhTtKIIyhPdim_dcRAJz_9YSRjc5egSotM46AL1zJqv_MRew0avjfP_dTFag4QVlqP9vsQSH8WvIxdsqQ_LLjLqVPp9d8xE0neNlq4Shfq3Jp3zPWO6TLOn6vziIAXePsxeNf3gr7wreDX2xaNLZDxQfwxWSkQRQCB8");'></div>
+</div>
+</header>
+<main class="flex-1 flex flex-col px-4 md:px-10 lg:px-20 py-6 max-w-[1600px] mx-auto w-full gap-6">
+<!-- Page Heading & Actions -->
+<div class="flex flex-wrap justify-between items-end gap-4 border-b border-[#cee4e8] dark:border-[#1f363a] pb-6">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<span class="px-2 py-1 rounded bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider">In Progress</span>
+<p class="text-[#498e9c] text-sm font-medium">Inquiry ID: #CRZ-9921</p>
+</div>
+<h1 class="text-3xl font-black leading-tight tracking-tight">Sarah Jenkins</h1>
+<p class="text-[#498e9c] text-base font-normal">Managing 7-Night Western Caribbean Cruise Itinerary</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center justify-center rounded-lg h-10 px-4 bg-[#e7f1f4] dark:bg-[#1f363a] text-[#0d191c] dark:text-white text-sm font-bold transition-all hover:bg-gray-200">
+<span class="material-symbols-outlined mr-2 text-lg">visibility</span>
+                            View Live Profile
+                        </button>
+<button class="flex items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:brightness-105 transition-all">
+<span class="material-symbols-outlined mr-2 text-lg">mail</span>
+                            Contact Client
+                        </button>
+</div>
+</div>
+<!-- Three-Column Content -->
+<div class="flex flex-col lg:flex-row gap-6 h-full">
+<!-- Left Sidebar: Client & Cruise Info -->
+<aside class="w-full lg:w-80 flex flex-col gap-6">
+<!-- Profile Card -->
+<div class="bg-white dark:bg-[#101f22] p-6 rounded-xl shadow-sm border border-[#e7f1f4] dark:border-[#1f363a]">
+<div class="flex items-center gap-4 mb-6">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-16 ring-2 ring-primary ring-offset-2" data-alt="Sarah Jenkins profile" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCumBO1tsRjF5B-W_NIiQH3e2rTIJ0K5jn9rDw7r9v_2hXYt-JONCMVxC2UJTg_4Cldq5UxZBK8w7DQIsLNN_DeiO8Q9MWVqLwl-opvaNC4-AsUZMRsZWv68BkYqRi83OAshatNTHsT2NKNtdvay7lsI1xexbV6ZHRNHZ47fRRbwP8bQZjHOQNegXCnLeaoQWFx-lqTkeiDFWyjvv1TfnnOhprqA21qMEFadaPvpnKyqgLiF1LwqWvMIFiWL4adEAbIwj0A5YE9-KE");'></div>
+<div>
+<h3 class="font-bold text-lg">Sarah Jenkins</h3>
+<p class="text-primary text-xs font-bold">GOLD MEMBER</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#498e9c]">location_on</span>
+<div>
+<p class="text-xs text-[#498e9c] font-bold uppercase">Location</p>
+<p class="text-sm">Miami, FL (EST)</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#498e9c]">family_restroom</span>
+<div>
+<p class="text-xs text-[#498e9c] font-bold uppercase">Traveler Type</p>
+<p class="text-sm">Family (4 Guests)</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#498e9c]">history</span>
+<div>
+<p class="text-xs text-[#498e9c] font-bold uppercase">Past Bookings</p>
+<p class="text-sm">3 Shorex, 1 Cruise</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Cruise Details Card -->
+<div class="bg-white dark:bg-[#101f22] p-6 rounded-xl shadow-sm border border-[#e7f1f4] dark:border-[#1f363a]">
+<h4 class="font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">directions_boat</span>
+                                Booked Cruise
+                            </h4>
+<div class="space-y-4">
+<div class="p-3 bg-background-light dark:bg-background-dark rounded-lg">
+<p class="font-bold text-sm">Symphony of the Seas</p>
+<p class="text-xs text-[#498e9c]">Royal Caribbean International</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-[10px] text-[#498e9c] font-bold uppercase">Embark</p>
+<p class="text-xs font-semibold">Oct 12, 2024</p>
+</div>
+<div>
+<p class="text-[10px] text-[#498e9c] font-bold uppercase">Debark</p>
+<p class="text-xs font-semibold">Oct 19, 2024</p>
+</div>
+</div>
+<div>
+<p class="text-[10px] text-[#498e9c] font-bold uppercase mb-2">Ports of Call</p>
+<ul class="text-xs space-y-2 border-l-2 border-primary/30 pl-3 ml-1">
+<li>Miami, FL</li>
+<li>Roatan, Honduras</li>
+<li>Puerto Costa Maya</li>
+<li>Cozumel, Mexico</li>
+<li>Perfect Day at CocoCay</li>
+</ul>
+</div>
+</div>
+</div>
+</aside>
+<!-- Center Panel: Timeline & Wishlist -->
+<section class="flex-1 flex flex-col gap-6">
+<!-- Tabs -->
+<div class="bg-white dark:bg-[#101f22] rounded-xl shadow-sm border border-[#e7f1f4] dark:border-[#1f363a] overflow-hidden">
+<div class="flex border-b border-[#cee4e8] dark:border-[#1f363a] px-6 gap-8">
+<a class="flex items-center border-b-2 border-primary text-primary py-4" href="#">
+<span class="material-symbols-outlined mr-2 text-lg">history</span>
+<p class="text-sm font-bold">Timeline</p>
+</a>
+<a class="flex items-center border-b-2 border-transparent text-[#498e9c] py-4 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mr-2 text-lg">favorite</span>
+<p class="text-sm font-bold">Wishlist</p>
+</a>
+<a class="flex items-center border-b-2 border-transparent text-[#498e9c] py-4 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mr-2 text-lg">description</span>
+<p class="text-sm font-bold">Documents</p>
+</a>
+</div>
+<!-- Timeline Content -->
+<div class="p-6">
+<div class="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-primary before:via-[#e7f1f4] before:to-transparent">
+<!-- Interaction 1 -->
+<div class="relative flex items-center justify-between gap-4">
+<div class="flex items-center">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-white ring-4 ring-white dark:ring-[#101f22] z-10">
+<span class="material-symbols-outlined text-lg">mail</span>
+</div>
+<div class="ml-6">
+<h5 class="font-bold text-sm">Email Sent: Welcome &amp; Itinerary Review</h5>
+<p class="text-xs text-[#498e9c]">Sent by Agent: Michael Chen • 2 hours ago</p>
+</div>
+</div>
+<button class="text-primary text-xs font-bold hover:underline">View Email</button>
+</div>
+<!-- Interaction 2 -->
+<div class="relative flex items-center justify-between gap-4">
+<div class="flex items-center">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-pink-500 text-white ring-4 ring-white dark:ring-[#101f22] z-10">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</div>
+<div class="ml-6">
+<h5 class="font-bold text-sm">Client added 3 items to Shorex Wishlist</h5>
+<p class="text-xs text-[#498e9c]">Yesterday, 4:15 PM</p>
+</div>
+</div>
+</div>
+<!-- Interaction 3 (Note) -->
+<div class="relative flex flex-col gap-2 ml-14 bg-background-light dark:bg-background-dark p-4 rounded-lg">
+<div class="flex justify-between items-start">
+<h5 class="font-bold text-xs uppercase text-primary">Internal Note</h5>
+<span class="text-[10px] text-[#498e9c]">3 days ago</span>
+</div>
+<p class="text-sm">Client is particularly interested in private catamaran tours for Roatan. They prefer morning starts to avoid the heat. Mention the VIP upgrade options.</p>
+</div>
+<!-- Interaction 4 (Call) -->
+<div class="relative flex items-center justify-between gap-4">
+<div class="flex items-center">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-green-500 text-white ring-4 ring-white dark:ring-[#101f22] z-10">
+<span class="material-symbols-outlined text-lg">call</span>
+</div>
+<div class="ml-6">
+<h5 class="font-bold text-sm">Outbound Call Completed</h5>
+<p class="text-xs text-[#498e9c]">Duration: 12m • 3 days ago</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Shorex Wishlist Highlights -->
+<div class="bg-white dark:bg-[#101f22] p-6 rounded-xl shadow-sm border border-[#e7f1f4] dark:border-[#1f363a]">
+<h4 class="font-bold mb-4">Customer's Shorex Wishlist</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Wishlist Item 1 -->
+<div class="flex gap-4 p-3 border border-[#e7f1f4] dark:border-[#1f363a] rounded-lg hover:border-primary transition-colors cursor-pointer group">
+<div class="size-20 bg-cover bg-center rounded-lg" data-alt="Roatan Snorkeling Tour" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGJcBIXX9yBWbEc7ynrLCjaH140QBdME-hNms3fubmyS0ot2lAEx2hm4DcRyc5q4vxrbIQUKExkOcNr-Xyys86Q-keLv7gYOZX4CPOOn8P_wcf08XyFBgcy9S_WIZ4jLuU_AMZxoc-N_T1WwPyKbHM7Po92G0j8Ltr2wqliZHbEUpIzEIxhZ79r7wpbs8CL4t9ZtimFI9b6zP3uUsUvv4lRNo7TPwPOibaOjTD1Ifi3SJlyeGEXqiFFpHdqY5wrPdCN9-O-LeJF6A");'></div>
+<div class="flex-1">
+<p class="text-xs text-primary font-bold">ROATAN</p>
+<p class="text-sm font-bold group-hover:text-primary">Private Snorkel &amp; Beach</p>
+<p class="text-xs text-[#498e9c]">4 Hours • $85.00 pp</p>
+<button class="mt-2 flex items-center text-[10px] font-bold bg-primary/10 text-primary px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px] mr-1">add</span> ADD TO QUOTE
+                                        </button>
+</div>
+</div>
+<!-- Wishlist Item 2 -->
+<div class="flex gap-4 p-3 border border-[#e7f1f4] dark:border-[#1f363a] rounded-lg hover:border-primary transition-colors cursor-pointer group">
+<div class="size-20 bg-cover bg-center rounded-lg" data-alt="Cozumel Ruins" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuADhVByepZ9FwrZqF4glCY_n4haSNtZlqnDWnTatSrDFmAfyjufnDPtcOQK7N3cMfq8jjTMKfR-BJ8wYcNYMv6_FXePmMO5XuAXW-pyMwzjNcbvfHDDwNyKtU5bR-nbt4BPmKFyObgPxLhuh6InuAv_Rlh_4JwmtCcYSMgO905j_m2lTzSzYbc3nW2JrY-iWBIvCWA9KC2ILkU0o6KdaJly1g8cxLEVm54dOsIU2C-g3psdOWKN1LSBX_FzIAEVIoCAE7RSPRZ5R-k");'></div>
+<div class="flex-1">
+<p class="text-xs text-primary font-bold">COZUMEL</p>
+<p class="text-sm font-bold group-hover:text-primary">Tulum Mayan Ruins Tour</p>
+<p class="text-xs text-[#498e9c]">6 Hours • $120.00 pp</p>
+<button class="mt-2 flex items-center text-[10px] font-bold bg-primary/10 text-primary px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px] mr-1">add</span> ADD TO QUOTE
+                                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Sidebar: Quote Builder -->
+<aside class="w-full lg:w-[400px] flex flex-col gap-6 sticky top-6">
+<div class="bg-white dark:bg-[#101f22] p-6 rounded-xl shadow-lg border-2 border-primary/20 flex flex-col min-h-[600px]">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-bold text-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">request_quote</span>
+                                    Quote Builder
+                                </h3>
+<span class="bg-primary/10 text-primary text-[10px] px-2 py-1 rounded-full font-bold">DRAFT</span>
+</div>
+<!-- Quote Items List -->
+<div class="flex-1 space-y-4">
+<p class="text-xs text-[#498e9c] font-bold uppercase mb-2">Selected Excursions (2)</p>
+<div class="p-3 bg-background-light dark:bg-[#1f363a] rounded-lg relative">
+<button class="absolute top-2 right-2 text-[#498e9c] hover:text-red-500">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs font-bold">Private Snorkel &amp; Beach</p>
+<p class="text-[10px] text-[#498e9c]">Roatan • 4 Adults</p>
+</div>
+<p class="text-xs font-bold">$340.00</p>
+</div>
+</div>
+<div class="p-3 bg-background-light dark:bg-[#1f363a] rounded-lg relative">
+<button class="absolute top-2 right-2 text-[#498e9c] hover:text-red-500">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs font-bold">Tulum Mayan Ruins Tour</p>
+<p class="text-[10px] text-[#498e9c]">Cozumel • 4 Adults</p>
+</div>
+<p class="text-xs font-bold">$480.00</p>
+</div>
+</div>
+<!-- Custom Add Field -->
+<button class="w-full border-2 border-dashed border-[#cee4e8] dark:border-[#1f363a] py-3 rounded-lg text-[#498e9c] text-xs font-bold flex items-center justify-center hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined text-lg mr-2">add_circle</span>
+                                    ADD CUSTOM ITEM
+                                </button>
+<div class="pt-6 space-y-3">
+<label class="block">
+<span class="text-xs font-bold uppercase text-[#498e9c]">Message to Client</span>
+<textarea class="mt-1 w-full rounded-lg bg-[#e7f1f4] dark:bg-[#1f363a] border-none text-sm placeholder:text-[#498e9c] focus:ring-primary" placeholder="Hi Sarah, I've put together these options for your group..." rows="4"></textarea>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="rounded text-primary focus:ring-primary bg-[#e7f1f4] dark:bg-[#1f363a] border-none" type="checkbox"/>
+<span class="text-xs font-medium">Apply Family Discount (10%)</span>
+</label>
+</div>
+</div>
+<!-- Quote Footer -->
+<div class="mt-6 border-t border-[#cee4e8] dark:border-[#1f363a] pt-4 space-y-4">
+<div class="flex justify-between items-center px-1">
+<p class="text-[#498e9c] text-sm">Total Quote Price</p>
+<p class="text-2xl font-black text-[#0d191c] dark:text-white">$820.00</p>
+</div>
+<div class="flex flex-col gap-2">
+<button class="w-full bg-primary text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-primary/30 hover:brightness-105 transition-all">
+<span class="material-symbols-outlined">send</span>
+                                        EMAIL QUOTE TO CLIENT
+                                    </button>
+<button class="w-full bg-[#e7f1f4] dark:bg-[#1f363a] text-[#0d191c] dark:text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-200 transition-all">
+<span class="material-symbols-outlined">download</span>
+                                        DOWNLOAD PDF
+                                    </button>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+</div>
+</div>
+</body></html>

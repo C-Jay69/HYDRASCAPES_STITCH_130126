@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cruises - Ocean &amp; River Hub | HYDRASCAPES</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0dccf2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d191c] dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-solid border-[#e7f1f4] dark:border-white/10 px-6 lg:px-20 py-4">
+<div class="max-w-[1280px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+</div>
+<h2 class="text-xl font-extrabold tracking-tight">HYDRASCAPES</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Ocean Voyages</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">River Explorations</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Deals</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center bg-[#e7f1f4] dark:bg-white/5 rounded-full px-4 py-2">
+<span class="material-symbols-outlined text-primary text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm placeholder:text-[#498e9c] ml-2 w-32 lg:w-48" placeholder="Search destinations..." type="text"/>
+</div>
+<button class="bg-primary hover:bg-primary/80 text-[#0d191c] px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg shadow-primary/20">
+                        Book Now
+                    </button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative h-[80vh] min-h-[600px] overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 flex">
+<!-- Ocean Side -->
+<div class="w-1/2 h-full bg-cover bg-center relative" data-alt="Majestic luxury ocean liner on deep blue sea" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDN-_0vLm9ikwxSpfj-hG1BpAFV-pKOei9jxaF8R1j2BsdpxTDr37AynQlEsb-_39AK25hNwJ2TFsb0mO-wJVM63aEXb59T20Rzsxg5oh_UuXJ2hAZS8-cgHa1obaa4RbiBtLDu6m4rrx5FI7fwAmcHUa6jdsq5QAiLdlAQZrGVBzVwx9UZFe5J7kd9ieFstO3nSGBwBB9zcDiO9571dtSVcnw1v0lOrvyuGbEWZcUc-xQ08eNJHCAGA0K4Fqwdr5qFdDFsu8qwGsE')">
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark/40 to-transparent"></div>
+</div>
+<!-- River Side -->
+<div class="w-1/2 h-full bg-cover bg-center relative" data-alt="Boutique river boat cruising through scenic European city" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4trSvFIgHi2NqODIUxJKCEDv44A7UhwI5GcHIVKeUtxxACA4ksqchOoKQVSa2BRSAi3KhOCs3N_15-0i_L5bJkt0zf7OaqBd-ee8M28OFsw3N9EVX7PefHVWoud-_QZidPH7CMWQhlWt9Y6_XuZ-_4B8AN3AJf3Itveu55jJazwmYLgRY_ak19LR-t6edvq_DdtMESd7sdH-DGWaXk0XAotUYcAnItCLFNIlxKZe_I6NueNIx8ZqR14d6KIo9yiKYpOUFJAuH-8Y')">
+<div class="absolute inset-0 bg-gradient-to-l from-background-dark/40 to-transparent"></div>
+</div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl">
+<div class="inline-block bg-white/10 backdrop-blur-md px-4 py-1 rounded-full text-primary font-bold text-xs tracking-widest uppercase mb-6 border border-white/20">
+                        Luxury Reimagined
+                    </div>
+<h1 class="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-tight mb-6 drop-shadow-2xl">
+                        Explore the Infinite Blue
+                    </h1>
+<p class="text-white/90 text-lg md:text-xl font-medium max-w-2xl mx-auto mb-10 leading-relaxed">
+                        From the majesty of open ocean horizons to the intimate charm of winding European rivers. Your voyage awaits.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-[#0d191c] px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">sailing</span>
+                            Ocean Grandeur
+                        </button>
+<button class="bg-white/20 backdrop-blur-xl text-white border border-white/30 px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#0d191c] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">kayaking</span>
+                            River Intimacy
+                        </button>
+</div>
+</div>
+</section>
+<!-- Dual Navigation & Filter -->
+<section class="max-w-[1280px] mx-auto px-6 py-20">
+<div class="grid lg:grid-cols-[300px_1fr] gap-12">
+<!-- Cruise Finder Sidebar -->
+<aside class="space-y-8">
+<div class="bg-white dark:bg-white/5 p-8 rounded-xl border border-[#e7f1f4] dark:border-white/10 shadow-xl sticky top-28">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">filter_list</span>
+<h3 class="text-xl font-bold">Cruise Finder</h3>
+</div>
+<div class="space-y-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-[#498e9c] uppercase tracking-wider">Destination</label>
+<select class="w-full bg-[#f8fbfc] dark:bg-background-dark border-none rounded-full px-4 py-3 text-sm focus:ring-2 focus:ring-primary">
+<option>All Destinations</option>
+<option>Caribbean</option>
+<option>Mediterranean</option>
+<option>Rhine River</option>
+<option>Mekong River</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-[#498e9c] uppercase tracking-wider">Duration</label>
+<select class="w-full bg-[#f8fbfc] dark:bg-background-dark border-none rounded-full px-4 py-3 text-sm focus:ring-2 focus:ring-primary">
+<option>Any Nights</option>
+<option>1-7 Nights</option>
+<option>8-14 Nights</option>
+<option>15+ Nights</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-[#498e9c] uppercase tracking-wider">Cruise Line</label>
+<select class="w-full bg-[#f8fbfc] dark:bg-background-dark border-none rounded-full px-4 py-3 text-sm focus:ring-2 focus:ring-primary">
+<option>All Lines</option>
+<option>Royal Caribbean</option>
+<option>Viking Cruises</option>
+<option>Crystal Cruises</option>
+<option>AmaWaterways</option>
+</select>
+</div>
+<button class="w-full bg-primary text-[#0d191c] font-bold py-3 rounded-full hover:shadow-lg transition-shadow mt-4">
+                                    Search Cruises
+                                </button>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<div class="space-y-16">
+<!-- Navigation Cards -->
+<div class="grid md:grid-cols-2 gap-6">
+<div class="group relative overflow-hidden rounded-xl h-[400px] cursor-pointer shadow-2xl">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="Blue ocean waters reflecting sunlight" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCsUsI_iVhIWcZouU55ED-vsohHVXrcuM58NkiRe2jBGMp7rPYqvOFMcHQKygmI8jkBMVHfsNXAiCqSrx2yOfJk-mxgo_O87P4OfwWQRnukD6nSGPbzI-Y0Fw8PlGChV5CH_vQXFY7IRZavNrOSgd_mXY0qekYyLRLgEf9b_OfsQ608NY4xkHc4ye_9UnKyIX2TPptdnP-8kVArbN_pOtWm-2m6tbCIRbbdryWzXneYHdA1GHC9XljsnWCqWz5TsqVhlcn0M1XasM')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 p-8">
+<h3 class="text-white text-3xl font-black mb-2">Ocean Voyages</h3>
+<p class="text-white/70 mb-4 line-clamp-2">Experience the grandeur of global horizons on world-class liners with unlimited amenities.</p>
+<span class="inline-flex items-center text-primary font-bold group-hover:gap-2 transition-all">
+                                        Explore Global Waters <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</span>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-xl h-[400px] cursor-pointer shadow-2xl">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="Scenic river canal in a historical city" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBLg84dkK4fNKWZYNlqMfPEdQISUhIN10XzX9S4hhDOuKXUCdxU5PewlFuBHxurFwnxPEiB37amB1RzTphlgPRM8Qd6Xt_Hgbu7ovOOe2jcokalwonoR8IHqRlCpAYAcW-OitMXxqiVJ5uzBSaVGP-y--uUiXirnmFQNRcq9VpLOgfRGB4S2HwhDh3LRJdWS9wjDlOsSOhhDkBSBAaUiUZyLGOjnscws111RtOAQMwQXJS_SpsAppk6oBpppKKMV5ORs1YW3ciGum4')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 p-8">
+<h3 class="text-white text-3xl font-black mb-2">River Explorations</h3>
+<p class="text-white/70 mb-4 line-clamp-2">Immerse yourself in culture and intimacy as you dock in the heart of the world's greatest cities.</p>
+<span class="inline-flex items-center text-primary font-bold group-hover:gap-2 transition-all">
+                                        Explore Scenic Rivers <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Featured Section Header -->
+<div>
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-3xl font-bold tracking-tight">Featured Itineraries</h2>
+<div class="flex gap-2">
+<button class="size-10 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary/10 text-primary">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="size-10 rounded-full border border-primary flex items-center justify-center bg-primary text-[#0d191c]">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Featured Grid -->
+<div class="grid sm:grid-cols-2 gap-6">
+<!-- Cruise Card 1 -->
+<div class="bg-white dark:bg-white/5 rounded-xl border border-[#e7f1f4] dark:border-white/10 overflow-hidden hover:shadow-2xl transition-all group">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Sunset over a Greek island coastline" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAaa2q3JkP-KBzPv0mTVI90X22UIFo7WFxkSnOLEjcHPva_K-4J7qiid__UWZuvuVAMW2jDXqqSnApGp_mkQrdDvnEvA_IGZ8w8uG62xucLx6XTXB08gdA-UvAAmVoygCzgdC4mhfpKmlFr-z0Fz-ajB9zYSWx9STInIREMZ6iGUmn-SsWXjGiv5Y2IHGNqgWxxmgpGPmV5Wn-I0gBe5ymLmHMFtOmYwzXrLAb6971rtY7yZBHHb-59Feg_YD22kmDIGqecmssiIXE')"></div>
+<div class="absolute top-4 left-4 bg-primary text-[#0d191c] px-3 py-1 rounded-full text-xs font-bold">Ocean</div>
+<div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-medium">9 Nights</div>
+</div>
+<div class="p-6">
+<h4 class="text-xl font-bold mb-2">Greek Island Odyssey</h4>
+<p class="text-sm text-[#498e9c] mb-4">Athens • Mykonos • Santorini • Crete</p>
+<div class="flex items-center justify-between mt-6">
+<div>
+<p class="text-xs text-[#498e9c] uppercase font-bold">Starting from</p>
+<p class="text-2xl font-black text-primary">$1,899</p>
+</div>
+<button class="bg-primary/20 hover:bg-primary text-primary hover:text-[#0d191c] px-5 py-2 rounded-full font-bold transition-colors">
+                                                View Trip
+                                            </button>
+</div>
+</div>
+</div>
+<!-- Cruise Card 2 -->
+<div class="bg-white dark:bg-white/5 rounded-xl border border-[#e7f1f4] dark:border-white/10 overflow-hidden hover:shadow-2xl transition-all group">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Eiffel Tower from the Seine River in Paris" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSe2LjFRAJpbYo_9IRK1nA2DOHoOXJ2-RUbMO-AlkVrNcPi13Sm7bvckjQlrRFviXxgOfH--QZ-p-ycXQMg8jgNTlyOslat_ggryodrgp24ORPBMKDC9l3StnTwKvuEKOkCAgnHfK8oPLUy5qsPfcXzSjc1U1UkHcJF7kncHs_dkswgLq-9ojDP5TB123HhFX4XBok5DCVq_ydB0BJsvK5Fo_2XhzIFlupoM4yBS1CP7lA2Dg2mqNTjCtmz5MQv5lc-1N6wEDZUvQ')"></div>
+<div class="absolute top-4 left-4 bg-[#0dccf2]/30 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-bold">River</div>
+<div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-medium">7 Nights</div>
+</div>
+<div class="p-6">
+<h4 class="text-xl font-bold mb-2">Seine River Romance</h4>
+<p class="text-sm text-[#498e9c] mb-4">Paris • Rouen • Honfleur • Vernon</p>
+<div class="flex items-center justify-between mt-6">
+<div>
+<p class="text-xs text-[#498e9c] uppercase font-bold">Starting from</p>
+<p class="text-2xl font-black text-primary">$3,450</p>
+</div>
+<button class="bg-primary/20 hover:bg-primary text-primary hover:text-[#0d191c] px-5 py-2 rounded-full font-bold transition-colors">
+                                                View Trip
+                                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof / Partners -->
+<section class="bg-[#e7f1f4] dark:bg-white/5 py-12">
+<div class="max-w-[1280px] mx-auto px-6">
+<p class="text-center text-[#498e9c] text-xs font-black uppercase tracking-[0.2em] mb-8">Preferred Partners &amp; Elite Lines</p>
+<div class="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all">
+<span class="text-2xl font-black">ROYAL CARIBBEAN</span>
+<span class="text-2xl font-black">VIKING</span>
+<span class="text-2xl font-black">CRYSTAL</span>
+<span class="text-2xl font-black">AMA WATERWAYS</span>
+<span class="text-2xl font-black">SILVERSEA</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-dark text-white py-16 px-6">
+<div class="max-w-[1280px] mx-auto grid md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+</div>
+<h2 class="text-lg font-extrabold tracking-tight">HYDRASCAPES</h2>
+</div>
+<p class="text-white/50 text-sm leading-relaxed">
+                        Curating world-class luxury cruise experiences for the modern traveler. From megaships to river boutique explorers.
+                    </p>
+</div>
+<div>
+<h4 class="font-bold mb-6">Destinations</h4>
+<ul class="space-y-4 text-sm text-white/50">
+<li><a class="hover:text-primary" href="#">Caribbean Islands</a></li>
+<li><a class="hover:text-primary" href="#">European Rivers</a></li>
+<li><a class="hover:text-primary" href="#">Mediterranean Gems</a></li>
+<li><a class="hover:text-primary" href="#">Asian Waterways</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">About Us</h4>
+<ul class="space-y-4 text-sm text-white/50">
+<li><a class="hover:text-primary" href="#">Our Story</a></li>
+<li><a class="hover:text-primary" href="#">Partner Agencies</a></li>
+<li><a class="hover:text-primary" href="#">Sustainability</a></li>
+<li><a class="hover:text-primary" href="#">Travel Insurance</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Stay Inspired</h4>
+<p class="text-sm text-white/50 mb-4">Subscribe to our newsletter for exclusive cruise deals.</p>
+<div class="flex bg-white/10 rounded-full p-1 border border-white/20">
+<input class="bg-transparent border-none focus:ring-0 text-sm flex-grow px-4" placeholder="Email address" type="email"/>
+<button class="bg-primary text-[#0d191c] size-10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4 text-xs text-white/30">
+<p>© 2024 HYDRASCAPES Luxury Travel Agency. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-white" href="#">Privacy Policy</a>
+<a class="hover:text-white" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

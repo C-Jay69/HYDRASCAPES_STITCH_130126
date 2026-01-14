@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HYDRASCAPES | The River Cruise Difference</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0dccf2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .comparison-gradient-river { background: linear-gradient(135deg, rgba(13, 204, 242, 0.1) 0%, rgba(255, 255, 255, 0) 100%); }
+        .comparison-gradient-ocean { background: linear-gradient(135deg, rgba(148, 163, 184, 0.1) 0%, rgba(255, 255, 255, 0) 100%); }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d191c] dark:text-white transition-colors duration-300">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#cee4e8] dark:border-slate-800 px-10 py-3 bg-white dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+</div>
+<h2 class="text-[#0d191c] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">HYDRASCAPES</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-[#0d191c] dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">River Cruises</a>
+<a class="text-[#0d191c] dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Destinations</a>
+<a class="text-[#0d191c] dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Deals</a>
+<a class="text-[#0d191c] dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">About Us</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4 sm:gap-8 items-center">
+<label class="hidden lg:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full bg-[#e7f1f4] dark:bg-slate-800">
+<div class="text-[#498e9c] flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input w-full border-none bg-transparent focus:ring-0 text-base placeholder:text-[#498e9c]" placeholder="Explore rivers..." value=""/>
+</div>
+</label>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-full h-10 px-6 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+                Book Now
+            </button>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-6 py-12">
+<!-- Hero Section -->
+<section class="text-center mb-16">
+<h1 class="text-[#0d191c] dark:text-white tracking-tight text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+                The River Cruise Difference: <span class="text-primary">Intimacy Over Scale</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
+                Discover why savvy travelers are choosing the boutique charm of the world's waterways over the crowded open sea.
+            </p>
+</section>
+<!-- Visual Split Header -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-4 items-end">
+<div class="relative group overflow-hidden rounded-xl h-64 shadow-xl">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Boutique river cruise ship sailing through a European city canal" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuANc1zM6uRIZdaHIZ_SIyQzW6JeirJEakWFtuEX3DgsY2-1Bk3oKixEbEMmX_Gga-SOoQLvztm9315wYgvjHDV1zyG2Xk34YUUvdQb4fVvGJJjfr2a_bapTF50UF4hlyILjnL-D5PfirQwuF4coK7ZOUDG6EDEiFuvVKVa9vKJuVeQeexkJs0SfgIB07EgE4_5kWP5-Z3MORcWdVM6F7gt2vmlpUZzAviuhvlmGXff7A6GEfcqzUnYOJ_SVpfbIGAeGMbLKaPZKDpg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<div class="bg-primary px-3 py-1 rounded-full text-xs font-bold mb-2 inline-block">THE HYDRA WAY</div>
+<h3 class="text-2xl font-bold">River Cruises</h3>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-xl h-64 shadow-xl hidden lg:block grayscale-[0.5] hover:grayscale-0 transition-all">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Massive ocean liner in the middle of a vast empty ocean" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDvoEz4Yl6ekAFdOG9xtIdItKXOl5c1A2RfkRvC63b1Nyy9pkG6Qy-iVYkxM-XV8l78BHL_3sO3xy6PUHxAigN8kQ7sGXzG1IW61w8ITWeCUwGStIH93BS7RkdIL4d22eeKqyK6QYNoyH5E0EwSy4DIn6PFii2krRVz7a3Q6WEDHxd8lUgon-XFbvC-WTMtOS7tcpEd4aoYJtxYiG22-2o_Y1vDnTxLYQ5pEpyeC4hr7BYAaQyNqbUr0697r9qO6cvfBPCMb5332PY')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<div class="bg-slate-500 px-3 py-1 rounded-full text-xs font-bold mb-2 inline-block">THE STATUS QUO</div>
+<h3 class="text-2xl font-bold">Ocean Cruises</h3>
+</div>
+</div>
+</div>
+<!-- Interactive Comparison Section -->
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-2xl overflow-hidden border border-[#cee4e8] dark:border-slate-800">
+<div class="grid grid-cols-1 lg:grid-cols-[1fr_200px_1fr]">
+<!-- River Side -->
+<div class="p-8 lg:p-12 comparison-gradient-river border-b lg:border-b-0 lg:border-r border-[#cee4e8] dark:border-slate-800">
+<div class="space-y-16">
+<!-- Feature 1: Guest Count -->
+<div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+<div class="size-14 bg-primary/20 rounded-full flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<h4 class="text-primary text-sm font-bold uppercase tracking-widest mb-2">Guest Count</h4>
+<p class="text-3xl font-extrabold text-[#0d191c] dark:text-white mb-3">~150 Guests</p>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Boutique, personal service where the crew knows your name. No lines, no crowds, just pure relaxation.
+                            </p>
+</div>
+<!-- Feature 2: Scenery -->
+<div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+<div class="size-14 bg-primary/20 rounded-full flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-3xl">landscape</span>
+</div>
+<h4 class="text-primary text-sm font-bold uppercase tracking-widest mb-2">Scenery</h4>
+<p class="text-3xl font-extrabold text-[#0d191c] dark:text-white mb-3">Always In Sight</p>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Constant panoramas of castles, vineyards, and villages. Dock right in the heart of historic city centers.
+                            </p>
+</div>
+<!-- Feature 3: Inclusions -->
+<div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+<div class="size-14 bg-primary/20 rounded-full flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-3xl">done_all</span>
+</div>
+<h4 class="text-primary text-sm font-bold uppercase tracking-widest mb-2">Inclusions</h4>
+<p class="text-3xl font-extrabold text-[#0d191c] dark:text-white mb-3">All-Inclusive</p>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Shore excursions, local wines with lunch/dinner, specialty coffees, and premium Wi-Fi are already covered.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Middle Divider Label (Desktop only) -->
+<div class="hidden lg:flex flex-col items-center justify-between py-12 bg-slate-50 dark:bg-slate-900/50">
+<div class="w-px h-full bg-slate-200 dark:bg-slate-800 relative">
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-full px-4 py-1 text-xs font-bold text-slate-400 whitespace-nowrap">vs</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-full px-4 py-1 text-xs font-bold text-slate-400 whitespace-nowrap">vs</div>
+<div class="absolute top-3/4 left-1/2 -translate-x-1/2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-full px-4 py-1 text-xs font-bold text-slate-400 whitespace-nowrap">vs</div>
+</div>
+</div>
+<!-- Ocean Side -->
+<div class="p-8 lg:p-12 comparison-gradient-ocean opacity-80 hover:opacity-100 transition-opacity">
+<div class="space-y-16">
+<!-- Feature 1: Guest Count -->
+<div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+<div class="size-14 bg-slate-200 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-500 mb-4">
+<span class="material-symbols-outlined text-3xl">groups_3</span>
+</div>
+<h4 class="text-slate-500 text-sm font-bold uppercase tracking-widest mb-2">Guest Count</h4>
+<p class="text-3xl font-extrabold text-slate-400 dark:text-slate-500 mb-3">3,000+ Guests</p>
+<p class="text-slate-500 dark:text-slate-500 leading-relaxed">
+                                Massive deck spaces, frequent queues for dining, and impersonal, high-volume service model.
+                            </p>
+</div>
+<!-- Feature 2: Scenery -->
+<div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+<div class="size-14 bg-slate-200 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-500 mb-4">
+<span class="material-symbols-outlined text-3xl">water</span>
+</div>
+<h4 class="text-slate-500 text-sm font-bold uppercase tracking-widest mb-2">Scenery</h4>
+<p class="text-3xl font-extrabold text-slate-400 dark:text-slate-500 mb-3">The Open Sea</p>
+<p class="text-slate-500 dark:text-slate-500 leading-relaxed">
+                                Long days at sea with nothing but the horizon. Docks in industrial ports far from the city center.
+                            </p>
+</div>
+<!-- Feature 3: Inclusions -->
+<div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+<div class="size-14 bg-slate-200 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-500 mb-4">
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+<h4 class="text-slate-500 text-sm font-bold uppercase tracking-widest mb-2">Inclusions</h4>
+<p class="text-3xl font-extrabold text-slate-400 dark:text-slate-500 mb-3">Pay-Per-Experience</p>
+<p class="text-slate-500 dark:text-slate-500 leading-relaxed">
+                                Expect extra daily charges for shore excursions, Wi-Fi, specialty dining, and even basic drink packages.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Call to Action -->
+<section class="mt-20 text-center">
+<h2 class="text-2xl font-bold mb-6 text-[#0d191c] dark:text-white">Ready to change your view?</h2>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<button class="bg-primary text-white font-bold py-4 px-10 rounded-full text-lg shadow-xl shadow-primary/30 hover:scale-105 active:scale-95 transition-all">
+                    Find My River Vibe
+                </button>
+<button class="bg-white dark:bg-slate-800 text-[#0d191c] dark:text-white font-bold py-4 px-10 rounded-full text-lg border border-[#cee4e8] dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
+                    View 2024 Deals
+                </button>
+</div>
+<p class="mt-6 text-slate-500 text-sm">Join 20,000+ travelers who made the switch this year.</p>
+</section>
+<!-- Comparison Table (Detailed View) -->
+<section class="mt-32">
+<div class="flex items-center justify-between mb-8 px-4">
+<h2 class="text-[#0d191c] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Experience Comparison</h2>
+<div class="flex gap-2">
+<span class="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">Hydra Advantage</span>
+</div>
+</div>
+<div class="px-4 py-3 @container">
+<div class="flex overflow-hidden rounded-xl border border-[#cee4e8] dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+<table class="flex-1 text-left">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50">
+<th class="px-6 py-4 text-[#0d191c] dark:text-white text-sm font-bold uppercase tracking-wider w-1/4">Feature</th>
+<th class="px-6 py-4 text-primary text-sm font-bold uppercase tracking-wider w-3/8">River Cruises (Hydra)</th>
+<th class="px-6 py-4 text-slate-400 dark:text-slate-500 text-sm font-bold uppercase tracking-wider w-3/8">Ocean Cruises</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#cee4e8] dark:divide-slate-800">
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+<td class="px-6 py-5 text-[#0d191c] dark:text-white text-sm font-semibold">Port Access</td>
+<td class="px-6 py-5 text-[#498e9c] dark:text-primary/70 text-sm">Dock in city centers; walk straight into the history.</td>
+<td class="px-6 py-5 text-slate-500 text-sm">Industrial ports; often requires 1+ hour bus transfers.</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+<td class="px-6 py-5 text-[#0d191c] dark:text-white text-sm font-semibold">Motion Sickness</td>
+<td class="px-6 py-5 text-[#498e9c] dark:text-primary/70 text-sm">Zero waves. Smooth sailing on calm inland waters.</td>
+<td class="px-6 py-5 text-slate-500 text-sm">Subject to swells and rough weather in open ocean.</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+<td class="px-6 py-5 text-[#0d191c] dark:text-white text-sm font-semibold">Atmosphere</td>
+<td class="px-6 py-5 text-[#498e9c] dark:text-primary/70 text-sm">Quiet, sophisticated, and culturally immersive.</td>
+<td class="px-6 py-5 text-slate-500 text-sm">High-energy, entertainment-focused, noisy decks.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-white dark:bg-background-dark border-t border-[#cee4e8] dark:border-slate-800 py-12 px-10 text-center">
+<div class="flex items-center justify-center gap-2 mb-4">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+</div>
+<span class="font-bold tracking-tight text-[#0d191c] dark:text-white">HYDRASCAPES</span>
+</div>
+<p class="text-slate-500 text-sm">© 2024 Hydrascapes Travel Booking Agency. All rights reserved.</p>
+</footer>
+</body></html>

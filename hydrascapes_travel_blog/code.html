@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HydraScapes Travel Blog &amp; Guides</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0dccf2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .masonry-grid {
+            column-count: 3;
+            column-gap: 1.5rem;
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 1024px) {
+            .masonry-grid { column-count: 2; }
+        }
+        @media (max-width: 640px) {
+            .masonry-grid { column-count: 1; }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d191c] dark:text-white antialiased">
+<div class="flex flex-col min-h-screen">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#e7f1f4] dark:border-white/10 px-6 lg:px-20 py-4">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between gap-8">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">explore</span>
+</div>
+<h2 class="text-xl font-extrabold tracking-tight">HydraScapes</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Packages</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Hotels</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Flights</a>
+<a class="text-sm font-semibold text-primary" href="#">Blog</a>
+</nav>
+</div>
+<div class="flex items-center gap-6 flex-1 justify-end">
+<div class="hidden lg:block flex-1 max-w-sm">
+<div class="relative flex items-center h-10">
+<span class="material-symbols-outlined absolute left-3 text-[#498e9c]">search</span>
+<input class="w-full h-full pl-10 pr-4 bg-[#e7f1f4] dark:bg-white/5 border-none rounded-full text-sm focus:ring-2 focus:ring-primary/50 transition-all" placeholder="Search guides..." type="text"/>
+</div>
+</div>
+<button class="bg-primary text-white font-bold py-2 px-6 rounded-full text-sm hover:brightness-105 transition-all shadow-lg shadow-primary/20 whitespace-nowrap">
+                        Book Now
+                    </button>
+<div class="size-10 rounded-full bg-cover bg-center border-2 border-primary/20" data-alt="User profile avatar portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9i5yR9AOQSikq7bBdFaWPdSXnyjUY0Acj6s2AE7t45Hvqbp16MFa4jkYou2U6_gaIa8vj7YgguuWZ5vPhAdkEjSsAxbzZj0k1UsPRn6JEcI2P8R242weRt5n1qew_1k2SeTvu6N_LjXINF8ABjGOz3IuS8BQgnBVGpAcsOZ4PP8v1Q29Fu9qzFM-DCc-gwMl3EK3yiiukZP5f3tOIIbTVPn2g0PMBad7QjwDA7tWp5iVY74VrokvJgLlxAGwtovXLUllA-h65ag8');"></div>
+</div>
+</div>
+</header>
+<main class="flex-grow max-w-[1440px] mx-auto w-full px-6 lg:px-20 py-10">
+<!-- Hero Title -->
+<div class="mb-10 text-center lg:text-left">
+<h1 class="text-4xl lg:text-6xl font-extrabold tracking-tight mb-4">The World Awaits.</h1>
+<p class="text-[#498e9c] text-lg max-w-2xl">Expert-curated travel guides, hidden gems, and insider stories from every corner of the globe. Start your next adventure here.</p>
+</div>
+<!-- Category Chips & Mobile Search -->
+<div class="flex flex-col gap-6 mb-12">
+<div class="flex items-center justify-between flex-wrap gap-4">
+<div class="flex gap-2 overflow-x-auto pb-2 no-scrollbar">
+<button class="bg-primary text-white px-5 py-2 rounded-full text-sm font-bold shadow-md">All Guides</button>
+<button class="bg-white dark:bg-white/5 px-5 py-2 rounded-full text-sm font-semibold hover:bg-primary/10 transition-colors border border-[#e7f1f4] dark:border-white/10">Adventure</button>
+<button class="bg-white dark:bg-white/5 px-5 py-2 rounded-full text-sm font-semibold hover:bg-primary/10 transition-colors border border-[#e7f1f4] dark:border-white/10">Relaxation</button>
+<button class="bg-white dark:bg-white/5 px-5 py-2 rounded-full text-sm font-semibold hover:bg-primary/10 transition-colors border border-[#e7f1f4] dark:border-white/10">Luxury</button>
+<button class="bg-white dark:bg-white/5 px-5 py-2 rounded-full text-sm font-semibold hover:bg-primary/10 transition-colors border border-[#e7f1f4] dark:border-white/10">Budget</button>
+<button class="bg-white dark:bg-white/5 px-5 py-2 rounded-full text-sm font-semibold hover:bg-primary/10 transition-colors border border-[#e7f1f4] dark:border-white/10">Hidden Gems</button>
+</div>
+</div>
+</div>
+<!-- Main Content Grid with Sidebar -->
+<div class="flex flex-col lg:flex-row gap-12">
+<!-- Masonry Feed -->
+<div class="flex-1">
+<div class="masonry-grid">
+<!-- Article Card 1 -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-white dark:bg-white/5 border border-[#e7f1f4] dark:border-white/10 transition-all hover:shadow-xl">
+<div class="relative h-80 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Blue geothermal lagoons in snowy Iceland" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBSvBdTq-qpSQszNWlhrTWB303VF_nnOzmEoL8JC67y1adKXXP5BEEE_kR7NoiacVPB0BE49qB7mHYDIn2ICRKWaVPVfNEW44irU9nCEoVA_qJqYG76Sr3YXQZUmf-CzSiJJb2afDZI985rvSsgbTdzRG-XGRImvbmPmauZiyJNRYowMZUTLLF-JHw7m-3sQ5jBDzi0stO6GSuHsW6pHHBloLv-920sAq-ZD-sLk6nSbCuWUAWb2TkmyJoo2bXMovAbg9tlDh7MK-g');">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Adventure</span>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">The Hidden Blue Lagoons of Iceland</h3>
+<p class="text-[#498e9c] text-sm leading-relaxed line-clamp-3">Beyond the tourist traps lie steaming geothermal pools tucked between volcanic ridges...</p>
+<div class="mt-4 flex items-center justify-between text-[11px] font-bold uppercase text-[#498e9c]">
+<span>8 min read</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Article Card 2 -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-white dark:bg-white/5 border border-[#e7f1f4] dark:border-white/10 transition-all hover:shadow-xl">
+<div class="relative h-64 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Vibrant street food stalls in Bangkok" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCNUcDqqOFy5h4lkkYn3npuBu5Y83dkupKsUNY8U-Faq69qc1H2vOsfBEHKgQ8WS8qIyGVcbYPllCfUjFgyMP8g6wi0BgEfn2ooJaj_siMzHYhdrtN2GXjIFDq6Vn88VfX0sQ67rz0NId1uj2AQ-goec25lZkKcN37B47Rq2iDIODfRXPCgSe3QCTJSsnFJtLI-u0EmvxqwtLs08xqYmErctWDvyODopwB5zLLN0GG6vl4NByYg8D5MjrnrFAs5MH77nwmQk05yO4');">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Relaxation</span>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Street Food Safari in Bangkok</h3>
+<p class="text-[#498e9c] text-sm leading-relaxed line-clamp-3">A culinary journey through Thailand's bustling night markets, from spicy pad thai to sweet mango sticky rice.</p>
+<div class="mt-4 flex items-center justify-between text-[11px] font-bold uppercase text-[#498e9c]">
+<span>12 min read</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Article Card 3 -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-white dark:bg-white/5 border border-[#e7f1f4] dark:border-white/10 transition-all hover:shadow-xl">
+<div class="relative h-96 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Majestic Swiss Alps peak with snow" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOQ7cfucY__ntJguW9Awxb-Zcz_16-4mbY1yi05LC5ta_PL9LiAJXFtd_iMbaz28wZdDWkggjUgRWK6vVOEVff0TtuFIp9rv6tnRIVppskakYdB9Md6l2_miOr6MS1MelV5ca89YfUQjmt_cQItUyEUUNB5pk6wffRxiXF0-guqKnJ4udae6ty5yYrjycp-mx8Y_a3l8GnltjljXHVXSJ8XqRVFPPHRc5Ihe-KdVVuNOOwHqppsaVuNSoJVytVTxdJb7c7kk9OgTM');">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Adventure</span>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">5 Days in the Swiss Alps</h3>
+<p class="text-[#498e9c] text-sm leading-relaxed line-clamp-3">Navigating the high peaks and verdant valleys of Switzerland's most legendary mountain range.</p>
+<div class="mt-4 flex items-center justify-between text-[11px] font-bold uppercase text-[#498e9c]">
+<span>15 min read</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Article Card 4 -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-white dark:bg-white/5 border border-[#e7f1f4] dark:border-white/10 transition-all hover:shadow-xl">
+<div class="relative h-60 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Classic Santorini white buildings at sunset" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCEdV4lN0ciP8ALsgEJrhRZRiVPN_ipf52aHvVuWUX3KBDss7YHUnWYavsrLH4bL6qC-ngAOYUVSl_5SWrGQmmfOcMYXsP7d8NKZLiAlVoVkBagD2PxleQipDRxARx0rtYvJvBOx_c9l5Kxf_yTZQJHwUx9puvc7MnfK76vAM7SlfALz9fZgvoet1RgNjBfotA4nLGeg0naBq5lMLE-BlbxX5HmebG0pPG13XQZhTvLeV2SexmvpOMc8XGkq5KHlbf--csa53-NOTo');">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Luxury</span>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Santorini Sunset Guide</h3>
+<p class="text-[#498e9c] text-sm leading-relaxed line-clamp-3">Where to find the best views, the coldest wine, and the most exclusive suites on the caldera.</p>
+<div class="mt-4 flex items-center justify-between text-[11px] font-bold uppercase text-[#498e9c]">
+<span>6 min read</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Article Card 5 -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-white dark:bg-white/5 border border-[#e7f1f4] dark:border-white/10 transition-all hover:shadow-xl">
+<div class="relative h-80 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Zen temple in Kyoto during autumn" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5tKZxGZ3euY1K4SjqVCwFZB3yUhbrLnbipA2YMI0Vdo6cKkzTb98BQZWfKJ3KqOWiVtzrbkBbkKZNt_XxaLltvrCirE-mGAk5RP4v2XIQCMSsJwpXPMhOv2fJhNjS1F073Rav-pwA1pPsSuh0FuOtYDf5EV7RhsyAFzYyTAkw7Dn1XJBOsMLMTMWqaqgIyjMKxb2plNUYRlnJI0UHVbiuEPuwB1hiPTz3meYZ6X4ime-cQPlSaTKW7mJct2PaWMR6GuAJr-iw4DA');">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Hidden Gems</span>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Kyoto's Secret Temples</h3>
+<p class="text-[#498e9c] text-sm leading-relaxed line-clamp-3">Escape the crowds and find peace in these lesser-known shrines nestled in the hills of Gion.</p>
+<div class="mt-4 flex items-center justify-between text-[11px] font-bold uppercase text-[#498e9c]">
+<span>10 min read</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar -->
+<aside class="w-full lg:w-80 flex flex-col gap-10">
+<!-- Popular Sidebar Section -->
+<section>
+<h4 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+                            Most Popular
+                        </h4>
+<div class="flex flex-col gap-6">
+<div class="flex gap-4 group cursor-pointer">
+<div class="size-20 rounded-lg bg-cover bg-center shrink-0" data-alt="Aerial view of Tropical Maldives island" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXjk86pJxlalDFD2B6wAMPkDPHbL33Do-YzxVkVuH1aUIFTsjtBCubGfdU1xI-50mBxI8pPQY7STMcBHXn3JmqQPc9ZwtKjMgiBNU8WyjU7Nn8ekTfqALpbCodYMUxoS30cX1hg2F1SDghNn6Zz2vsP_4CHR9WCbZtAG1CPtPKgjar8483IUJddONb28hovhoWbcHMlWNX3LsujnWboY6ORwS8WM3IlXwiTf4iFKJkBOtEPdfn_bzORd9QrIdW21qvgJNdK-zwEh8');"></div>
+<div>
+<h5 class="text-sm font-bold leading-tight group-hover:text-primary transition-colors">Top 10 Summer 2024 Destinations</h5>
+<p class="text-[11px] text-[#498e9c] mt-1 font-semibold">1.2M READS • MAY 12</p>
+</div>
+</div>
+<div class="flex gap-4 group cursor-pointer">
+<div class="size-20 rounded-lg bg-cover bg-center shrink-0" data-alt="Traditional safari jeep in savanna" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5Mi_a31dhEBDsvQzIIyVHq2h5Z4T3IXTa1Nhl1u7K7GxLF-wT5KBmkHNSaGVxUAiycKw7KpHIw5oO1byYUIxjX1hjArT3-ZGp4mmCp3-TcrAw8tIE1k7Bqd6S6kfw84vtH8WsI9frkvFvj4XWJLRNrmn38NyEQYusVi5sFKeFDJqHiPAvOwaGuRHfsa9aDyoBnb9tC7yPSNdV0sGV2F4bOTSkAacs25EXU8UcqFk1iUhHkfr4wIO0bypODG2C58tdkKzFDfsEFSU');"></div>
+<div>
+<h5 class="text-sm font-bold leading-tight group-hover:text-primary transition-colors">Safari Essentials for Kenya</h5>
+<p class="text-[11px] text-[#498e9c] mt-1 font-semibold">850K READS • JUN 02</p>
+</div>
+</div>
+<div class="flex gap-4 group cursor-pointer">
+<div class="size-20 rounded-lg bg-cover bg-center shrink-0" data-alt="Vibrant street in old town Havana" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZemudE34__R9x2lbYEFLbUmezAoTrEZ9h-HI7dLWbVJuUVdTEFLcrHIDP2cT4iPxtGEBpiDcNDUsXjGtTJZbOij-aCI9TakvonzGcbXZJD2_wECUCYUTBdoZzOOx-Qcb_2FE3dKLP68DrpcK0ZsesWNizDuy3XS4aKuAso20uqSEweE8zdMEa9ids0Ul7dyDzbvl4cWATiGt8FT3iBcDJTtiMMIFGFbnnE6ClwM3XGsrvkfCOLcryHohIXh6ldw0855H64FKfYX4');"></div>
+<div>
+<h5 class="text-sm font-bold leading-tight group-hover:text-primary transition-colors">The Colors of Old Havana</h5>
+<p class="text-[11px] text-[#498e9c] mt-1 font-semibold">420K READS • JUN 15</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="bg-primary/10 dark:bg-white/5 rounded-2xl p-8 border border-primary/20">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">mail</span>
+<h4 class="text-xl font-extrabold mb-2 leading-tight">Join the HydraScapes Tribe</h4>
+<p class="text-[#498e9c] text-sm mb-6">Get exclusive travel deals and local guides delivered to your inbox every Tuesday.</p>
+<form class="flex flex-col gap-3">
+<input class="w-full px-4 py-3 rounded-full text-sm bg-white dark:bg-background-dark border border-[#e7f1f4] dark:border-white/10 focus:ring-2 focus:ring-primary/50" placeholder="Your email address" type="email"/>
+<button class="w-full bg-primary text-white font-bold py-3 rounded-full text-sm shadow-lg shadow-primary/20 hover:brightness-105 transition-all" type="submit">Subscribe Now</button>
+</form>
+</section>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-[#e7f1f4] dark:border-white/10 py-12 px-6 lg:px-20 mt-20">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">explore</span>
+</div>
+<h2 class="text-xl font-extrabold tracking-tight">HydraScapes</h2>
+</div>
+<p class="text-[#498e9c] text-sm max-w-sm mb-6 leading-relaxed">
+                        HydraScapes is your passport to the world's most breathtaking destinations. We combine expert knowledge with seamless booking to make your travel dreams a reality.
+                    </p>
+<div class="flex gap-4">
+<a class="size-10 rounded-full bg-[#e7f1f4] dark:bg-white/5 flex items-center justify-center hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">language</span>
+</a>
+<a class="size-10 rounded-full bg-[#e7f1f4] dark:bg-white/5 flex items-center justify-center hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="size-10 rounded-full bg-[#e7f1f4] dark:bg-white/5 flex items-center justify-center hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-bold mb-6 uppercase text-xs tracking-widest text-[#498e9c]">Company</h5>
+<ul class="flex flex-col gap-4 text-sm font-semibold">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Partners</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 uppercase text-xs tracking-widest text-[#498e9c]">Support</h5>
+<ul class="flex flex-col gap-4 text-sm font-semibold">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Booking Guide</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-12 pt-8 border-t border-[#e7f1f4] dark:border-white/10 text-center text-[10px] font-bold uppercase tracking-widest text-[#498e9c]">
+                © 2024 HydraScapes Travel Agency. All rights reserved.
+            </div>
+</footer>
+</div>
+</body></html>

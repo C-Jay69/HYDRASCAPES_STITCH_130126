@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HYDRASCAPES Admin: Promotions &amp; CMS Manager</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d41132",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221013",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex flex-col lg:flex-row min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="w-full lg:w-64 bg-white dark:bg-[#2d161a] border-r border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="p-6 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div>
+<h1 class="text-sm font-bold tracking-tight text-slate-900 dark:text-white uppercase">HYDRASCAPES</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400">Admin Portal</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 p-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-primary/10 text-primary rounded-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">sell</span>
+<span class="text-sm font-semibold">Promotions</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">photo_library</span>
+<span class="text-sm font-medium">Media Library</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">settings_input_component</span>
+<span class="text-sm font-medium">Global CTA</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-primary/10 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">manage_accounts</span>
+<span class="text-sm font-medium">User Access</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 p-2">
+<div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+<div class="w-full h-full bg-center bg-cover" data-alt="User avatar placeholder" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDwd1qRIQFGbzhCu9QsMPgFBhj2NQy-dLzW3founxAyL_fku4pOqP1FoseAqicLCm6mYDpZbEe_svORsx0_26ogxVF8S8kCwYS1AOwq9FUnTLJ3Of35XpZ9WZ3E9SbUS5fAgc2R1apao-m-tHOb4GkiZAiaCnBt13PFBcwnpcS30PDsRrj3Z0sdElSDXs4iBGQ3P_wY-86ZU53lzSepvXLJGMEr5AA7U8zwOVoejasMqe_1Wp_zPpJW521fEMwNJ_o120EImzihV4g')"></div>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-semibold truncate">Alex Rivera</p>
+<p class="text-[10px] text-slate-500">System Admin</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 text-sm">logout</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col">
+<!-- Header -->
+<header class="bg-white dark:bg-[#2d161a] border-b border-slate-200 dark:border-slate-800 px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white">Promotions Manager</h2>
+<div class="relative w-64 group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors text-xl">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm focus:ring-2 focus:ring-primary/50 transition-all" placeholder="Search promotions..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center gap-2 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-lg">add</span>
+                        Create New Offer
+                    </button>
+</div>
+</header>
+<div class="p-8 max-w-7xl mx-auto w-full space-y-6">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-sm">
+<a class="text-slate-500 hover:text-primary" href="#">Admin</a>
+<span class="text-slate-400">/</span>
+<span class="text-slate-900 dark:text-white font-medium">Promotions</span>
+</nav>
+<!-- Stats Overview -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-[#2d161a] p-6 rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<p class="text-sm font-medium text-slate-500">Active Banners</p>
+<span class="flex h-2 w-2 rounded-full bg-emerald-500"></span>
+</div>
+<p class="text-3xl font-bold text-slate-900 dark:text-white">4</p>
+<p class="text-xs text-emerald-600 font-medium flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-xs">trending_up</span> +12% from last month
+                        </p>
+</div>
+<div class="bg-white dark:bg-[#2d161a] p-6 rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col gap-1">
+<p class="text-sm font-medium text-slate-500">Ending Soon</p>
+<p class="text-3xl font-bold text-slate-900 dark:text-white">2</p>
+<p class="text-xs text-amber-600 font-medium flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-xs">schedule</span> Within 48 hours
+                        </p>
+</div>
+<div class="bg-white dark:bg-[#2d161a] p-6 rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col gap-1">
+<p class="text-sm font-medium text-slate-500">Total Impressions</p>
+<p class="text-3xl font-bold text-slate-900 dark:text-white">12.4K</p>
+<p class="text-xs text-rose-600 font-medium flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-xs">trending_down</span> -2% from yesterday
+                        </p>
+</div>
+</div>
+<!-- Tabs -->
+<div class="border-b border-slate-200 dark:border-slate-800">
+<nav class="flex gap-8">
+<button class="pb-4 text-sm font-bold border-b-2 border-primary text-primary">Active Promotions</button>
+<button class="pb-4 text-sm font-bold text-slate-500 border-b-2 border-transparent hover:text-slate-700 dark:hover:text-slate-300">Media Library</button>
+<button class="pb-4 text-sm font-bold text-slate-500 border-b-2 border-transparent hover:text-slate-700 dark:hover:text-slate-300">Global CTA Manager</button>
+</nav>
+</div>
+<!-- Content Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-4 gap-8">
+<!-- Promotions List (Left Columns) -->
+<div class="xl:col-span-3 space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Promotion Card 1 -->
+<div class="group bg-white dark:bg-[#2d161a] rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all">
+<div class="aspect-video relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform group-hover:scale-105" data-alt="River cruise luxury travel banner" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxyj-VGzT-He3-99Dz1oUD2WDQ36m_kOE7CxgZSGBxKnL44fK8QyyyStETGwK647ZMlkseTDAHl8LXYdCNnpbXmzi3ErD1e-gqCwfKCd0w4xOFIknL-ZwdQHa_ApyKUJKClWkIyI53MI8N1xqmsy5sFXiln6BHnHfK6HMb1fA7OXjrfZa4SBDtiJ7vv-E4Vev-aoc8NwimXyirI1vovamWYBUm8NVLcQoNNYPiwQ9pTdVSh49ef5XyN1-lMXnFJkc0Jx7hcn7UDpY')"></div>
+<div class="absolute top-3 left-3 z-20 flex gap-2">
+<span class="px-2 py-1 bg-emerald-500 text-white text-[10px] font-bold rounded uppercase tracking-wider">Live</span>
+<span class="px-2 py-1 bg-black/50 backdrop-blur-md text-white text-[10px] font-bold rounded uppercase tracking-wider">Home Page</span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 z-20">
+<h3 class="text-white font-bold text-lg">20% Off River Cruises</h3>
+<p class="text-white/80 text-xs">Seasonal early bird special for 2024</p>
+</div>
+</div>
+<div class="p-4 space-y-3">
+<div class="flex items-center justify-between text-xs">
+<div class="flex flex-col">
+<span class="text-slate-400">Start Date</span>
+<span class="font-semibold">Oct 12, 2023</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="text-slate-400">End Date</span>
+<span class="font-semibold">Dec 31, 2023</span>
+</div>
+</div>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full border-2 border-white dark:border-slate-800 bg-slate-200 overflow-hidden" title="Page: Home">
+<div class="w-full h-full bg-center bg-cover" data-alt="Home page icon" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCJQFYO_hLgssEOutD-08R6VDN4YClr9z6RD4STsVmVH59WD5c6kdMy_OiBQ1KewOFDe1jrJYetI3kO9pgvjlUQtPxWCGD7zB7pLAC3qtay95FfOgNdtcNXptOz0YdbGjEPrDEXBScNXagMi5KMynP07-6CKFlUfILG_qvirWmtVsBBL3BmY4wOazOVGuL8JUSsJOnHdwKpFkgDCcYWWTkKJsNux59zgNzYUC4Gg8ouOe2PNKj8u-BTzz0FVYkL-C3JvPM3dObICU')"></div>
+</div>
+<div class="w-7 h-7 rounded-full border-2 border-white dark:border-slate-800 bg-slate-200 overflow-hidden" title="Page: Cruises">
+<div class="w-full h-full bg-center bg-cover" data-alt="Cruises page icon" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFJpF9LDVu8VF_HPE0sW_mSADGasVdd3KsQVCBL8rSFFfUI0Y5sz_cO3J1cwvHmrdIPGKejSABIywJUHbgG7AQG-f_mKvlUHfPnNnCdB8FWp0-rGopwbVelfGvMTfisXqTTEtFgfovw8RtGS1orLJ4QmGBumZq9bAkxlYiBr4F9B6Zpu0FwI2fNEWuUcQhY6UfpdJYFPqap-xnt55rDm9Gp6GwmXu8pk7TjFRPOc29ywQSDThJgFk0QPY7CCPMrLEJccdE-Au77co')"></div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-2 text-slate-400 hover:text-rose-500 transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Promotion Card 2 -->
+<div class="group bg-white dark:bg-[#2d161a] rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all">
+<div class="aspect-video relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform group-hover:scale-105" data-alt="Adventure diving tour banner" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBb89yYnYNWskSDgGfy6hYJMID7HqGauyq6vInG7k6-BHl1Io1RO65om8b48t8_2zvU7IvCcXIqyquvt17Du5yb6qmEzrHpa8VA-Rsmr25bSks8i_l9e-mbjWqAlbr7xP1NyL8v-7mT7IjJhVbYh8e5uISXWnRt08LNmncm5MWNvtCFqVCyqZjuDcFj3AAu0LVUTgkEptF0cHB70CW5W3CxsvNJAxQvCM_yKnUmlOIMX3Gwm7Q1PJ7i2UHah1tkvOmsno9cftyX94I')"></div>
+<div class="absolute top-3 left-3 z-20 flex gap-2">
+<span class="px-2 py-1 bg-amber-500 text-white text-[10px] font-bold rounded uppercase tracking-wider">Scheduled</span>
+<span class="px-2 py-1 bg-black/50 backdrop-blur-md text-white text-[10px] font-bold rounded uppercase tracking-wider">Adventure Tiers</span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 z-20">
+<h3 class="text-white font-bold text-lg">Summer Diving Bundle</h3>
+<p class="text-white/80 text-xs">Buy 2 get 1 free on deep sea expeditions</p>
+</div>
+</div>
+<div class="p-4 space-y-3">
+<div class="flex items-center justify-between text-xs">
+<div class="flex flex-col">
+<span class="text-slate-400">Start Date</span>
+<span class="font-semibold">Jun 01, 2024</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="text-slate-400">End Date</span>
+<span class="font-semibold">Aug 31, 2024</span>
+</div>
+</div>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full border-2 border-white dark:border-slate-800 bg-slate-200 overflow-hidden" title="Page: Adventure">
+<div class="w-full h-full bg-center bg-cover" data-alt="Adventure page icon" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBWtraRW_T_tQrXIe4C_OpN4nHEmLyKET_v_nTwgrGBlxV_vUt87A2I1TyQRLGJarcG87K5LvmSeu3ELtrkUlg2mMFLcT6Qk8e_KCVVtntKJgfiTn7RQUnDzRu76Z_vKniSbd4wcETXLryloUMcUj1nyWnmfY5571uuJRdJwmnVXh-ibyfMLg7J_eIeQDGf9js2dbJxGQZXJFFhYixTp1Xl68o36GKKlW2MmJxdySEm-PGmAoeUYhd8NIKPGue24zLqZXlP0Ia1rFA')"></div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-2 text-slate-400 hover:text-rose-500 transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Global CTA Manager (Standalone Section) -->
+<div class="bg-white dark:bg-[#2d161a] p-8 rounded-xl border border-slate-200 dark:border-slate-800 space-y-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-lg">mouse</span>
+<div>
+<h3 class="text-lg font-bold">Global CTA Manager</h3>
+<p class="text-sm text-slate-500">Update the default "Explore" buttons across all pages instantly.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-semibold">Default Button Text</label>
+<input class="w-full p-3 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm focus:ring-primary focus:border-primary" type="text" value="Explore Now"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold">Default Redirect Link</label>
+<input class="w-full p-3 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm focus:ring-primary focus:border-primary" type="text" value="https://hydrascapes.com/destinations"/>
+</div>
+</div>
+<div class="flex justify-end pt-4">
+<button class="px-6 py-2.5 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 rounded-lg text-sm font-bold hover:opacity-90 transition-opacity">
+                                    Apply Globally
+                                </button>
+</div>
+</div>
+</div>
+<!-- Sidebar Control Panel (Right Column) -->
+<div class="space-y-6">
+<!-- Scheduling Quick Tool -->
+<div class="bg-white dark:bg-[#2d161a] p-6 rounded-xl border border-slate-200 dark:border-slate-800 space-y-4">
+<h4 class="text-sm font-bold uppercase tracking-wider text-slate-400">Quick Visibility</h4>
+<div class="space-y-4">
+<div class="space-y-1">
+<label class="text-xs font-bold text-slate-500">Page Placement</label>
+<select class="w-full p-2.5 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm focus:ring-primary">
+<option>All Pages</option>
+<option>Home Page Only</option>
+<option>Cruises &amp; Tours</option>
+<option>Booking Funnel</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-bold text-slate-500">Auto-Archive</label>
+<div class="flex items-center gap-3 p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+<input checked="" class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm">Remove after expiry</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Media Library Mini -->
+<div class="bg-white dark:bg-[#2d161a] p-6 rounded-xl border border-slate-200 dark:border-slate-800 space-y-4">
+<div class="flex items-center justify-between">
+<h4 class="text-sm font-bold uppercase tracking-wider text-slate-400">Recent Assets</h4>
+<button class="text-primary text-xs font-bold">View All</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="aspect-square bg-slate-200 rounded-lg overflow-hidden relative group">
+<div class="w-full h-full bg-center bg-cover" data-alt="Tropical beach asset thumbnail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5KFlxj7wn-eR8efuwbc9i89_jsbi0aCKn_CDzReXLgB7DMfbIYnB0LNreKonvWlpkCSqtwYHibiH3don5lTNPbJBdmoCQ521sc2ZBdCsUTTDUXoLvu1zFnLZWbNuytgxKJkdQxL5DO3xKEJ6ZVzlfQKtzoHUfntHs59C9ndOKAng2w_yQXdRuZfjt3yx029vk5BRJIDtwxhYsgyQ7sMS9rds0EOp5Ba6OwF6liUiQQ0Bx-4KnMZFJI6Mulor-g09W1RgEltyifkI')"></div>
+<button class="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">edit</span>
+</button>
+</div>
+<div class="aspect-square bg-slate-200 rounded-lg overflow-hidden relative group">
+<div class="w-full h-full bg-center bg-cover" data-alt="Mountain lake asset thumbnail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDsDVdOB3PYiLOEnyhspK7vSbtdcskG7Nu8qSU2uFRqc1ylEf7FXOsSET6TnJqJxC37hBNGnQkV6PnJZXHtCekjC1WRZH4wTMk0-646fLBWWjnlj5a-oA5jEFDzSJ35FSpV3M2EKXF1Xeb_681_9VAze6PLbbml-xu5n10rmUI_9aSuU0TBMs86TZyCjFUiBg2BvCdOp4H6ooKYEvTPAAnt6DMO6Ulf44eQOwBLUZUmnd4kW4oYBazKRBJ117FgnRhJjUyJw_Otphs')"></div>
+<button class="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">edit</span>
+</button>
+</div>
+<div class="aspect-square bg-slate-200 rounded-lg overflow-hidden relative group">
+<div class="w-full h-full bg-center bg-cover" data-alt="Ocean waves asset thumbnail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGbQq_qkahFjVOd6sPn6JR5Y47oLjobv-g9CZh81ftkYSAXybuLI6OHMsZ1RhoZnS6kFJBOo4ZPDQAIVvXzOg3F7KAEHFfdKD6eJs0Q_9tQYkZX56gv0Q17TjUP8QEqJB2QV3KAvcyqEKleCoD_vZSFbd4iAg3e_M7HxLfWs2Igejd3D4RfYV8J47to7wakQniOWrp8rGjccoq4_P0M-PZ8h_wn87V3Bmx0tNL3sgGd9rZ5nEDcVakoeFjgIF1eB9kfGPj767km1I')"></div>
+<button class="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">edit</span>
+</button>
+</div>
+<button class="aspect-square border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-lg flex flex-col items-center justify-center text-slate-400 hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">upload</span>
+<span class="text-[10px] font-bold mt-1">Upload</span>
+</button>
+</div>
+</div>
+<!-- Conflict Alert -->
+<div class="bg-rose-50 dark:bg-rose-950/20 p-4 rounded-xl border border-rose-100 dark:border-rose-900/50 flex gap-3">
+<span class="material-symbols-outlined text-rose-500">warning</span>
+<div class="flex-1">
+<p class="text-xs font-bold text-rose-700 dark:text-rose-400">Scheduling Conflict</p>
+<p class="text-[10px] text-rose-600/80 dark:text-rose-500">Two banners are set for "Home Page" on June 1st.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

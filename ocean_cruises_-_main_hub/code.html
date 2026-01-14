@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ocean Cruises - HYDRASCAPES</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#0dccf2",
+                "background-light": "#f5f8f8",
+                "background-dark": "#101f22",
+              },
+              fontFamily: {
+                "display": ["Plus Jakarta Sans", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>body {
+    font-family: "Plus Jakarta Sans", sans-serif
+    }
+.select-custom {
+    appearance: none;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDpDD0tdTPk63YWaNyW-i-IL22I_jrXe-QisjkwZUE7DItwrYqq-upSV2UXxnJQJojNXwOD2JGLQ3Aa1EvCpEXQZBwyLZEtq-5jNbVjCxjwfkk-5n4sEC19woKOijLUN_ENIQwfEj_qSnjphKl3ShjXwLKfTILDpT6bIYTXoLKBTaNfjP0dmhr6Ns4u_SUZBclwAd-pHCtUJ2ilLsg6GG-B-Rjamb5XWwuddYAu_gKOYkvGt3tAIb0GWjNPmgEebC7UwE_8WZYwApw);
+    background-position: right 0.75rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em
+    }</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d191c] dark:text-white antialiased">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-solid border-[#e7f1f4] dark:border-[#1e3438] px-6 lg:px-20 py-3">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+</div>
+<h2 class="text-[#0d191c] dark:text-white text-xl font-extrabold leading-tight tracking-tight">HYDRASCAPES</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Destinations</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Cruise Lines</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Deals</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">My Bookings</a>
+</nav>
+<div class="flex gap-3">
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-xl h-10 px-4 bg-primary text-[#0d191c] text-sm font-bold transition-transform hover:scale-105">
+                    Sign In
+                </button>
+<button class="hidden sm:flex min-w-[120px] cursor-pointer items-center justify-center rounded-xl h-10 px-4 bg-white dark:bg-[#1e3438] border border-[#cee4e8] dark:border-[#2a4a50] text-[#0d191c] dark:text-white text-sm font-bold">
+                    Contact Expert
+                </button>
+</div>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto pb-20">
+<!-- Hero Section with Video Concept Background -->
+<section class="relative h-[600px] w-full overflow-hidden mb-12 lg:rounded-b-3xl">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Cinematic luxury cruise ship sailing through azure waters at sunset" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB4NWvwjlaSaXW5D92ig2esYh5tCZVScRMlg6eu1O-y6YjO8D1SZzFg3iEe1znOIw0pxTPAZkWRdpJzDqs8lPZCuj_6x-zD_Jfn9A-4XRT7p9pkqypb14AdUgGKt29ej8a1V3XcaihLhyyg6yCTXHTy_Sh818ES9OKrTv_E7XDJo3CKSQVcLWhBpj1cssuqX7kyCCTdj5mwHUg9RTI4zO7bLewxSMayhieXafqSQRdsuNFNV9MtkcngebPt5_duDQXgNjBEKUbR0oU");'>
+<!-- This would be a video tag in a real implementation -->
+</div>
+<div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+<span class="bg-primary/90 text-[#0d191c] text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">New 2024 Itineraries</span>
+<h1 class="text-white text-5xl md:text-7xl font-black leading-tight tracking-tighter mb-6 max-w-4xl">
+                    Explore the World <br/><span class="text-primary">by Sea</span>
+</h1>
+<p class="text-white/90 text-lg md:text-xl font-medium max-w-2xl mb-8">
+                    Experience the ultimate luxury with our curated ocean cruise collections. From hidden Mediterranean coves to Caribbean paradises.
+                </p>
+<button class="bg-primary hover:bg-white text-[#0d191c] px-8 py-4 rounded-xl text-lg font-extrabold transition-all transform hover:scale-105 shadow-2xl">
+                    Discover Exclusive Deals
+                </button>
+</div>
+<!-- Quick Cruise Finder Floating Bar -->
+<div class="absolute bottom-0 left-0 right-0 transform translate-y-1/2 px-6 lg:px-20 z-20">
+<div class="bg-white dark:bg-[#1a2d31] p-2 rounded-2xl shadow-2xl flex flex-wrap lg:flex-nowrap items-center gap-2 border border-[#cee4e8] dark:border-[#2a4a50]">
+<!-- Destination -->
+<div class="flex-1 min-w-[200px] p-3 border-r border-[#e7f1f4] dark:border-[#2a4a50]">
+<p class="text-[10px] font-bold uppercase text-[#498e9c] mb-1">Destination</p>
+<select class="select-custom w-full border-none bg-transparent p-0 text-[#0d191c] dark:text-white font-bold focus:ring-0 cursor-pointer">
+<option>Caribbean, Mediterranean...</option>
+<option>Alaska</option>
+<option>Northern Europe</option>
+<option>Asia Pacific</option>
+</select>
+</div>
+<!-- Cruise Line -->
+<div class="flex-1 min-w-[200px] p-3 border-r border-[#e7f1f4] dark:border-[#2a4a50]">
+<p class="text-[10px] font-bold uppercase text-[#498e9c] mb-1">Cruise Line</p>
+<select class="select-custom w-full border-none bg-transparent p-0 text-[#0d191c] dark:text-white font-bold focus:ring-0 cursor-pointer">
+<option>Royal Caribbean, Celebrity...</option>
+<option>Virgin Voyages</option>
+<option>Norwegian Cruise Line</option>
+<option>Princess Cruises</option>
+</select>
+</div>
+<!-- Month -->
+<div class="flex-1 min-w-[200px] p-3 border-r border-[#e7f1f4] dark:border-[#2a4a50]">
+<p class="text-[10px] font-bold uppercase text-[#498e9c] mb-1">Departure Month</p>
+<select class="select-custom w-full border-none bg-transparent p-0 text-[#0d191c] dark:text-white font-bold focus:ring-0 cursor-pointer">
+<option>All Months</option>
+<option>June 2024</option>
+<option>July 2024</option>
+<option>August 2024</option>
+</select>
+</div>
+<!-- Search Button -->
+<button class="w-full lg:w-auto bg-primary text-[#0d191c] px-10 py-4 rounded-xl font-black text-base flex items-center justify-center gap-2 hover:brightness-110">
+<span class="material-symbols-outlined">search</span>
+                        FIND CRUISES
+                    </button>
+</div>
+</div>
+</section>
+<!-- Spacer for the floating finder -->
+<div class="h-16 lg:h-24"></div>
+<!-- Section: Curated Collections - Family Fun -->
+<section class="px-6 lg:px-20 mt-12">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h2 class="text-3xl font-black tracking-tight text-[#0d191c] dark:text-white">Family Fun Ships</h2>
+<p class="text-[#498e9c] font-medium">Waterparks, kids clubs, and non-stop entertainment</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 group" href="#">
+                    View all <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Cruise Card 1 -->
+<div class="bg-white dark:bg-[#1a2d31] rounded-2xl overflow-hidden shadow-lg border border-[#e7f1f4] dark:border-[#2a4a50] group hover:shadow-2xl transition-all">
+<div class="relative h-56">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Icon of the Seas massive water park at sea" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmkLvEFin9mhDAJbqZz9_I9qmIfPP5JNnDUtAxwLWbkA2obhlp4kiQHF-i__MRtMYRXEHJMTVbhFqChLruJjCSUxquYQAaPsanGgMSBlhunz8unpRZEfEY4tNnFErhO20CCzJPNTUdzKQXL9pjPs4M1hUpgr48save9NS6ATD97RVDsekJIY4kuFc6ieCUSyZbUoWgH83wHRq5T4LLWOz1yhVem3ua28pCU9pgT-w4fnE7ZG8vFblPvSuX9IOlkYihn5GInq7S1js");'></div>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-primary/90 text-[#0d191c] text-[10px] font-black uppercase px-2 py-1 rounded">Best Seller</span>
+<span class="bg-white/90 text-[#0d191c] text-[10px] font-black uppercase px-2 py-1 rounded">Family Favorite</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Western Caribbean Adventure</h3>
+<div class="flex items-center text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-sm font-bold ml-1">4.9</span>
+</div>
+</div>
+<p class="text-sm text-[#498e9c] mb-4">Royal Caribbean • Icon of the Seas • 7 Nights</p>
+<!-- Selling Points -->
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="inline-flex items-center gap-1 text-[11px] font-bold text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">wifi</span> Free Wi-Fi
+                            </span>
+<span class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">payments</span> $200 Credit
+                            </span>
+<span class="inline-flex items-center gap-1 text-[11px] font-bold text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-900/20 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">liquor</span> Drinks Included
+                            </span>
+</div>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-[#e7f1f4] dark:border-[#2a4a50]">
+<div>
+<p class="text-[10px] text-[#498e9c] font-bold uppercase">From</p>
+<p class="text-2xl font-black text-[#0d191c] dark:text-white">$1,299 <span class="text-sm font-medium text-[#498e9c]">/pp</span></p>
+</div>
+<button class="bg-primary hover:bg-[#0bbbdc] text-[#0d191c] font-black px-4 py-2 rounded-lg transition-colors">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Cruise Card 2 -->
+<div class="bg-white dark:bg-[#1a2d31] rounded-2xl overflow-hidden shadow-lg border border-[#e7f1f4] dark:border-[#2a4a50] group hover:shadow-2xl transition-all">
+<div class="relative h-56">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Disney Cruise ship with character theme deck" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBb7F8nDO6S1ctXfujB3MRzVuVSpAMqzC7DrDptAmiiNdPXt67i_ilKL2JmpRGPrwCLXDyyJONLOG9ZlNihw-8UGQMBtxh4CpNyY7Qxj5KWvNvYFXle56mlfFjb6m6cAW5J8bIjr--fHsfwooKAxGj_Zim_Ks2hK7Chbkmcd4DPATlusboAEhrOgV6YR74EekMpT9lwdr8TOOHCfP3YxK7Vw2UONcmP-IjN6iB0f_XGxNP03Mo4dg6bLEk3HpnfaVS_-p-8cHfFafw");'></div>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-[#0d191c] text-[10px] font-black uppercase px-2 py-1 rounded">Magical Getaway</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Bahamian Castaway Cay</h3>
+<div class="flex items-center text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-sm font-bold ml-1">5.0</span>
+</div>
+</div>
+<p class="text-sm text-[#498e9c] mb-4">Disney Cruise Line • Disney Wish • 4 Nights</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-blue-900/20 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">restaurant</span> All Dining Inc.
+                            </span>
+<span class="inline-flex items-center gap-1 text-[11px] font-bold text-purple-600 bg-purple-50 dark:text-purple-400 dark:bg-purple-900/20 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">theater_comedy</span> Broadway Shows
+                            </span>
+</div>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-[#e7f1f4] dark:border-[#2a4a50]">
+<div>
+<p class="text-[10px] text-[#498e9c] font-bold uppercase">From</p>
+<p class="text-2xl font-black text-[#0d191c] dark:text-white">$1,840 <span class="text-sm font-medium text-[#498e9c]">/pp</span></p>
+</div>
+<button class="bg-primary hover:bg-[#0bbbdc] text-[#0d191c] font-black px-4 py-2 rounded-lg transition-colors">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Cruise Card 3 -->
+<div class="bg-white dark:bg-[#1a2d31] rounded-2xl overflow-hidden shadow-lg border border-[#e7f1f4] dark:border-[#2a4a50] group hover:shadow-2xl transition-all">
+<div class="relative h-56">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Cruise ship waterslide at sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwDlAZHNIqS7xdXgYwI3ZFzeoEwAkFitDrnINnacxbW0PD7lQ2ZCKCvvNbuVoQDYiVl-NzgvsY3ImYaDxE1LX8l3zYhEN8ajXoonKp9m48j9KDORBYF8bmgAs-ji6uCBZdh-ATsv94I44dXhLzflJ_JPSIErlYb_wxtWF1J3j6-2ORfe4mKs0IHo6ZHGTjF-IqCB3ym03R7XKSDSnYNoS7jPMohSLsxrfStwTU9iCo6XmszEx0vF-Dz9tdBqpVQRkG8M9rYWIezqA");'></div>
+<div class="absolute top-4 left-4">
+<span class="bg-[#0d191c] text-white text-[10px] font-black uppercase px-2 py-1 rounded">New Ship</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Mexican Riviera Escape</h3>
+<div class="flex items-center text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-sm font-bold ml-1">4.8</span>
+</div>
+</div>
+<p class="text-sm text-[#498e9c] mb-4">Carnival • Carnival Celebration • 7 Nights</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="inline-flex items-center gap-1 text-[11px] font-bold text-orange-600 bg-orange-50 dark:text-orange-400 dark:bg-orange-900/20 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">bolt</span> Bolt Rollercoaster
+                            </span>
+<span class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-blue-900/20 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">payments</span> $100 Credit
+                            </span>
+</div>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-[#e7f1f4] dark:border-[#2a4a50]">
+<div>
+<p class="text-[10px] text-[#498e9c] font-bold uppercase">From</p>
+<p class="text-2xl font-black text-[#0d191c] dark:text-white">$749 <span class="text-sm font-medium text-[#498e9c]">/pp</span></p>
+</div>
+<button class="bg-primary hover:bg-[#0bbbdc] text-[#0d191c] font-black px-4 py-2 rounded-lg transition-colors">Book Now</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Incentive Banner Section -->
+<section class="px-6 lg:px-20 py-16">
+<div class="bg-[#0d191c] rounded-3xl p-8 lg:p-12 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8">
+<!-- Abstract background pattern -->
+<div class="absolute top-0 right-0 w-1/2 h-full bg-primary/10 -skew-x-12 transform translate-x-1/4"></div>
+<div class="relative z-10 max-w-xl">
+<h2 class="text-white text-3xl md:text-4xl font-black mb-4">Why Book with HYDRASCAPES?</h2>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-white/80 font-medium">
+<span class="material-symbols-outlined text-primary">verified</span>
+                            Exclusive "Hydra-Perks" including Upgraded Wi-Fi &amp; Private Shore Excursions.
+                        </li>
+<li class="flex items-center gap-3 text-white/80 font-medium">
+<span class="material-symbols-outlined text-primary">support_agent</span>
+                            24/7 Concierge Support before, during, and after your voyage.
+                        </li>
+<li class="flex items-center gap-3 text-white/80 font-medium">
+<span class="material-symbols-outlined text-primary">savings</span>
+                            Lowest Price Guarantee – We'll beat any cruise line direct price.
+                        </li>
+</ul>
+</div>
+<div class="relative z-10 flex flex-col gap-4 text-center">
+<div class="bg-primary/20 border border-primary/30 p-6 rounded-2xl backdrop-blur-sm">
+<p class="text-primary text-4xl font-black mb-1">$500</p>
+<p class="text-white text-sm font-bold uppercase tracking-widest">Onboard Credit Bonus</p>
+<p class="text-white/60 text-xs mt-2">Available for all balcony suites booked this week</p>
+</div>
+<button class="bg-primary text-[#0d191c] py-4 rounded-xl font-black hover:bg-white transition-colors">TALK TO AN EXPERT</button>
+</div>
+</div>
+</section>
+<!-- Section: Ultra-Luxury Voyages -->
+<section class="px-6 lg:px-20">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h2 class="text-3xl font-black tracking-tight text-[#0d191c] dark:text-white">Ultra-Luxury Voyages</h2>
+<p class="text-[#498e9c] font-medium">Personalized service, gourmet dining, and exotic ports</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 group" href="#">
+                    Explore Luxury <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Luxury Card 1 -->
+<div class="relative group cursor-pointer overflow-hidden rounded-3xl h-[400px]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Modern luxury suite overlooking the Mediterranean sea" style='background-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCUGNRDiisLzk2re-vZtkL2Ps66jzetkxz5Vj5D82L1MLwqDkwFW6ZDMTy7NdO6zmzgtQQcdvdMcOQZZeJ8k9pfg9gyNAjVeDbGDuxexXong8eL6j12NeCE5B8fLrju06eId0xq-xT-05F2ErD81kPUzCNVuh2grbf5OoYhOWgoGEh94ef-zr2lVHeKx2Tr2xv0CUluCGNI7yMJMXN-VxkjxAOoT8C3WAckGlXfAeuPWp2lDxPJZXcf57R3KJIGJUy84zuMcFwehqE");'></div>
+<div class="absolute bottom-0 left-0 right-0 p-8">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-white/20 backdrop-blur-md text-white text-[10px] font-black uppercase px-2 py-1 rounded">All-Inclusive</span>
+<span class="bg-primary text-[#0d191c] text-[10px] font-black uppercase px-2 py-1 rounded">Butler Service</span>
+</div>
+<h3 class="text-white text-3xl font-black mb-2">Mediterranean Grandeur</h3>
+<p class="text-white/80 text-lg font-medium mb-6">Celebrity Cruises • Beyond • 10 Nights</p>
+<div class="flex items-center justify-between border-t border-white/20 pt-6">
+<p class="text-white font-bold">From $3,499<span class="text-white/60 text-sm font-normal">/pp</span></p>
+<span class="material-symbols-outlined text-white text-3xl group-hover:translate-x-2 transition-transform">east</span>
+</div>
+</div>
+</div>
+<!-- Luxury Card 2 -->
+<div class="relative group cursor-pointer overflow-hidden rounded-3xl h-[400px]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Elegant cruise ship dining room with sea view" style='background-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDmoydqH5xv9uQkt2zr6noXUgbmOLwR1mDI43pu8IGcTAVnZNdG1NI8pfG3ofIVIsf7NFSe2bMCaKjW2_ZkS04JRS66TBizIFbHSUf9MXdzfipi3qKIldlbAbpONqMACAav_vwpKEwiJrQqKPUTf3AZ1nl01Sob-bGFQzr3LTSJUvNL5mWhU8ZcLFpNlo368hAzo8IduMYcui4rB-MUDG26TA8wfCMxrS3tdhGRhZx5RVxW0syY3MuaU5WsHy0QqwHenJ-2F-NPcvE");'></div>
+<div class="absolute bottom-0 left-0 right-0 p-8">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-white/20 backdrop-blur-md text-white text-[10px] font-black uppercase px-2 py-1 rounded">Adults Only</span>
+<span class="bg-primary text-[#0d191c] text-[10px] font-black uppercase px-2 py-1 rounded">Luxury Lifestyle</span>
+</div>
+<h3 class="text-white text-3xl font-black mb-2">French Riviera &amp; Ibiza</h3>
+<p class="text-white/80 text-lg font-medium mb-6">Virgin Voyages • Valiant Lady • 7 Nights</p>
+<div class="flex items-center justify-between border-t border-white/20 pt-6">
+<p class="text-white font-bold">From $2,850<span class="text-white/60 text-sm font-normal">/pp</span></p>
+<span class="material-symbols-outlined text-white text-3xl group-hover:translate-x-2 transition-transform">east</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-[#0a1517] border-t border-[#e7f1f4] dark:border-[#1e3438] py-12 px-6 lg:px-20">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 text-primary mb-6">
+<div class="size-6">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+</div>
+<h2 class="text-xl font-extrabold text-[#0d191c] dark:text-white uppercase tracking-tighter">HYDRASCAPES</h2>
+</div>
+<p class="text-[#498e9c] text-sm leading-relaxed">Your portal to the most vibrant ocean adventures. Expertly curated, exclusively delivered.</p>
+</div>
+<div>
+<h4 class="font-black text-[#0d191c] dark:text-white mb-6">Explore</h4>
+<ul class="space-y-3 text-sm text-[#498e9c]">
+<li><a class="hover:text-primary" href="#">Last Minute Deals</a></li>
+<li><a class="hover:text-primary" href="#">Family Cruises</a></li>
+<li><a class="hover:text-primary" href="#">Adults-Only</a></li>
+<li><a class="hover:text-primary" href="#">Luxury Collection</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-black text-[#0d191c] dark:text-white mb-6">Support</h4>
+<ul class="space-y-3 text-sm text-[#498e9c]">
+<li><a class="hover:text-primary" href="#">Help Center</a></li>
+<li><a class="hover:text-primary" href="#">Travel Requirements</a></li>
+<li><a class="hover:text-primary" href="#">Booking Terms</a></li>
+<li><a class="hover:text-primary" href="#">Insurance</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-black text-[#0d191c] dark:text-white mb-6">Join the voyage</h4>
+<div class="flex gap-2 mb-6">
+<input class="bg-background-light dark:bg-[#1a2d31] border border-[#cee4e8] dark:border-[#2a4a50] rounded-xl px-4 py-2 text-sm w-full focus:ring-primary focus:border-primary" placeholder="Email address" type="email"/>
+<button class="bg-primary text-[#0d191c] p-2 rounded-xl">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+<div class="flex gap-4 text-[#498e9c]">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">social_leaderboard</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">camera</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">play_circle</span>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-12 pt-8 border-t border-[#e7f1f4] dark:border-[#1e3438] flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-[#498e9c]">
+<p>© 2024 HYDRASCAPES TRAVEL AGENCY. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-6">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
+<a href="#">Cookie Settings</a>
+</div>
+</div>
+</footer>
+</body></html>

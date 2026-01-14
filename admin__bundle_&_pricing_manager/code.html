@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HYDRASCAPES Admin: Bundle &amp; Pricing Manager</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0dccf2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d191c] dark:text-white font-display min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7f1f4] dark:border-[#1e2f33] bg-white dark:bg-[#15262a] px-6 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-[#0d191c] dark:text-white text-lg font-bold leading-tight tracking-tight">HYDRASCAPES Admin</h2>
+</div>
+<label class="flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#498e9c] flex border-none bg-[#e7f1f4] dark:bg-[#1e2f33] items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-[#e7f1f4] dark:bg-[#1e2f33] text-[#0d191c] dark:text-white placeholder:text-[#498e9c] px-4 rounded-r-lg focus:ring-0 text-sm" placeholder="Search excursions..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<nav class="flex items-center gap-6">
+<a class="text-[#498e9c] hover:text-primary text-sm font-medium transition-colors" href="#">Dashboard</a>
+<a class="text-[#498e9c] hover:text-primary text-sm font-medium transition-colors" href="#">Excursions</a>
+<a class="text-[#0d191c] dark:text-white text-sm font-bold border-b-2 border-primary py-1" href="#">Pricing Manager</a>
+<a class="text-[#498e9c] hover:text-primary text-sm font-medium transition-colors" href="#">Reports</a>
+</nav>
+<div class="flex gap-2 border-l border-[#e7f1f4] dark:border-[#1e2f33] pl-6">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#e7f1f4] dark:bg-[#1e2f33] text-[#0d191c] dark:text-white">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#e7f1f4] dark:bg-[#1e2f33] text-[#0d191c] dark:text-white">
+<span class="material-symbols-outlined text-xl">settings</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCIEZm25jq4atmhYce1xr7ZVajTnOt3rLPnEVmPveuS3DQwqKcE_4yZPzzzuDk7WEriHPQQXhSbiP0LFJTXPowCov2PM5-UqEdShxbNAHdZD4wSxQvMqgCSqSN8rz3-Bb4LJ6XA4EEeKMc11HdCR9Pw2I_MwJGH0aZ3GXInvRp4Ai0CzlTaBtW2S1NfJVToOIp9NB8odGDhkfYOkgrDyAjNsagvz6i5j3dxNlCce1sOd8dVOODZTddYFXXGQA0_3ClJ8Q_VgAIgjf4");'></div>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col max-w-[1600px] mx-auto w-full px-6">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 py-4">
+<a class="text-[#498e9c] text-sm font-medium hover:text-primary" href="#">Admin</a>
+<span class="text-[#498e9c] text-sm">/</span>
+<a class="text-[#498e9c] text-sm font-medium hover:text-primary" href="#">Pricing Manager</a>
+<span class="text-[#498e9c] text-sm">/</span>
+<span class="text-[#0d191c] dark:text-white text-sm font-bold">Bundle Creator</span>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-wrap justify-between items-end gap-3 pb-6 border-b border-[#e7f1f4] dark:border-[#1e2f33]">
+<div class="flex min-w-72 flex-col gap-1">
+<h1 class="text-[#0d191c] dark:text-white text-3xl font-black leading-tight tracking-tight">Bundle Management</h1>
+<p class="text-[#498e9c] text-base font-normal">Drag excursions into the canvas to build a package and calculate margins.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex min-w-[120px] items-center justify-center rounded-lg h-11 px-6 bg-[#e7f1f4] dark:bg-[#1e2f33] text-[#0d191c] dark:text-white text-sm font-bold hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    Save Draft
+                </button>
+<button class="flex min-w-[140px] items-center justify-center rounded-lg h-11 px-6 bg-primary text-white text-sm font-bold hover:opacity-90 transition-opacity shadow-lg shadow-primary/20">
+                    Publish Bundle
+                </button>
+</div>
+</div>
+<!-- Workspace Layout -->
+<div class="flex gap-6 py-6 flex-1 min-h-0">
+<!-- Left Pane: Inventory -->
+<aside class="w-80 flex flex-col gap-4 bg-white dark:bg-[#15262a] rounded-xl border border-[#e7f1f4] dark:border-[#1e2f33] p-4 h-[calc(100vh-280px)]">
+<div class="flex items-center justify-between">
+<h3 class="font-bold text-[#0d191c] dark:text-white">Excursion Inventory</h3>
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full font-bold">128 Total</span>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-gray-400 text-lg">filter_list</span>
+<input class="w-full pl-10 pr-4 py-2 bg-background-light dark:bg-background-dark border-none rounded-lg text-sm focus:ring-1 focus:ring-primary" placeholder="Filter by region..." type="text"/>
+</div>
+<div class="flex-1 overflow-y-auto pr-2 space-y-3 custom-scrollbar">
+<!-- Inventory Card 1 -->
+<div class="p-3 bg-white dark:bg-[#1c3136] border border-[#e7f1f4] dark:border-[#2a4348] rounded-lg cursor-grab active:cursor-grabbing hover:border-primary transition-all shadow-sm group">
+<div class="flex gap-3">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center shrink-0" data-alt="Crystal clear Caribbean waters" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8c9Sz7VSI0E9oV7H_FthcmAThtpM55Evkwv5rUiFRuxb1t_tmHf4P4lgmvi7OtcEo2ID2pyfhZXfsPNZoW-KpP7JVdkQIF1parOYTKj5g6XiCeWSuwxoIKvfOnYGvQsO0Ew5B_TTUhdkjVlO22sbPjqBbA_eYW-FGxCHxgWWgeD78bDWdSfmdDt2mgx9EvfEWUrQD9zqX3ccuRfLf_IbH6dPO_atY48BNqwBnsHRHKRM7OixV81zcrnwlc7UG_Qx9VG-DYozimFg");'></div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold truncate group-hover:text-primary">St. Lucia Pitons Hike</p>
+<p class="text-[11px] text-[#498e9c]">4 Hours • Moderate</p>
+<div class="flex items-center justify-between mt-1">
+<span class="text-sm font-bold">$85.00</span>
+<span class="material-symbols-outlined text-gray-300">drag_indicator</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Inventory Card 2 -->
+<div class="p-3 bg-white dark:bg-[#1c3136] border border-[#e7f1f4] dark:border-[#2a4348] rounded-lg cursor-grab active:cursor-grabbing hover:border-primary transition-all shadow-sm group">
+<div class="flex gap-3">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center shrink-0" data-alt="Tropical snorkeling with sea turtles" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDiGFqefaGxj7TnUYIOvDoHQs5PJn29JsoWtZqPYFIMieEzZtOj7-BCKb1U6fxSoYZiNrCLxeUDq3C7xWgkY0IK1wq-2rEjDqwfWCRrgKfRzzikA9OgBmUj1cO2iLuBRedGvlhPkrsBRSclwb8yugG2uhT1MbilbWUZ6t6yhOO_5wNJB_SBvXDSoTgZnIikOMyo5SaK1mIphFQd5tY6UqRTvSdxwblt9EsjWrOiUiBnbxLKlG6dLtkxJmqkNnhaJWF9X5oaKzTn2BI");'></div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold truncate group-hover:text-primary">Turtle Cove Snorkel</p>
+<p class="text-[11px] text-[#498e9c]">3 Hours • Easy</p>
+<div class="flex items-center justify-between mt-1">
+<span class="text-sm font-bold">$120.00</span>
+<span class="material-symbols-outlined text-gray-300">drag_indicator</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Inventory Card 3 -->
+<div class="p-3 bg-white dark:bg-[#1c3136] border border-[#e7f1f4] dark:border-[#2a4348] rounded-lg cursor-grab active:cursor-grabbing hover:border-primary transition-all shadow-sm group">
+<div class="flex gap-3">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center shrink-0" data-alt="Private beach cabana" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA2SqdDaXEH4HpBotYTLnMZHt5X3AvciPUVjimhn9uwrLqASau6564b69Au6PSgDFsbohTKBIWWJJiWpUDOPj1voL0dbxjjXlU6iWQsDx4NVkD2LJw6THqacgZx-OmTn2jHcA4H6iPwgePr1dFYuRIvD9dOQ3PvamHc7irepHI9N_0CsLG0J7aDQh0DFilR_7yW-SkbRedivY9M2hQTO-lzzbKlnj_-QSwe801NLdjQsu4ebFfw0RCOI-pxm2w-MUDDciQOGmcjBUU");'></div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold truncate group-hover:text-primary">Private Beach Escape</p>
+<p class="text-[11px] text-[#498e9c]">6 Hours • Leisure</p>
+<div class="flex items-center justify-between mt-1">
+<span class="text-sm font-bold">$210.00</span>
+<span class="material-symbols-outlined text-gray-300">drag_indicator</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Inventory Card 4 -->
+<div class="p-3 bg-white dark:bg-[#1c3136] border border-[#e7f1f4] dark:border-[#2a4348] rounded-lg cursor-grab active:cursor-grabbing hover:border-primary transition-all shadow-sm group">
+<div class="flex gap-3">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center shrink-0" data-alt="Offroad jeep jungle tour" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA31ilkQYRaoEzVDiTLxA5UA4KNoSM_dXSCBS-I0JV0A_nK8UHVOEWryIcU5yX3dUPHMuIxh3E7ym8D_te02cSEyIb5PwAd73llaf7CUMBeyabJLu_K9anwv_CwRpIKNhIO4CS531IWLuweRzdBMQaPOsDtiaukJlVPAJIjNw-Mie-98l2HCDhV8_KTwz5M94FdEx3FIRRvZqbGPmwl4L-lwNYj_FD86jYKIFlUG-7jKm_HL1xUZj7UzQgOdGVEu5tpCC6Y29RX2RA");'></div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold truncate group-hover:text-primary">Jungle Jeep Safari</p>
+<p class="text-[11px] text-[#498e9c]">5 Hours • Active</p>
+<div class="flex items-center justify-between mt-1">
+<span class="text-sm font-bold">$145.00</span>
+<span class="material-symbols-outlined text-gray-300">drag_indicator</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Workspace: Bundle Constructor -->
+<div class="flex-1 flex flex-col gap-6">
+<!-- Bundle Settings -->
+<div class="grid grid-cols-3 gap-4 bg-white dark:bg-[#15262a] p-5 rounded-xl border border-[#e7f1f4] dark:border-[#1e2f33]">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold text-[#498e9c] uppercase tracking-wider">Bundle Name</label>
+<input class="form-input rounded-lg border-[#e7f1f4] dark:border-[#2a4348] bg-transparent text-[#0d191c] dark:text-white focus:border-primary focus:ring-0" type="text" value="Caribbean Sun &amp; Sand Pack"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold text-[#498e9c] uppercase tracking-wider">Base Price ($)</label>
+<input class="form-input rounded-lg border-[#e7f1f4] dark:border-[#2a4348] bg-transparent text-[#0d191c] dark:text-white focus:border-primary focus:ring-0" type="number" value="299.00"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold text-[#498e9c] uppercase tracking-wider">Discount (%)</label>
+<input class="form-input rounded-lg border-[#e7f1f4] dark:border-[#2a4348] bg-transparent text-[#0d191c] dark:text-white focus:border-primary focus:ring-0" type="number" value="15"/>
+</div>
+</div>
+<!-- Canvas / Drop Zone -->
+<div class="flex-1 flex flex-col gap-4 bg-[#eef6f8] dark:bg-[#122327] rounded-xl border-2 border-dashed border-[#cee4e8] dark:border-[#2a4348] p-6 overflow-y-auto">
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-bold text-[#0d191c] dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">shopping_bag</span>
+                            Bundle Contents
+                        </h3>
+<button class="text-xs text-red-500 font-bold hover:underline">Clear Canvas</button>
+</div>
+<!-- Added Excursion 1 -->
+<div class="flex items-center gap-4 bg-white dark:bg-[#1c3136] p-4 rounded-xl border border-[#e7f1f4] dark:border-[#2a4348] shadow-sm animate-in fade-in slide-in-from-left-4 duration-300">
+<div class="w-20 h-20 rounded-lg bg-cover bg-center shrink-0" data-alt="St. Lucia hike view" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBkJGeIYpRVA2YBFLX_3iwno_MfBjCmr-RJ4BRvZRyv5CjWi7v4J60DjeExxctyBjZoa_q-pRClM_4zOkrK_MfA78ouEihM-IkDAcRhBsaENuLQ1zEu7PrcoF32poGOoqPBK1bILw1NYYMO3e8KZl3FsCnMkpcZ5L5_oQ4xsHBzUIM_1FGCSnxQY6nhZ77da11MHWw0Bixg9ehuZlIJQbkR9HYOOGeL47CJec3MwxTy-DoOpx4hGMTBGy-2R6MKEHlHgPElPg7ffp4");'></div>
+<div class="flex-1">
+<h4 class="font-bold text-base">St. Lucia Pitons Hike</h4>
+<p class="text-sm text-[#498e9c]">Cost per person: $65.00 • Retail: $85.00</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="text-right">
+<p class="text-xs text-[#498e9c] uppercase font-bold">Margin</p>
+<p class="text-green-500 font-bold">23.5%</p>
+</div>
+<button class="p-2 text-gray-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+<!-- Added Excursion 2 -->
+<div class="flex items-center gap-4 bg-white dark:bg-[#1c3136] p-4 rounded-xl border border-[#e7f1f4] dark:border-[#2a4348] shadow-sm">
+<div class="w-20 h-20 rounded-lg bg-cover bg-center shrink-0" data-alt="Snorkeling with turtles" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTHfWP1GMFqXeRTiyCwYn6P1HsI1hCY2yUD75g9HwVsNHVzFqpZbrTGd1DXput66U1ICIS1RuTfPhPlPV5elVlcxLnHUjCCl1rpX7bUnmJ0tkgpnv91U2RxuZ-A8VC3n0ylx3aFmdwaM80ORqUN-vYaSBCpYu_6Pib1BBgo9TT4a-9l4n_Ig3IKRip6zNIhFkxo7rTBCdULpVg-7kL-9ObhdWMahDOFVDuPUqiG540IcFee5FW2AqLPO2DvWt5ipDgcE4cuHjGfpw");'></div>
+<div class="flex-1">
+<h4 class="font-bold text-base">Turtle Cove Snorkel</h4>
+<p class="text-sm text-[#498e9c]">Cost per person: $90.00 • Retail: $120.00</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="text-right">
+<p class="text-xs text-[#498e9c] uppercase font-bold">Margin</p>
+<p class="text-green-500 font-bold">25.0%</p>
+</div>
+<button class="p-2 text-gray-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+<!-- Drop Zone Placeholder -->
+<div class="border-2 border-dashed border-[#cee4e8] dark:border-[#2a4348] rounded-xl flex flex-col items-center justify-center py-12 text-[#498e9c]">
+<span class="material-symbols-outlined text-4xl mb-2 opacity-50">add_circle</span>
+<p class="font-medium">Drag excursions here to add to bundle</p>
+</div>
+</div>
+<!-- VIP Perk Selection -->
+<div class="bg-white dark:bg-[#15262a] p-5 rounded-xl border border-[#e7f1f4] dark:border-[#1e2f33]">
+<h3 class="font-bold text-sm mb-3 uppercase tracking-wider text-[#498e9c]">VIP Perk Selection</h3>
+<div class="flex flex-wrap gap-3">
+<label class="flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full cursor-pointer hover:bg-primary/20 transition-colors border border-primary/20">
+<input checked="" class="hidden" type="checkbox"/>
+<span class="material-symbols-outlined text-lg">wifi</span>
+<span class="text-sm font-bold">Free Wi-Fi</span>
+</label>
+<label class="flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full cursor-pointer hover:bg-primary/20 transition-colors border border-primary/20">
+<input checked="" class="hidden" type="checkbox"/>
+<span class="material-symbols-outlined text-lg">airport_shuttle</span>
+<span class="text-sm font-bold">Private Transfer</span>
+</label>
+<label class="flex items-center gap-2 px-4 py-2 bg-[#e7f1f4] dark:bg-[#1e2f33] text-[#498e9c] rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors border border-transparent">
+<input class="hidden" type="checkbox"/>
+<span class="material-symbols-outlined text-lg">liquor</span>
+<span class="text-sm font-bold">Welcome Drink</span>
+</label>
+<label class="flex items-center gap-2 px-4 py-2 bg-[#e7f1f4] dark:bg-[#1e2f33] text-[#498e9c] rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors border border-transparent">
+<input class="hidden" type="checkbox"/>
+<span class="material-symbols-outlined text-lg">verified_user</span>
+<span class="text-sm font-bold">Priority Boarding</span>
+</label>
+<button class="flex items-center gap-1 px-4 py-2 text-primary hover:underline text-sm font-bold">
+<span class="material-symbols-outlined text-lg">add</span> Add Custom Perk
+                        </button>
+</div>
+</div>
+</div>
+<!-- Side Pane: Real-time Calculator -->
+<aside class="w-72 flex flex-col gap-6 bg-white dark:bg-[#15262a] rounded-xl border border-[#e7f1f4] dark:border-[#1e2f33] p-5 sticky top-24 h-fit">
+<div>
+<h3 class="font-black text-lg mb-4 text-[#0d191c] dark:text-white">Financial Summary</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm">
+<span class="text-[#498e9c]">Total Operator Cost</span>
+<span class="font-bold">$155.00</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-[#498e9c]">Total Retail Value</span>
+<span class="font-bold">$205.00</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-[#498e9c]">Perk Provisioning</span>
+<span class="font-bold text-red-500">+$25.00</span>
+</div>
+<div class="border-t border-[#e7f1f4] dark:border-[#1e2f33] pt-4">
+<div class="flex justify-between items-center">
+<span class="text-xs font-bold text-[#498e9c] uppercase">Bundle Price</span>
+<span class="text-2xl font-black text-primary leading-none">$299.00</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-xl">
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-bold text-[#498e9c] uppercase">Net Profit Margin</span>
+<span class="text-xl font-black text-green-500 leading-none">39.8%</span>
+</div>
+<!-- Progress Bar (Margin Health) -->
+<div class="w-full bg-gray-200 dark:bg-gray-700 h-2.5 rounded-full overflow-hidden">
+<div class="bg-green-500 h-full w-[80%]" style="width: 39.8%;"></div>
+</div>
+<p class="text-[11px] text-[#498e9c] mt-2">Target margin: 35.0% - 45.0%</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-[11px] text-[#498e9c]">
+<span class="material-symbols-outlined text-sm text-green-500">check_circle</span>
+<span>Complies with Caribbean Pricing Rule #104</span>
+</div>
+<div class="flex items-center gap-2 text-[11px] text-[#498e9c]">
+<span class="material-symbols-outlined text-sm text-green-500">check_circle</span>
+<span>Inventory availability verified for Summer '24</span>
+</div>
+</div>
+<button class="w-full py-3 bg-primary/20 text-primary border border-primary/30 rounded-lg font-bold text-sm hover:bg-primary/30 transition-colors">
+                    Preview Landing Page
+                </button>
+</aside>
+</div>
+</main>
+<!-- Footer for quick stats (Optional layout element) -->
+<footer class="bg-white dark:bg-[#15262a] border-t border-[#e7f1f4] dark:border-[#1e2f33] px-6 py-3 mt-auto">
+<div class="max-w-[1600px] mx-auto flex justify-between items-center text-xs text-[#498e9c] font-medium">
+<div class="flex gap-4">
+<span>Last Autosave: 2 minutes ago</span>
+<span class="flex items-center gap-1"><div class="size-2 rounded-full bg-green-500"></div> System Online</span>
+</div>
+<div class="flex gap-4">
+<a class="hover:text-primary" href="#">Admin Guide</a>
+<a class="hover:text-primary" href="#">Support</a>
+<span>v2.4.1-stable</span>
+</div>
+</div>
+</footer>
+</body></html>

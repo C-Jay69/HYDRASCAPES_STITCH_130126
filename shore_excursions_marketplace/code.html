@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shore Excursions Marketplace | HYDRASCAPES</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0dccf2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "sans": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d191c] dark:text-white min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-solid border-[#e7f1f4] dark:border-[#1e2f33] px-6 lg:px-20 py-3">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-[#0d191c] dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-extrabold leading-tight tracking-[-0.015em] uppercase">HYDRASCAPES</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">My Cruises</a>
+<a class="text-sm font-semibold text-primary" href="#">Excursions</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Destinations</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Support</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden sm:flex items-center bg-[#e7f1f4] dark:bg-[#1e2f33] rounded-lg px-3 py-2">
+<span class="material-symbols-outlined text-[#498e9c] text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm placeholder:text-[#498e9c] ml-2 w-48" placeholder="Search destinations..."/>
+</div>
+<button class="relative flex items-center justify-center p-2 rounded-lg hover:bg-[#e7f1f4] dark:hover:bg-[#1e2f33] transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-primary text-[#0d191c] text-[10px] font-bold size-4 rounded-full flex items-center justify-center">2</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile avatar showing a smiling traveler" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACQ5KyuegDlS-826fXCEqVNnHTI64jbEp8YjORG9H7PcETENWnrldV44dk2_RBiAt0fHGiNmwhBKW0Ry3s1pTb42c9_w2pxvwoxn1VlhaEMUXeCOPFYfWGU3NLw-oM8P5NvzoQkqwcDIhNo1OR1lCf8PVkqvfQo1YEUMpkDnfvgV-xUOUcGE7oFCuMlSY_8_gXzy1HtIlubu61STQgv3QbpBoekphC1kOCNvkarQtpqLAEuFkjUPSG2KydC85Gz9t9EQ5pRICA9ng");'></div>
+</div>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto px-6 lg:px-20 py-8">
+<!-- Hero Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+<div class="max-w-2xl">
+<h1 class="text-[#0d191c] dark:text-white text-5xl font-black leading-tight tracking-[-0.033em] mb-3">Mediterranean Marvels</h1>
+<p class="text-[#498e9c] dark:text-[#a0c4cc] text-lg font-normal">Maximize your journey with curated, ship-guaranteed experiences across every port of call.</p>
+</div>
+<button class="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#e7f1f4] dark:bg-[#1e2f33] text-[#0d191c] dark:text-white text-sm font-bold hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                View Itinerary
+            </button>
+</div>
+<!-- Content Layout -->
+<div class="flex flex-col lg:flex-row gap-10">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-64 shrink-0 space-y-8">
+<!-- Activity Types -->
+<div class="flex flex-col gap-4">
+<div class="flex flex-col">
+<h3 class="text-[#0d191c] dark:text-white text-lg font-bold leading-normal">Activity Type</h3>
+<p class="text-[#498e9c] dark:text-[#a0c4cc] text-sm">Filter by your interests</p>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 border border-primary/20">
+<span class="material-symbols-outlined text-primary text-[20px] filled-icon">landscape</span>
+<p class="text-[#0d191c] dark:text-white text-sm font-bold">Adventure</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#e7f1f4] dark:hover:bg-[#1e2f33] cursor-pointer group transition-colors">
+<span class="material-symbols-outlined text-[#498e9c] text-[20px] group-hover:text-primary">restaurant</span>
+<p class="text-[#0d191c] dark:text-white text-sm font-medium">Food &amp; Wine</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#e7f1f4] dark:hover:bg-[#1e2f33] cursor-pointer group transition-colors">
+<span class="material-symbols-outlined text-[#498e9c] text-[20px] group-hover:text-primary">castle</span>
+<p class="text-[#0d191c] dark:text-white text-sm font-medium">Historical</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#e7f1f4] dark:hover:bg-[#1e2f33] cursor-pointer group transition-colors">
+<span class="material-symbols-outlined text-[#498e9c] text-[20px] group-hover:text-primary">star</span>
+<p class="text-[#0d191c] dark:text-white text-sm font-medium">Private Tours</p>
+</div>
+</div>
+</div>
+<!-- Price Range Slider -->
+<div class="space-y-4">
+<h3 class="text-[#0d191c] dark:text-white text-lg font-bold">Price Range</h3>
+<div class="flex h-[40px] w-full pt-1.5 px-1">
+<div class="flex h-1.5 w-full rounded-full bg-[#cee4e8] dark:bg-[#1e2f33] relative">
+<div class="absolute left-[15%] right-[25%] h-full bg-primary rounded-full"></div>
+<div class="absolute left-[15%] -top-1.5">
+<div class="size-4 rounded-full bg-primary ring-4 ring-white dark:ring-background-dark shadow-sm"></div>
+<p class="text-[#0d191c] dark:text-white text-xs font-bold mt-2">$80</p>
+</div>
+<div class="absolute right-[25%] -top-1.5">
+<div class="size-4 rounded-full bg-primary ring-4 ring-white dark:ring-background-dark shadow-sm"></div>
+<p class="text-[#0d191c] dark:text-white text-xs font-bold mt-2">$450</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Difficulty Filter -->
+<div class="space-y-4">
+<h3 class="text-[#0d191c] dark:text-white text-lg font-bold">Difficulty</h3>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 cursor-pointer">
+<input checked="" class="rounded text-primary focus:ring-primary size-5 bg-[#e7f1f4] dark:bg-[#1e2f33] border-none" type="checkbox"/>
+<span class="text-sm font-medium">Easy</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input checked="" class="rounded text-primary focus:ring-primary size-5 bg-[#e7f1f4] dark:bg-[#1e2f33] border-none" type="checkbox"/>
+<span class="text-sm font-medium">Moderate</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="rounded text-primary focus:ring-primary size-5 bg-[#e7f1f4] dark:bg-[#1e2f33] border-none" type="checkbox"/>
+<span class="text-sm font-medium">Strenuous</span>
+</label>
+</div>
+</div>
+<!-- Trust Badge Banner -->
+<div class="p-4 rounded-xl bg-primary/10 border border-primary/20">
+<span class="material-symbols-outlined text-primary mb-2">verified_user</span>
+<p class="text-[#0d191c] dark:text-white text-sm font-bold mb-1">Hydrascapes Guarantee</p>
+<p class="text-[#498e9c] dark:text-[#a0c4cc] text-[12px] leading-relaxed">We guarantee you'll return to your ship on time, or we'll fly you to the next port.</p>
+</div>
+</aside>
+<!-- Main Content Grid -->
+<div class="flex-1">
+<!-- Port Tabs -->
+<div class="mb-8 border-b border-[#cee4e8] dark:border-[#1e2f33] overflow-x-auto">
+<div class="flex gap-10 whitespace-nowrap min-w-max px-2">
+<a class="pb-4 border-b-[3px] border-transparent text-[#498e9c] dark:text-[#a0c4cc] font-bold text-sm hover:text-primary transition-colors" href="#">All Ports</a>
+<a class="pb-4 border-b-[3px] border-primary text-[#0d191c] dark:text-white font-bold text-sm" href="#">Naples, Italy</a>
+<a class="pb-4 border-b-[3px] border-transparent text-[#498e9c] dark:text-[#a0c4cc] font-bold text-sm hover:text-primary transition-colors" href="#">Mykonos, Greece</a>
+<a class="pb-4 border-b-[3px] border-transparent text-[#498e9c] dark:text-[#a0c4cc] font-bold text-sm hover:text-primary transition-colors" href="#">Barcelona, Spain</a>
+<a class="pb-4 border-b-[3px] border-transparent text-[#498e9c] dark:text-[#a0c4cc] font-bold text-sm hover:text-primary transition-colors" href="#">Cannes, France</a>
+</div>
+</div>
+<!-- Sorting & Results Info -->
+<div class="flex justify-between items-center mb-6">
+<p class="text-sm font-semibold text-[#498e9c]"><span class="text-[#0d191c] dark:text-white">12</span> excursions found for Naples</p>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold uppercase tracking-wider text-[#498e9c]">Sort by:</span>
+<select class="bg-transparent border-none text-sm font-bold focus:ring-0 cursor-pointer">
+<option>Recommended</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Most Popular</option>
+</select>
+</div>
+</div>
+<!-- Excursion Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group bg-white dark:bg-[#1e2f33] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-primary/20">
+<div class="relative h-48 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" data-alt="Stunning aerial view of Positano cliffs and colorful houses" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuChErVtu2bLQF923i2tnqKWWziJ5FKsPFxLRyGChIalL3Dd79nUQKpNSWGWdjJGTnUSX1RKKp2o4gEiHqRtB3L9av6AiDzNWS3CSfveP1_02PWK0RXIZI11LE5A_vlqrMUNj-Btne63Ss91cVfXKi2FkG3rTDS9zfnfRGBK4jVPckSuXAlT0WdDzeC7BlCl67L-lWhnikfhNMgCvmiBdpAdVsqw0V95z_NDNNKpAD1OxyqxbrrH0v5VOdlkuX_RQx95E4vy-EnfZck");'></div>
+<div class="absolute top-3 left-3 flex flex-col gap-2">
+<span class="bg-primary text-[#0d191c] text-[10px] font-black uppercase px-2 py-1 rounded tracking-wide flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] filled-icon">verified</span> Guaranteed Return
+                                </span>
+<span class="bg-white/90 backdrop-blur-sm text-[#0d191c] text-[10px] font-black uppercase px-2 py-1 rounded tracking-wide">Small Group</span>
+</div>
+<button class="absolute top-3 right-3 size-8 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:text-red-500 hover:bg-white transition-all">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-primary text-[10px] font-bold uppercase tracking-widest">Adventure &amp; Sightseeing</span>
+</div>
+<h3 class="text-[#0d191c] dark:text-white text-lg font-bold leading-tight mb-4 min-h-[3.5rem] flex items-center">Private Amalfi Coast &amp; Positano Dream</h3>
+<div class="flex items-center gap-4 text-[#498e9c] text-xs font-medium mb-5">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 8.5 Hours
+                                </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span> Moderate
+                                </div>
+</div>
+<div class="flex items-center justify-between border-t border-[#f2f2f2] dark:border-[#2a3f44] pt-4">
+<div>
+<p class="text-[10px] uppercase font-bold text-[#498e9c]">From</p>
+<p class="text-2xl font-black text-primary">$349<span class="text-xs font-bold text-[#498e9c]">/pp</span></p>
+</div>
+<button class="bg-primary text-[#0d191c] px-4 py-2 rounded-lg font-bold text-sm hover:scale-105 transition-transform active:scale-95">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-white dark:bg-[#1e2f33] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-primary/20">
+<div class="relative h-48 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" data-alt="Ruins of Pompeii with Mount Vesuvius in background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCWYYhqvW2KqGOAtI6FPLZmXZhVZHsKITBBEhuFIJOHqoTSuugXCp0L4Wg00_77GDz6BtnwFOjroDgQCcfgGOjn0CGCmHnVirdIYxXVzfrDF0HCbyaDv2P7sBkj1VjC5g2DSKDNUQzhXlehvBN_vUIR1MkAcIV4NRk3gSXcqu3sGtKBlX9nS7dX-U3xXJtLa21yClG4QSa8-QFWiA8C7cAUn5DmUPdfwLDYpVnftVymi5fJc4JtfomfkBSAr74cEvmiVXJKdeySQyM");'></div>
+<div class="absolute top-3 left-3 flex flex-col gap-2">
+<span class="bg-primary text-[#0d191c] text-[10px] font-black uppercase px-2 py-1 rounded tracking-wide flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] filled-icon">verified</span> Guaranteed Return
+                                </span>
+</div>
+<button class="absolute top-3 right-3 size-8 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:text-red-500 hover:bg-white transition-all">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-primary text-[10px] font-bold uppercase tracking-widest">Historical</span>
+</div>
+<h3 class="text-[#0d191c] dark:text-white text-lg font-bold leading-tight mb-4 min-h-[3.5rem] flex items-center">Pompeii &amp; Vesuvius: The Ultimate Echo of History</h3>
+<div class="flex items-center gap-4 text-[#498e9c] text-xs font-medium mb-5">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 6 Hours
+                                </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span> Strenuous
+                                </div>
+</div>
+<div class="flex items-center justify-between border-t border-[#f2f2f2] dark:border-[#2a3f44] pt-4">
+<div>
+<p class="text-[10px] uppercase font-bold text-[#498e9c]">From</p>
+<p class="text-2xl font-black text-primary">$189<span class="text-xs font-bold text-[#498e9c]">/pp</span></p>
+</div>
+<button class="bg-primary text-[#0d191c] px-4 py-2 rounded-lg font-bold text-sm hover:scale-105 transition-transform">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-white dark:bg-[#1e2f33] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-primary/20">
+<div class="relative h-48 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" data-alt="Traditional Neapolitan pizza on a marble table with wine" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-OtJnjNAmofEvUeZYyDy-Rd8M-zka-siB0sRlOTfaLkZBYXIA34vfGJ8AX3L4ohq4Sukog9K7piAzqwd67FnK1GLqpg6NAIS1j5y5uEt_-hXJEQeZHNYUdGK1j1h_lhq5wwUr0255VfrhzspZH4JIXMWGEUlscs_yLy1Dyau3Pi8MC2BJKPVaZ9NoDevBAnZYHUeiS5gGK6B7DnXWvBnAZuw9y8EgMQe9HA0K1baFH7d8AlY6PVUUguXStSx8CF6UR2KZw21cTW0");'></div>
+<div class="absolute top-3 left-3 flex flex-col gap-2">
+<span class="bg-primary text-[#0d191c] text-[10px] font-black uppercase px-2 py-1 rounded tracking-wide flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] filled-icon">verified</span> Guaranteed Return
+                                </span>
+<span class="bg-white/90 backdrop-blur-sm text-[#0d191c] text-[10px] font-black uppercase px-2 py-1 rounded tracking-wide">Foodie Choice</span>
+</div>
+<button class="absolute top-3 right-3 size-8 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:text-red-500 hover:bg-white transition-all">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-primary text-[10px] font-bold uppercase tracking-widest">Food &amp; Wine</span>
+</div>
+<h3 class="text-[#0d191c] dark:text-white text-lg font-bold leading-tight mb-4 min-h-[3.5rem] flex items-center">Secret Flavors of Naples: Street Food &amp; Wine</h3>
+<div class="flex items-center gap-4 text-[#498e9c] text-xs font-medium mb-5">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 4 Hours
+                                </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span> Easy
+                                </div>
+</div>
+<div class="flex items-center justify-between border-t border-[#f2f2f2] dark:border-[#2a3f44] pt-4">
+<div>
+<p class="text-[10px] uppercase font-bold text-[#498e9c]">From</p>
+<p class="text-2xl font-black text-primary">$125<span class="text-xs font-bold text-[#498e9c]">/pp</span></p>
+</div>
+<button class="bg-primary text-[#0d191c] px-4 py-2 rounded-lg font-bold text-sm hover:scale-105 transition-transform">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-white dark:bg-[#1e2f33] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-primary/20">
+<div class="relative h-48 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" data-alt="Blue grotto in Capri with glowing water" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCtCw47O35CEURzdvX9abT1UJNglN3RT0ltm-MJVgwSTYte3cDGKz2mUeQ3ZjMwbAAAt9eJIl3OhVOHuY0uMYyVFm9Sqj2vbzS9-AavaNbSraKtxUmwg7jbl2YV2iksF0K5Mc6ro2l5HOBxjm9zM_fa_x5wNiR7fgKH3JYTylN3YRVIv-K1Pxnwnj0P-we6pkipFKfOxuUpk3oSg2yJw0DaO3KnJgqQP94ZDVrT3R-sumGWRRBOGZ4vv4abQBxiu1CfplW2CarpdZ4");'></div>
+<div class="absolute top-3 left-3 flex flex-col gap-2">
+<span class="bg-primary text-[#0d191c] text-[10px] font-black uppercase px-2 py-1 rounded tracking-wide flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] filled-icon">verified</span> Guaranteed Return
+                                </span>
+</div>
+<button class="absolute top-3 right-3 size-8 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:text-red-500 hover:bg-white transition-all">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-primary text-[10px] font-bold uppercase tracking-widest">Adventure</span>
+</div>
+<h3 class="text-[#0d191c] dark:text-white text-lg font-bold leading-tight mb-4 min-h-[3.5rem] flex items-center">Capri &amp; Blue Grotto: Luxury Private Boat Tour</h3>
+<div class="flex items-center gap-4 text-[#498e9c] text-xs font-medium mb-5">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 7 Hours
+                                </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span> Moderate
+                                </div>
+</div>
+<div class="flex items-center justify-between border-t border-[#f2f2f2] dark:border-[#2a3f44] pt-4">
+<div>
+<p class="text-[10px] uppercase font-bold text-[#498e9c]">From</p>
+<p class="text-2xl font-black text-primary">$499<span class="text-xs font-bold text-[#498e9c]">/pp</span></p>
+</div>
+<button class="bg-primary text-[#0d191c] px-4 py-2 rounded-lg font-bold text-sm hover:scale-105 transition-transform">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group bg-white dark:bg-[#1e2f33] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-primary/20">
+<div class="relative h-48 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" data-alt="Sorrento lemon groves under the sun" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9keuAEpkUX6p66108QywhhDSXlaXd_jnCSm80S9XItD4uX3ALt5UGazQPE0HlPMlIIWLDDKmdvsb81rtDSdv5T-zk1h-3WvUXizmTInZgPnPTbZLhSK-GQONQQ2D_IXd_qfQ0kJat4J2WgLZNifJwYgtkOl7Ij8dU7qJc04eB4a_BKPiRe7-m6sSALeDVTJmFZRfGp2pq69EVFkOEhmNIliqcwtn5uEZFz5ZCoCkjk716Oci_DucGk3iZOFFa7K3Nn5-U0okZ-hM");'></div>
+<div class="absolute top-3 left-3 flex flex-col gap-2">
+<span class="bg-primary text-[#0d191c] text-[10px] font-black uppercase px-2 py-1 rounded tracking-wide flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] filled-icon">verified</span> Guaranteed Return
+                                </span>
+<span class="bg-white/90 backdrop-blur-sm text-[#0d191c] text-[10px] font-black uppercase px-2 py-1 rounded tracking-wide">Small Group</span>
+</div>
+<button class="absolute top-3 right-3 size-8 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:text-red-500 hover:bg-white transition-all">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-primary text-[10px] font-bold uppercase tracking-widest">Food &amp; Wine</span>
+</div>
+<h3 class="text-[#0d191c] dark:text-white text-lg font-bold leading-tight mb-4 min-h-[3.5rem] flex items-center">Sorrento Farm Visit: Limoncello &amp; Olive Oil</h3>
+<div class="flex items-center gap-4 text-[#498e9c] text-xs font-medium mb-5">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 5 Hours
+                                </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span> Easy
+                                </div>
+</div>
+<div class="flex items-center justify-between border-t border-[#f2f2f2] dark:border-[#2a3f44] pt-4">
+<div>
+<p class="text-[10px] uppercase font-bold text-[#498e9c]">From</p>
+<p class="text-2xl font-black text-primary">$155<span class="text-xs font-bold text-[#498e9c]">/pp</span></p>
+</div>
+<button class="bg-primary text-[#0d191c] px-4 py-2 rounded-lg font-bold text-sm hover:scale-105 transition-transform">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group bg-white dark:bg-[#1e2f33] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-primary/20">
+<div class="relative h-48 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" data-alt="Underground Naples tunnel tour with stone walls" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBYZismKiHIkpjk_JWTdoPFp52SQpnvOeUCoBtpI4XFNSbl_y7c0sJBdSWpJPe4mFwVzMWiYmuhJGqyIAEYkTmlkw13sCNmKCDnTTZn3vGO7s2oArbYlkVQCSwlZ9NaRCW9lg6r72pvEg0VUvpUjkjUI6mNUZwKrBKYl1AtQCfAIflQw5slyyczn9CFeRxtACSVbJNpZFqfgpb0YjadsY-mcpLEgF0myStke7aUguE4nMxHngDrf5z974r6O1Owz8BL7pyvutdyMpg");'></div>
+<div class="absolute top-3 left-3 flex flex-col gap-2">
+<span class="bg-primary text-[#0d191c] text-[10px] font-black uppercase px-2 py-1 rounded tracking-wide flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] filled-icon">verified</span> Guaranteed Return
+                                </span>
+</div>
+<button class="absolute top-3 right-3 size-8 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:text-red-500 hover:bg-white transition-all">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-primary text-[10px] font-bold uppercase tracking-widest">Historical</span>
+</div>
+<h3 class="text-[#0d191c] dark:text-white text-lg font-bold leading-tight mb-4 min-h-[3.5rem] flex items-center">Underground Naples: Archeology &amp; Catacombs</h3>
+<div class="flex items-center gap-4 text-[#498e9c] text-xs font-medium mb-5">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 3 Hours
+                                </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span> Moderate
+                                </div>
+</div>
+<div class="flex items-center justify-between border-t border-[#f2f2f2] dark:border-[#2a3f44] pt-4">
+<div>
+<p class="text-[10px] uppercase font-bold text-[#498e9c]">From</p>
+<p class="text-2xl font-black text-primary">$95<span class="text-xs font-bold text-[#498e9c]">/pp</span></p>
+</div>
+<button class="bg-primary text-[#0d191c] px-4 py-2 rounded-lg font-bold text-sm hover:scale-105 transition-transform">Book Now</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More -->
+<div class="mt-12 flex justify-center">
+<button class="px-8 py-4 bg-[#e7f1f4] dark:bg-[#1e2f33] text-[#0d191c] dark:text-white font-bold rounded-xl hover:bg-primary/20 transition-colors flex items-center gap-2">
+                        Show More Excursions
+                        <span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Trust Bar -->
+<footer class="bg-white dark:bg-background-dark border-t border-[#e7f1f4] dark:border-[#1e2f33] mt-20 py-12 px-6 lg:px-20">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="flex items-start gap-4">
+<div class="p-3 bg-primary/10 rounded-full text-primary">
+<span class="material-symbols-outlined text-3xl">anchor</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Return to Ship Guarantee</h4>
+<p class="text-sm text-[#498e9c]">Don't worry about being left behind. Every Hydrascapes tour includes guaranteed on-time return.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-3 bg-primary/10 rounded-full text-primary">
+<span class="material-symbols-outlined text-3xl">support_agent</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">24/7 Port Support</h4>
+<p class="text-sm text-[#498e9c]">Our local specialists are on the ground at every Mediterranean port to assist your journey.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-3 bg-primary/10 rounded-full text-primary">
+<span class="material-symbols-outlined text-3xl">currency_exchange</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Best Price Promise</h4>
+<p class="text-sm text-[#498e9c]">Found a cheaper local rate? We'll match it and give you a $50 cruise credit.</p>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-12 pt-8 border-t border-[#f2f2f2] dark:border-[#2a3f44] flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2 text-[#0d191c] dark:text-white opacity-50">
+<h2 class="text-sm font-extrabold uppercase">HYDRASCAPES</h2>
+<span class="text-xs">© 2024 Shore Excursions Marketplace. All rights reserved.</span>
+</div>
+<div class="flex gap-6">
+<a class="text-xs font-bold text-[#498e9c] hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-xs font-bold text-[#498e9c] hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-xs font-bold text-[#498e9c] hover:text-primary transition-colors" href="#">Cancellation Policy</a>
+</div>
+</div>
+</footer>
+</body></html>

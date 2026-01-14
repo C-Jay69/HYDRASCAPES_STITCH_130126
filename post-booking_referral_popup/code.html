@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Post-Booking Referral | HYDRASCAPES</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .modal-overlay {
+            background: rgba(16, 25, 34, 0.6);
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d141b] dark:text-slate-50 min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7edf3] dark:border-slate-800 px-10 py-3 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+</div>
+<h2 class="text-[#0d141b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">HYDRASCAPES</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<nav class="flex items-center gap-9">
+<a class="text-[#4c739a] dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Destinations</a>
+<a class="text-[#4c739a] dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">My Bookings</a>
+<a class="text-[#4c739a] dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Offers</a>
+</nav>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC6YvGSJolRVA1AKDObTLOuCzuYaev8KNYD17vpx2HpY0iA-YRTnLigXbFljsD20B2RbsaqxV1r5MQ8xBKeb-7bQLmNtwFKesjDqtqdIrFGscAxpmklLQY-E5MbkV4W08TYxRhKMtfdiNYFrXMtdV7r1nQ-fV9VlfpJxLy3tbQB1n3q3CYUASVvTTByLQsbohvZqAzwpczmixETnE7hcyvuRD0TgdBRP5ulm9DbiUAcvad54Qjq3VVVxwA55DvnvpwdPZV3K7DzZgI");'></div>
+</div>
+</header>
+<main class="flex-1 flex items-center justify-center p-6">
+<!-- Main Booking Page Background Content (Simulated) -->
+<div class="max-w-4xl w-full opacity-30 pointer-events-none select-none">
+<h1 class="text-4xl font-extrabold mb-4">Booking Summary</h1>
+<div class="h-64 bg-slate-200 dark:bg-slate-800 rounded-xl mb-4"></div>
+<div class="h-12 bg-slate-200 dark:bg-slate-800 rounded-xl w-1/2 mb-4"></div>
+<div class="grid grid-cols-3 gap-4">
+<div class="h-32 bg-slate-200 dark:bg-slate-800 rounded-xl"></div>
+<div class="h-32 bg-slate-200 dark:bg-slate-800 rounded-xl"></div>
+<div class="h-32 bg-slate-200 dark:bg-slate-800 rounded-xl"></div>
+</div>
+</div>
+<!-- Referral Popup Modal -->
+<div class="fixed inset-0 z-50 flex items-center justify-center modal-overlay p-4">
+<div class="bg-white dark:bg-[#1a2634] w-full max-w-[640px] rounded-xl shadow-2xl overflow-hidden flex flex-col relative">
+<!-- Confetti/Celebration Accent -->
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-purple-500 to-primary"></div>
+<!-- Close Button -->
+<button class="absolute top-4 right-4 text-[#4c739a] hover:text-[#0d141b] dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+<!-- Hero Header -->
+<div class="pt-10 px-8 text-center">
+<div class="inline-flex items-center justify-center size-14 bg-primary/10 rounded-full mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">task_alt</span>
+</div>
+<h1 class="text-[#0d141b] dark:text-white tracking-tight text-3xl font-extrabold leading-tight mb-2">
+                        Pack your bags! Your trip is booked.
+                    </h1>
+<p class="text-[#4c739a] dark:text-slate-400 text-base font-normal mb-8">
+                        A confirmation email has been sent to your inbox.
+                    </p>
+</div>
+<!-- Referral Card -->
+<div class="px-8 pb-8 flex flex-col gap-6">
+<div class="bg-primary/5 dark:bg-primary/10 border border-primary/10 rounded-xl overflow-hidden shadow-sm">
+<div class="flex flex-col @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start p-1">
+<!-- Destination Graphic Preview -->
+<div class="relative w-full @xl:w-1/2 bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-lg group overflow-hidden" data-alt="Vibrant tropical beach resort destination graphic" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxXVTobcefSSKy8KJOt6zAEX22-EyItkr-bZf0BblaEMxf2QRWSK6FqrryGngMh-PVBKCoL_0QwOmEf4fw7cZZjyPqw_3hh7vrIhHj4sY5M9gIlxSwIfGIOG-lXOnyeKTOEEXguYOhqhL_Z9l5XLVVXMZF6Nn7XzCCs2A8Slpxuclaq8VL0Qr276YeNmb2bhowBy5yjcHmH084oJAsFETmqFso200_HkJNbSfAum8MFLcPLpNMZOkApQBsaQQuoKSpa-AHdvYA0lg");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4">
+<p class="text-white text-xs font-bold uppercase tracking-widest opacity-80 mb-1">HYDRASCAPES</p>
+<p class="text-white text-lg font-extrabold">Next Stop: Paradise 🏝️</p>
+</div>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="bg-white/90 text-primary px-3 py-1 rounded-full text-xs font-bold">PREVIEW</span>
+</div>
+</div>
+<!-- Offer Content -->
+<div class="flex w-full @xl:w-1/2 flex-col items-stretch justify-center gap-4 py-6 px-6">
+<div>
+<h3 class="text-primary text-2xl font-black leading-tight mb-1">Want $100 off?</h3>
+<p class="text-[#4c739a] dark:text-slate-300 text-sm font-medium leading-relaxed">
+                                            Invite your travel crew and we'll credit your account as soon as they book.
+                                        </p>
+</div>
+<button class="w-full flex cursor-pointer items-center justify-center gap-2 rounded-xl h-12 px-6 bg-primary hover:bg-primary/90 text-white text-sm font-bold transition-all shadow-md shadow-primary/20 active:scale-[0.98]">
+<span class="material-symbols-outlined text-xl">share</span>
+<span class="truncate">Post to Story</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Email Invite Field -->
+<div class="flex flex-col gap-2">
+<label class="text-[#0d141b] dark:text-slate-200 text-sm font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">alternate_email</span>
+                            Invite via email
+                        </label>
+<div class="flex w-full items-stretch rounded-xl shadow-sm">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-xl text-[#0d141b] dark:text-white focus:outline-0 focus:ring-0 border border-[#cfdbe7] dark:border-slate-700 bg-slate-50 dark:bg-[#101922] focus:border-primary dark:focus:border-primary h-14 placeholder:text-[#4c739a] p-[15px] pr-2 text-base font-normal" placeholder="friend@email.com" type="email" value=""/>
+<button class="bg-primary hover:bg-primary/90 text-white flex items-center justify-center px-6 rounded-r-xl transition-colors">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+<p class="text-[#4c739a] dark:text-slate-400 text-[11px] text-center mt-2">
+                            By inviting friends, you agree to our <a class="underline hover:text-primary" href="#">Referral Terms</a>.
+                        </p>
+</div>
+</div>
+<!-- Secondary Action -->
+<div class="bg-slate-50 dark:bg-[#151e29] px-8 py-4 flex justify-center border-t border-slate-100 dark:border-slate-800">
+<button class="text-[#4c739a] dark:text-slate-400 text-sm font-semibold hover:text-[#0d141b] dark:hover:text-white transition-colors">
+                        Maybe later, just show me my booking
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Credit -->
+<footer class="p-6 text-center text-[#4c739a] text-sm">
+        © 2024 HYDRASCAPES Travel Agency. All rights reserved.
+    </footer>
+</body></html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin: SEO-Optimized Article Editor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 flex items-center justify-between border-b border-solid border-slate-200 dark:border-[#232f48] bg-background-light dark:bg-background-dark px-6 py-3">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight">HYDRASCAPES Admin</h2>
+<div class="h-6 w-px bg-slate-200 dark:bg-[#232f48] mx-2"></div>
+<div class="flex items-center gap-2">
+<a class="text-slate-500 dark:text-[#92a4c9] text-sm font-medium hover:text-primary transition-colors" href="#">Admin</a>
+<span class="text-slate-400 dark:text-[#92a4c9] text-sm font-medium">/</span>
+<a class="text-slate-500 dark:text-[#92a4c9] text-sm font-medium hover:text-primary transition-colors" href="#">Blog</a>
+<span class="text-slate-400 dark:text-[#92a4c9] text-sm font-medium">/</span>
+<span class="text-slate-900 dark:text-white text-sm font-medium">Editor</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-6 mr-6">
+<a class="text-slate-900 dark:text-white text-sm font-medium" href="#">Dashboard</a>
+<a class="text-slate-900 dark:text-white text-sm font-medium border-b-2 border-primary" href="#">Content</a>
+<a class="text-slate-900 dark:text-white text-sm font-medium" href="#">Media</a>
+<a class="text-slate-900 dark:text-white text-sm font-medium" href="#">Analytics</a>
+</div>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-slate-200 dark:bg-[#232f48] text-slate-900 dark:text-white text-sm font-bold">
+<span>Save Draft</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-primary text-white text-sm font-bold">
+<span>Publish</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-9 border border-slate-200 dark:border-slate-700" data-alt="Admin profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBRt3SAzXGBZCfnfkU7lnoChcXyF5p3KZOJPmUqssoc3Er5_GIZrOT1eGOqsZ7VP08cfbLcj98xkPgPsakoeucwfl6sCntYiCgvKXv2BrnMNDqM3q-DP0kd-CpL0W54mQa4e9s2rW2lb9lgq00UiZIDz8qDp-EsbZJBJWWjDbbQn_wnaIfWXo4pJ0M_6I0Fm1Qjwv57ysjikDAjZcg6pcubRFXRgqGTXQm36FaASFffxWmTwDuP3iv-kLRBFX5ExRYhxWLFBBxVX6s");'></div>
+</div>
+</header>
+<!-- Main Content Area: Split Screen -->
+<main class="flex flex-1 overflow-hidden h-[calc(100vh-61px)]">
+<!-- Left Side Navigation (Minimizable) -->
+<aside class="w-64 border-r border-slate-200 dark:border-[#232f48] flex flex-col justify-between p-4 bg-background-light dark:bg-background-dark overflow-y-auto">
+<div class="flex flex-col gap-6">
+<div class="flex flex-col px-2">
+<h1 class="text-slate-900 dark:text-white text-base font-bold">Post Editor</h1>
+<p class="text-slate-500 dark:text-[#92a4c9] text-xs font-normal">Editing Draft Mode</p>
+</div>
+<nav class="flex flex-col gap-1">
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-xl">edit_note</span>
+<p class="text-sm font-semibold">Content Editor</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-[#92a4c9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-xl">travel_explore</span>
+<p class="text-sm font-medium">SEO Audit</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-[#92a4c9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-xl">image</span>
+<p class="text-sm font-medium">Media Assets</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-[#92a4c9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-xl">history</span>
+<p class="text-sm font-medium">Revision History</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-[#92a4c9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-xl">settings</span>
+<p class="text-sm font-medium">Post Settings</p>
+</div>
+</nav>
+</div>
+<div class="p-3 bg-slate-100 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700/50">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-bold text-slate-500 dark:text-slate-400">SEO Health</span>
+<span class="text-xs font-bold text-primary">82/100</span>
+</div>
+<div class="w-full bg-slate-200 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[82%]"></div>
+</div>
+</div>
+</aside>
+<!-- Center: The Content Editor -->
+<section class="flex-1 flex flex-col bg-white dark:bg-[#111722] overflow-y-auto scrollbar-hide relative">
+<!-- Content Header -->
+<div class="p-8 pb-4 max-w-4xl mx-auto w-full">
+<div class="flex justify-between items-end mb-6">
+<div class="flex flex-col gap-1">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Article Draft</span>
+<input class="bg-transparent border-none p-0 text-4xl font-extrabold text-slate-900 dark:text-white placeholder-slate-300 dark:placeholder-slate-700 focus:ring-0 w-full" placeholder="Enter title..." type="text" value="Top 10 Hidden Gems in the Amalfi Coast"/>
+<p class="text-slate-400 text-sm mt-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-base">cloud_done</span>
+                            Last saved: 2 minutes ago
+                        </p>
+</div>
+<button class="mb-2 flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-[#232f48] rounded-lg text-slate-700 dark:text-white text-sm font-semibold hover:bg-slate-200 dark:hover:bg-[#2d3a56] transition-colors">
+<span class="material-symbols-outlined text-lg">visibility</span>
+                        Preview
+                    </button>
+</div>
+<!-- Rich Text Toolbar (Floating/Sticky) -->
+<div class="sticky top-0 z-10 py-3 mb-6 flex items-center gap-1 border-y border-slate-200 dark:border-[#232f48] bg-white dark:bg-[#111722]">
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors text-slate-600 dark:text-white">
+<span class="material-symbols-outlined">format_bold</span>
+</button>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors text-slate-600 dark:text-white">
+<span class="material-symbols-outlined">format_italic</span>
+</button>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors text-slate-600 dark:text-white">
+<span class="material-symbols-outlined">format_list_bulleted</span>
+</button>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors text-slate-600 dark:text-white">
+<span class="material-symbols-outlined">format_quote</span>
+</button>
+<div class="h-6 w-px bg-slate-200 dark:bg-slate-700 mx-1"></div>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors text-slate-600 dark:text-white">
+<span class="material-symbols-outlined">link</span>
+</button>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors text-slate-600 dark:text-white">
+<span class="material-symbols-outlined">image</span>
+</button>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors text-slate-600 dark:text-white">
+<span class="material-symbols-outlined">code</span>
+</button>
+<div class="h-6 w-px bg-slate-200 dark:bg-slate-700 mx-1"></div>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors text-slate-600 dark:text-white">
+<span class="material-symbols-outlined">undo</span>
+</button>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors text-slate-600 dark:text-white">
+<span class="material-symbols-outlined">redo</span>
+</button>
+</div>
+<!-- Editor Body -->
+<div class="prose prose-slate dark:prose-invert max-w-none pb-24">
+<p class="text-slate-700 dark:text-slate-300 text-lg leading-relaxed mb-6">
+                        While the world flocks to the main squares of Positano and Amalfi, there lies a quieter, more enchanting side to this UNESCO World Heritage coast. If you're looking for an authentic experience, skip the crowds and head to these secret spots.
+                    </p>
+<div class="group relative my-8 overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 aspect-video">
+<img class="w-full h-full object-cover" data-alt="Scenic landscape of Fiordo di Furore bridge and beach" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4m8RZdF-_O4HMUKwNVnCh8T9ouN8Lbb12vwj2kvCSrHuPZ6av-uDsTcb03Xb572HFuuLUUFVVLHibMmE0hABQ3-Ch9wvCuEkWtlyMV-yiT6wn_BtHK22vI80r92GnOYViEp_6E7_gMCFxOJwX5cDr7LrzlT0LajpHAoH7WLeud5eiCUYMBkU5O34i97_i7O5tVmPy9Tl7srApRs_lOSKvOQ2ekuSZItS8URgfuDI1YR4XV8DRfaWoDp53UKvkmRnyvJn2AiodDew"/>
+<div class="absolute top-4 right-4 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded flex items-center gap-1 shadow-lg">
+<span class="material-symbols-outlined text-xs">warning</span> Missing Alt Text
+                        </div>
+</div>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">1. Fiordo di Furore</h2>
+<p class="text-slate-700 dark:text-slate-300 text-lg leading-relaxed mb-6">
+                        Nestled in a deep gorge, this "fjord" is actually a ria—a narrow coastal inlet created by the Schiato stream. It's home to a tiny beach and a collection of old fishermen's houses that seem to cling to the rock faces.
+                    </p>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">2. Atrani: The Smallest Town in Italy</h2>
+<p class="text-slate-700 dark:text-slate-300 text-lg leading-relaxed mb-6">
+                        Just a ten-minute walk from Amalfi, Atrani remains miraculously untouched by mass tourism. Its maze of whitewashed alleys and stairways is a delight for photographers and slow-travel enthusiasts alike.
+                    </p>
+</div>
+</div>
+<!-- Floating Status Footer -->
+<div class="sticky bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-6 px-6 py-3 bg-white/80 dark:bg-[#1e293b]/90 backdrop-blur-md rounded-full shadow-2xl border border-slate-200 dark:border-slate-700 mb-4">
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-slate-400">Words</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">1,240</span>
+</div>
+<div class="h-4 w-px bg-slate-300 dark:bg-slate-700"></div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-slate-400">Reading Time</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">6 min</span>
+</div>
+<div class="h-4 w-px bg-slate-300 dark:bg-slate-700"></div>
+<div class="flex items-center gap-2">
+<div class="size-2 bg-green-500 rounded-full animate-pulse"></div>
+<span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Autosaved at 14:42</span>
+</div>
+</div>
+</section>
+<!-- Right Side: SEO Optimizer Panel -->
+<aside class="w-80 border-l border-slate-200 dark:border-[#232f48] bg-slate-50 dark:bg-[#101622] overflow-y-auto scrollbar-hide">
+<div class="p-5 flex flex-col gap-6">
+<!-- SEO Score Card -->
+<div class="bg-white dark:bg-[#1e293b] p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-bold text-slate-900 dark:text-white text-sm">SEO Score</h3>
+<span class="material-symbols-outlined text-primary">info</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="relative size-24">
+<svg class="size-full" viewbox="0 0 36 36">
+<circle class="stroke-slate-100 dark:stroke-slate-800" cx="18" cy="18" fill="none" r="16" stroke-width="3"></circle>
+<circle class="stroke-primary" cx="18" cy="18" fill="none" r="16" stroke-dasharray="82, 100" stroke-linecap="round" stroke-width="3"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-2xl font-black text-slate-900 dark:text-white">82</span>
+</div>
+</div>
+<p class="text-xs text-green-500 font-bold mt-2">Good Performance</p>
+</div>
+</div>
+<!-- Google Snippet Preview -->
+<div class="flex flex-col gap-3">
+<h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Google Preview</h3>
+<div class="bg-white dark:bg-[#1e293b] p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 text-xs text-slate-500">
+<span>hydrascapes.com › travel › blog</span>
+<span class="material-symbols-outlined text-[10px]">expand_more</span>
+</div>
+<h4 class="text-lg font-medium text-blue-700 dark:text-blue-400 hover:underline cursor-pointer">Top 10 Hidden Gems in the Amalfi Coast - Hydrascapes</h4>
+<p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-2">Discover the best hidden gems in the Amalfi Coast. From secret beaches like Fiordo di Furore to the quiet streets of Atrani, explore Italy's best kept secrets...</p>
+</div>
+</div>
+</div>
+<!-- Target Keywords -->
+<div class="flex flex-col gap-3">
+<h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Focus Keyword</h3>
+<div class="relative">
+<input class="w-full bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-700 rounded-lg py-2 px-3 text-sm text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none" type="text" value="Amalfi Coast hidden gems"/>
+</div>
+<div class="flex flex-col gap-2 mt-2">
+<div class="flex items-center justify-between p-2 bg-green-500/10 rounded border border-green-500/20">
+<span class="text-xs font-medium text-green-600 dark:text-green-400">Title inclusion</span>
+<span class="material-symbols-outlined text-green-500 text-sm">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-green-500/10 rounded border border-green-500/20">
+<span class="text-xs font-medium text-green-600 dark:text-green-400">First paragraph</span>
+<span class="material-symbols-outlined text-green-500 text-sm">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-red-500/10 rounded border border-red-500/20">
+<span class="text-xs font-medium text-red-600 dark:text-red-400">Density (0.4%)</span>
+<span class="material-symbols-outlined text-red-500 text-sm">arrow_upward</span>
+</div>
+</div>
+</div>
+<!-- Alt Text Manager -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Imagery &amp; Alt Text</h3>
+<span class="text-[10px] bg-red-500/20 text-red-500 px-1.5 py-0.5 rounded font-bold">2 Missing</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="aspect-square rounded-lg bg-slate-200 dark:bg-slate-800 overflow-hidden relative group border-2 border-red-500/50">
+<img class="w-full h-full object-cover" data-alt="Furore beach thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtnMHQrqxG6N3eLd8hlihOnNFWhxNPCMLc9JrSVz-UHKWvYN3YcbZKz-RO1o6fQU3Pd5NAJYwY4lbYIGy4F2FnA4zmbTKXQK1wiIg1R2qIdWh0yBRSZVdfw8e5vh4kecDRgq2wSXaMYl7DnwDgHHDOifWfEGHkDHUl-wHuCJA7Ne7-N24IIvL0bGIksL983_guaKLeafIT5hHeKba-J4stlhAnu-JcKHib7ax2oWIWlNJ3iHpKChSHGDzTBB1ecDfaX9_cP9xG_9U"/>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity cursor-pointer">
+<span class="text-[10px] text-white font-bold">Fix Alt</span>
+</div>
+</div>
+<div class="aspect-square rounded-lg bg-slate-200 dark:bg-slate-800 overflow-hidden relative group border-2 border-green-500/50">
+<img class="w-full h-full object-cover" data-alt="Italy colorful houses thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx8o-OS7eUq2O2gmDoEormMYR3mxm3izh3paA-iDFx75G0ykZ-gNsT1nlpDJJyd2WAU7bXYsYAohJPSarXnfAF_FvZ9fqjYHqBUg4jZ9jEH2iPHqpGD3tZLUV5Jt3E1n856fXCxeX4dNHWV0oQxblvovICQMSpJLNzh2KGOSfpK2poXBwiPwPyxGNY6FAlho6hakhSdt-lWsO3DUcaW0jv2CgSYi5UvxPjRfulvYqFIGiXiTg6_j4p_4UALlyZz4pPkTybkwome0s"/>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity cursor-pointer">
+<span class="text-[10px] text-white font-bold">Edit Alt</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Meta Description -->
+<div class="flex flex-col gap-3">
+<div class="flex justify-between">
+<h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Meta Description</h3>
+<span class="text-[10px] text-slate-400">142/160</span>
+</div>
+<textarea class="w-full h-24 bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-700 rounded-lg p-3 text-xs text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none resize-none">Discover the best hidden gems in the Amalfi Coast. From secret beaches like Fiordo di Furore to the quiet streets of Atrani, explore Italy's best kept secrets.</textarea>
+<div class="w-full bg-slate-200 dark:bg-slate-800 h-1 rounded-full overflow-hidden">
+<div class="bg-green-500 h-full w-[88%]"></div>
+</div>
+</div>
+</div>
+</aside>
+</main>
+</body></html>

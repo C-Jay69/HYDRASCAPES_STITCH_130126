@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ambassador Program | HYDRASCAPES</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d141b] dark:text-slate-50 transition-colors duration-300">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-solid border-[#e7edf3] dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-20 lg:px-40 py-3">
+<div class="max-w-[1280px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold tracking-tight">HYDRASCAPES</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#perks">Perks</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#audience">Who We Are</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#apply">Apply</a>
+</nav>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all" onclick="document.getElementById('apply').scrollIntoView({behavior: 'smooth'})">
+                Apply Now
+            </button>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto">
+<!-- Split-Screen Hero Section -->
+<section class="flex flex-col lg:flex-row w-full min-h-[85vh] overflow-hidden">
+<!-- Left Side: Lifestyle Content Creator -->
+<div class="relative w-full lg:w-1/2 flex items-center justify-center p-8 lg:p-20 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center z-0 scale-105" data-alt="Influencer traveler taking photo at resort" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBbG4sB_o-_QcjOLFAJ4MTiNhbTgGljhpTCmNBaF0TICM4bellURtf3Vng9iGgu1PBgXokEho4mvQTii5JSX3y3DPsqgqCGW1GO3vUUNj_PeG6w0uiyBznQ8tVfPCW4P-JC2m2UOrWOaDv2xNZDHM044qTqAyRcC34CyKionfpYg4batZp4IPYlEIz9V6UbaIYo-XAy8M3ibJ9H0nM0jCiJrl6m6KRvY05Hsdhv3QFCyCuRjw7QHaMPN4ZhZ5BGBaYMXeTrIKHNuJk");'></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark/60 via-background-dark/20 to-transparent z-10"></div>
+<div class="relative z-20 max-w-lg">
+<span class="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-widest text-white uppercase bg-primary rounded-full">Elite Program</span>
+<h1 class="text-white text-5xl lg:text-7xl font-black leading-tight tracking-[-0.04em] mb-6">
+                        Travel the World as a <span class="text-primary">HYDRASCAPES</span> Ambassador
+                    </h1>
+<p class="text-slate-100 text-lg lg:text-xl font-normal leading-relaxed mb-8">
+                        Turn your passion for discovery into exclusive rewards and global influence. Join our inner circle of elite explorers.
+                    </p>
+<button class="flex min-w-[180px] items-center justify-center rounded-xl h-14 px-8 bg-primary text-white text-lg font-bold shadow-2xl shadow-primary/40 hover:scale-105 transition-transform" onclick="document.getElementById('apply').scrollIntoView({behavior: 'smooth'})">
+                        Apply to Join
+                    </button>
+</div>
+</div>
+<!-- Right Side: Stunning Destination -->
+<div class="hidden lg:block w-1/2 relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Breathtaking view of Santorini blue domes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBh1i_kUlmtUsWouKRCQbYprUF8hdXpvQaVTVtcMVRty3EDOy-LbFma09-6b3hcw8tg6XhGkIWkcW_lmDHThPtWfP2X2awJYe-u2zYkpDhKWqBz1Q2yZV6cvEVTl3rc-Y0JPnAqFXKkFJUTcuK_rEMF1365fGMYNabmpbqNrC6kcaXLk7gFZXozG5vn8nafGgi1jIOcNZw-MAQ4x9J7BFGmlfLi8DIwWv8fxWqgAgi7Pakr3P7ehIuVasWJfpn6JZZQbcDdRqvpCIw");'></div>
+<div class="absolute bottom-10 right-10 p-6 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 text-white">
+<p class="text-xs font-bold uppercase tracking-widest opacity-70">Current Route</p>
+<p class="text-xl font-bold">Oia, Santorini</p>
+</div>
+</div>
+</section>
+<!-- Perks Section -->
+<section class="py-20 px-6 md:px-20 lg:px-40 bg-white dark:bg-slate-900/50" id="perks">
+<div class="mb-12 text-center">
+<h2 class="text-3xl lg:text-4xl font-black tracking-tight mb-4">Exclusive Ambassador Perks</h2>
+<div class="h-1.5 w-20 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Perk 1 -->
+<div class="group flex flex-col gap-6 p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-800 hover:border-primary transition-all">
+<div class="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">flight_takeoff</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-3">Free Trips &amp; Upgrades</h3>
+<p class="text-[#4c739a] dark:text-slate-400 leading-relaxed">Experience the world on us with all-expenses paid luxury trips and VIP upgrades at our partner resorts.</p>
+</div>
+</div>
+<!-- Perk 2 -->
+<div class="group flex flex-col gap-6 p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-800 hover:border-primary transition-all">
+<div class="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-3">Exclusive Commission</h3>
+<p class="text-[#4c739a] dark:text-slate-400 leading-relaxed">Earn industry-leading rewards for every traveler you refer to our unique boutique routes.</p>
+</div>
+</div>
+<!-- Perk 3 -->
+<div class="group flex flex-col gap-6 p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-800 hover:border-primary transition-all">
+<div class="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-3">Early Access</h3>
+<p class="text-[#4c739a] dark:text-slate-400 leading-relaxed">Be the very first to explore and document our newest hidden gems before they go public.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Who We Are Looking For Section -->
+<section class="py-20 px-6 md:px-20 lg:px-40" id="audience">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="w-full lg:w-1/2">
+<h2 class="text-3xl lg:text-4xl font-black tracking-tight mb-8">Who We Are Looking For</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center font-bold text-primary">01</div>
+<div>
+<h4 class="text-lg font-bold mb-2">Visual Creators</h4>
+<p class="text-[#4c739a] dark:text-slate-400">Content creators and photographers who can capture the soul of a destination through high-quality visual storytelling.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center font-bold text-primary">02</div>
+<div>
+<h4 class="text-lg font-bold mb-2">Community Leaders</h4>
+<p class="text-[#4c739a] dark:text-slate-400">Group leaders and networkers who naturally inspire others to explore the world and try new experiences.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center font-bold text-primary">03</div>
+<div>
+<h4 class="text-lg font-bold mb-2">Passionate Travelers</h4>
+<p class="text-[#4c739a] dark:text-slate-400">Authentic explorers who live for the "off-the-beaten-path" moments and value deep cultural immersion.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 grid grid-cols-2 gap-4">
+<div class="h-64 rounded-2xl bg-cover bg-center shadow-lg" data-alt="Traveler documenting with camera" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCm7MlxDwLQeXEKPFG_RhqtGaBwFrFy19XQdY0xQMukC2fLLc7PGZM5ceEci4YlVVaPkhGjd_mHQWpvn0NDaomt1yjjixDzL6JJ66ux9UYmIYQWPin5DBn_bj9CHqKybceQqaOYRUuuh7aWTTLhLFyNr7ufw-eqjDftOcV5ZAUZa8fMN-F6lqc7yS_Ksoj-Br6JAbWHSUGrOdeu2fDjeLAw655A92fOqynX7VFkf85R0wpyq4eK_loYpM02PUmgvW-w8cW-NIhO_-Y");'></div>
+<div class="h-64 rounded-2xl bg-cover bg-center shadow-lg mt-8" data-alt="Group of friends hiking together" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD7MA8hG-4S3KqhB3HHmw-bzMY28-kgh0a1K96tbbGc4B2BlrRa6MGpMCQ3TZ3mKTo4aMA7_Puwz9iSVS5S_455NeOj_o0s859pZRbh_vPO0zK1IrIY54zomlGDwhiwQoEeu-x3LQSxAZhMbE8BW2b9sXBT-KjWa24pZ4ju62wressF_MaO8GBf0DnB7X8e-9b1xNQTCUu1SFk62x4GnfNrnRYLbx_OKX0arLf-uBaGqZ8k2dlt2yLWr61JeD6Xzm074bBwFWz-RtA");'></div>
+</div>
+</div>
+</section>
+<!-- Application Form Section -->
+<section class="py-20 px-6 md:px-20 lg:px-40 bg-primary/5 dark:bg-primary/10" id="apply">
+<div class="max-w-3xl mx-auto bg-white dark:bg-background-dark p-8 md:p-12 rounded-3xl shadow-2xl border border-slate-100 dark:border-slate-800">
+<div class="text-center mb-10">
+<h2 class="text-3xl font-black mb-4">Start Your Journey</h2>
+<p class="text-[#4c739a] dark:text-slate-400">Tell us about yourself and why you'd be a perfect fit for the elite Hydrascapes collective.</p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold opacity-70">Full Name</label>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:ring-primary focus:border-primary px-4 py-3" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold opacity-70">Instagram / TikTok Handle</label>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:ring-primary focus:border-primary px-4 py-3" placeholder="@yourhandle" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold opacity-70">Primary Travel Niche</label>
+<select class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:ring-primary focus:border-primary px-4 py-3">
+<option>Adventure &amp; Outdoor</option>
+<option>Luxury &amp; Lifestyle</option>
+<option>Cultural Exploration</option>
+<option>Hidden Gems &amp; Local Secrets</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold opacity-70">Why do you want to join Hydrascapes?</label>
+<textarea class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:ring-primary focus:border-primary px-4 py-3" placeholder="Tell us your story..." rows="4"></textarea>
+</div>
+<button class="w-full flex items-center justify-center rounded-xl h-14 bg-primary text-white text-lg font-bold shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all" type="submit">
+                        Submit Application
+                    </button>
+<p class="text-center text-xs text-[#4c739a] opacity-60">By submitting, you agree to our Terms of Service and Privacy Policy.</p>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="py-12 border-t border-slate-200 dark:border-slate-800 text-center">
+<div class="flex justify-center items-center gap-4 mb-6">
+<div class="size-5 text-primary opacity-50">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+</div>
+<p class="font-bold text-sm tracking-widest opacity-50">HYDRASCAPES © 2024</p>
+</div>
+<div class="flex justify-center gap-6 text-sm opacity-50">
+<a class="hover:underline" href="#">Instagram</a>
+<a class="hover:underline" href="#">TikTok</a>
+<a class="hover:underline" href="#">YouTube</a>
+</div>
+</footer>
+</body></html>

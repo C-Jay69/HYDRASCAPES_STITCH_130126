@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ocean Cruise Cabin Selection | HYDRASCAPES</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0dccf2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d191c] dark:text-white min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#e7f1f4] dark:border-white/10 px-6 lg:px-20 py-4">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+</div>
+<h2 class="text-xl font-extrabold tracking-tight">HYDRASCAPES</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Destinations</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Cruises</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Decks</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">My Bookings</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full text-sm font-bold transition-all">Sign In</button>
+<div class="size-10 rounded-full bg-cover bg-center border-2 border-primary/20" data-alt="User profile avatar icon" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDcowXaY5gDE57OYwXtFhoeUxwQuKoaWKvllxKZ_5SQaLsgSOnJJ6dxc6BnRiivpkB2zplSyDbThoOZCdanxaWbBEDgSoFlC3UVI8AttYG7G9Fd6gpLWa9HfHAvP28lzqJ8gFPHsZugkLqK8CF5SOkRDxXzll-iVFqF5Rw8KRZY2mcCUsS5fytAeDuwzQl69bA9n8lyDPzu2UJCBqfv9o6TfqLINMuej-d81uTNCfvNbEpxQtlB-gnmz2ahUJe91sXyW4dKj_01kvg')"></div>
+</div>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto px-6 lg:px-20 py-8">
+<!-- Booking Progress Bar -->
+<div class="mb-10 max-w-2xl">
+<div class="flex justify-between items-end mb-2">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Step 2 of 4</span>
+<h3 class="text-lg font-bold">Cabin Selection</h3>
+</div>
+<span class="text-sm font-semibold">40% Complete</span>
+</div>
+<div class="h-2 w-full bg-[#cee4e8] dark:bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 40%;"></div>
+</div>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div class="max-w-2xl">
+<h1 class="text-5xl font-black leading-tight tracking-tighter mb-4">Choose Your Sanctuary</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400">Discover the perfect space for your journey on the <span class="text-[#0d191c] dark:text-white font-bold italic">HMS Majestic</span>. All rooms include 24/7 service and premium amenities.</p>
+</div>
+<button class="flex items-center gap-2 bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 px-6 py-3 rounded-xl font-bold transition-all text-sm">
+<span class="material-symbols-outlined text-xl">map</span>
+                View Interactive Deck Plan
+            </button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Left Side: Deck Visualizer & Controls -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- Deck Tabs -->
+<div class="bg-white dark:bg-white/5 p-2 rounded-2xl border border-slate-100 dark:border-white/10">
+<div class="flex overflow-x-auto no-scrollbar gap-2 p-1">
+<button class="flex-1 py-3 px-4 rounded-xl text-xs font-bold whitespace-nowrap bg-slate-100 dark:bg-white/5 text-slate-500">Deck 12</button>
+<button class="flex-1 py-3 px-4 rounded-xl text-xs font-bold whitespace-nowrap bg-slate-100 dark:bg-white/5 text-slate-500">Deck 11</button>
+<button class="flex-1 py-3 px-4 rounded-xl text-xs font-bold whitespace-nowrap bg-primary text-white shadow-lg shadow-primary/30">Deck 10</button>
+<button class="flex-1 py-3 px-4 rounded-xl text-xs font-bold whitespace-nowrap bg-slate-100 dark:bg-white/5 text-slate-500">Deck 09</button>
+<button class="flex-1 py-3 px-4 rounded-xl text-xs font-bold whitespace-nowrap bg-slate-100 dark:bg-white/5 text-slate-500">Deck 08</button>
+</div>
+</div>
+<!-- Ship Map Visual -->
+<div class="relative bg-white dark:bg-white/5 rounded-3xl p-6 border border-slate-100 dark:border-white/10 flex flex-col items-center justify-center min-h-[500px] group">
+<div class="absolute top-6 left-6 flex flex-col gap-1">
+<span class="text-xs font-black uppercase text-slate-400">Current View</span>
+<span class="text-xl font-bold">Lido Deck Panorama</span>
+</div>
+<div class="w-full h-80 bg-center bg-contain bg-no-repeat transition-transform duration-500 group-hover:scale-105" data-alt="Blueprint of a cruise ship deck layout with numbered cabins" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXjriMYtW-G_nKaHPvfCdGPRj-vD_rHEvohZjMTWtX44AfuaxBm7ObD0n5GtNTxkOdbCoz_Hy6Q2o2C5qbIU9vaWCVTsVDcy4OKzMhet7iGCG7rHONFSUPm-uQnUqgqz9HVYrpBEOEZkQjbQ55osuYrmNp3NEKBpskvd-NdQGyLS6OUo87ADw2Ij1ReukHFuTuxnlBqIDMwc5crZyfO18IBKV9WqqXBWWZtl-HdtfBhz0mtpV_t-UpuGYTfdWojPj5DoBPJpr9YEE')">
+</div>
+<div class="mt-8 flex gap-6 text-[10px] font-bold uppercase tracking-widest text-slate-500">
+<div class="flex items-center gap-2">
+<span class="size-3 bg-primary rounded-full"></span> Available
+                        </div>
+<div class="flex items-center gap-2">
+<span class="size-3 bg-slate-300 dark:bg-white/20 rounded-full"></span> Booked
+                        </div>
+<div class="flex items-center gap-2">
+<span class="size-3 bg-amber-400 rounded-full"></span> Selected
+                        </div>
+</div>
+</div>
+</div>
+<!-- Right Side: Cabin Selection List -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<!-- Cabin Card: Suite (Premium Nudge) -->
+<div class="bg-white dark:bg-white/5 rounded-3xl overflow-hidden border-2 border-transparent hover:border-primary/50 transition-all group flex flex-col md:flex-row h-full md:h-64">
+<div class="md:w-2/5 relative h-48 md:h-full">
+<div class="absolute top-4 left-4 z-10 bg-amber-400 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">Great Value</div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Luxury junior suite with balcony and ocean view" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC34-T5Mue9hH1PSNEuXFYgbX6I7yK4KWAkSl4QQRJV6aveAlgjS4v_7_ggccBJ7vMpDMBCqmA-t_z2FAosch9QXGNGhf2DsWn_FkTM5AGd8TrhpJS0CiKJhPCoiCx4sw53QVaj-2_rcQ5fe3eASxjg6T1PPJ2q9Re5w4VLE5CrIeMQGYB8qdvWtslr3x5szTWr5qlxk9eZQsBSB1rZhzqXYdnSNq6ejVwkSkebr-e9os5_JZKQviENT_SOQ0hFiZKN4iiUgcUiEVk')"></div>
+</div>
+<div class="md:w-3/5 p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-xl font-extrabold">Junior Suite</h4>
+<div class="text-right">
+<span class="block text-2xl font-black text-primary">$1,849</span>
+<span class="text-[10px] text-slate-400 uppercase font-bold">per guest</span>
+</div>
+</div>
+<ul class="grid grid-cols-2 gap-y-1 gap-x-4 mb-4">
+<li class="flex items-center gap-2 text-xs font-medium text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Private Veranda
+                                </li>
+<li class="flex items-center gap-2 text-xs font-medium text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Priority Boarding
+                                </li>
+<li class="flex items-center gap-2 text-xs font-medium text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Butler Service
+                                </li>
+<li class="flex items-center gap-2 text-xs font-medium text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> 420 sq. ft.
+                                </li>
+</ul>
+</div>
+<button class="w-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 py-3 rounded-2xl font-bold text-sm hover:scale-[1.02] transition-transform">Select Junior Suite</button>
+</div>
+</div>
+<!-- Cabin Card: Balcony (Most Popular Nudge) -->
+<div class="bg-white dark:bg-white/5 rounded-3xl overflow-hidden border-2 border-primary shadow-xl shadow-primary/10 transition-all group flex flex-col md:flex-row h-full md:h-64">
+<div class="md:w-2/5 relative h-48 md:h-full">
+<div class="absolute top-4 left-4 z-10 bg-primary text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">Most Popular</div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Modern cabin room with sliding glass door to private balcony" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnxBSojLKLKDmZA1XH_ElEjo-rDU1DUaJGAu2hSh0xuCiue4qRthS--lVIf8E2ByoJ6_oYMW8hr8wHddl9H1t29Y8G0Bx7RAcO05lC9_YzcATiFioyAshyjU_Ycd4CQ9msuf49D1qwWdamjCqtQaXjX-qDocwEeHqcODMjhKYYNaS7DymqciBx9Z9zaOniecHT5vJnrOyxaNaC63dKCDTgqt_BFKjtzeAHHPQeGSGNYKx3G4u9Iux4GhKonleP6vUZl5SB3K9SHiw')"></div>
+</div>
+<div class="md:w-3/5 p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-xl font-extrabold">Balcony Stateroom</h4>
+<div class="text-right">
+<span class="block text-2xl font-black text-primary">$1,299</span>
+<span class="text-[10px] text-slate-400 uppercase font-bold">per guest</span>
+</div>
+</div>
+<ul class="grid grid-cols-2 gap-y-1 gap-x-4 mb-4">
+<li class="flex items-center gap-2 text-xs font-medium text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Private Balcony
+                                    </li><li class="flex items-center gap-2 text-xs font-medium text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Ocean Views
+                                </li>
+<li class="flex items-center gap-2 text-xs font-medium text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Mini-bar
+                                </li>
+<li class="flex items-center gap-2 text-xs font-medium text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> 210 sq. ft.
+                                </li>
+</ul>
+</div>
+<button class="w-full bg-primary text-white py-3 rounded-2xl font-bold text-sm hover:bg-primary/90 transition-all">Select Balcony</button>
+</div>
+</div>
+<!-- Cabin Card: Oceanview -->
+<div class="bg-white dark:bg-white/5 rounded-3xl overflow-hidden border-2 border-transparent hover:border-slate-200 dark:hover:border-white/10 transition-all group flex flex-col md:flex-row h-full md:h-64">
+<div class="md:w-2/5 relative h-48 md:h-full">
+<div class="w-full h-full bg-cover bg-center" data-alt="Cruise ship room with a large porthole window looking at sea" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDcMsNsjxls4J-oVp5jBpj4d8yJ1HKaw7Lmp36sH972R6VAKBdoZ9Rg3fL-58e3BSxGvkj2IAiWaJN4kxOq9ZkQRdt_yT-kbhMYm5E3-vOAjoawtjBwwJkXnoIt__0khq7zKikglxW0DsntKhPtHb0mXuRKbAFtB-Ydmodr_1j9fGULUNwXwD1vw5jBdMjWND2rKYCEeShjsYcVnUWgCwunCLh9ywAOAVszvsj1ejaVAj-dR0RrCNgfwkm79FnmZn7kMsX_HGetk0w')"></div>
+</div>
+<div class="md:w-3/5 p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-xl font-extrabold">Oceanview Room</h4>
+<div class="text-right">
+<span class="block text-2xl font-black text-slate-900 dark:text-white">$949</span>
+<span class="text-[10px] text-slate-400 uppercase font-bold">per guest</span>
+</div>
+</div>
+<ul class="grid grid-cols-2 gap-y-1 gap-x-4 mb-4">
+<li class="flex items-center gap-2 text-xs font-medium text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-slate-300 dark:text-white/20 text-sm">check_circle</span> Window View
+                                </li>
+<li class="flex items-center gap-2 text-xs font-medium text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-slate-300 dark:text-white/20 text-sm">check_circle</span> Queen Bed
+                                </li>
+</ul>
+</div>
+<button class="w-full bg-slate-100 dark:bg-white/5 text-slate-900 dark:text-white py-3 rounded-2xl font-bold text-sm hover:bg-slate-200 transition-all">Select Oceanview</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Price Comparison Nudge Bar -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] max-w-4xl bg-slate-900/90 dark:bg-primary/20 backdrop-blur-xl rounded-3xl p-6 border border-white/10 shadow-2xl z-40">
+<div class="flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="bg-primary/20 p-2 rounded-xl">
+<span class="material-symbols-outlined text-primary text-3xl">trending_up</span>
+</div>
+<div>
+<p class="text-white text-sm font-medium">Elevate your experience</p>
+<p class="text-primary text-xl font-black">Upgrade to Balcony for only +$350</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:block text-right">
+<p class="text-white/50 text-[10px] uppercase font-bold tracking-widest">Current Selection</p>
+<p class="text-white font-bold text-lg">Oceanview · $949</p>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-2xl font-black text-sm transition-all whitespace-nowrap shadow-lg shadow-primary/20">
+                        Upgrade Now
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Space -->
+<footer class="py-24 text-center text-slate-400 text-sm">
+<p>© 2024 HYDRASCAPES Global Travel. All rights reserved.</p>
+</footer>
+</body></html>

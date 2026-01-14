@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout - Step 3: Payment | HYDRASCAPES</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Noto+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0dccf2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d191c] dark:text-white min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7f1f4] dark:border-b-[#2a3c40] px-10 py-3 bg-white dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-4 text-[#0d191c] dark:text-primary">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-[#0d191c] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] font-display">HYDRASCAPES</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-[#0d191c] dark:text-white text-sm font-medium leading-normal" href="#">Destinations</a>
+<a class="text-[#0d191c] dark:text-white text-sm font-medium leading-normal" href="#">Experiences</a>
+<a class="text-[#0d191c] dark:text-white text-sm font-medium leading-normal" href="#">Packages</a>
+<a class="text-[#0d191c] dark:text-white text-sm font-medium leading-normal" href="#">Support</a>
+</div>
+<div class="flex gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#e7f1f4] dark:bg-[#1c2e32] text-[#0d191c] dark:text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#e7f1f4] dark:bg-[#1c2e32] text-[#0d191c] dark:text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 px-4 md:px-20 lg:px-40 py-10">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
+<!-- Left Column: Payment Process -->
+<div class="lg:col-span-2 flex flex-col gap-8">
+<!-- Breadcrumbs & Heading -->
+<div class="flex flex-col gap-2">
+<div class="flex flex-wrap items-center gap-2">
+<a class="text-primary text-sm font-medium leading-normal" href="#">Traveler Info</a>
+<span class="text-primary text-sm font-medium leading-normal material-symbols-outlined text-[16px]">chevron_right</span>
+<a class="text-primary text-sm font-medium leading-normal" href="#">Trip Customization</a>
+<span class="text-primary text-sm font-medium leading-normal material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-[#0d191c] dark:text-white text-sm font-medium leading-normal">Payment</span>
+</div>
+<div class="mt-4">
+<h1 class="text-[#0d191c] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] font-display">Payment &amp; Confirmation</h1>
+<p class="text-[#498e9c] dark:text-[#a0c5cc] text-base font-normal leading-normal">Step 3 of 3: Finalize your custom trip booking</p>
+</div>
+</div>
+<!-- ProgressBar -->
+<div class="flex flex-col gap-3 p-6 bg-white dark:bg-[#1c2e32] rounded-xl shadow-sm">
+<div class="flex gap-6 justify-between items-center">
+<p class="text-[#0d191c] dark:text-white text-base font-bold leading-normal">Checkout Progress</p>
+<p class="text-primary text-sm font-bold leading-normal">100% Complete</p>
+</div>
+<div class="rounded-full bg-[#cee4e8] dark:bg-[#2a3c40] h-3 overflow-hidden">
+<div class="h-full rounded-full bg-primary" style="width: 100%;"></div>
+</div>
+<p class="text-[#498e9c] dark:text-[#a0c5cc] text-xs font-medium leading-normal uppercase tracking-wider">Ready to secure your journey</p>
+</div>
+<!-- SegmentedButtons: Pay Method -->
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-bold font-display">Select Payment Plan</h3>
+<div class="flex h-14 items-center justify-center rounded-full bg-[#e7f1f4] dark:bg-[#1c2e32] p-1.5">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-4 has-[:checked]:bg-white dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-[0_2px_8px_rgba(0,0,0,0.1)] has-[:checked]:text-[#0d191c] dark:has-[:checked]:text-primary text-[#498e9c] text-sm font-bold leading-normal transition-all">
+<span class="truncate">Pay in Full</span>
+<input checked="" class="invisible w-0" name="payment-plan" type="radio" value="Pay in Full"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-4 has-[:checked]:bg-white dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-[0_2px_8px_rgba(0,0,0,0.1)] has-[:checked]:text-[#0d191c] dark:has-[:checked]:text-primary text-[#498e9c] text-sm font-bold leading-normal transition-all">
+<span class="truncate">Reserve with Deposit</span>
+<input class="invisible w-0" name="payment-plan" type="radio" value="Reserve with Deposit"/>
+</label>
+</div>
+</div>
+<!-- Payment Methods Tabs -->
+<div class="flex flex-col gap-6 p-6 bg-white dark:bg-[#1c2e32] rounded-xl shadow-sm">
+<h3 class="text-lg font-bold font-display">Payment Details</h3>
+<div class="flex gap-4">
+<button class="flex-1 flex flex-col items-center justify-center gap-2 p-4 border-2 border-primary rounded-xl bg-primary/5">
+<span class="material-symbols-outlined text-primary">credit_card</span>
+<span class="text-xs font-bold">Credit Card</span>
+</button>
+<button class="flex-1 flex flex-col items-center justify-center gap-2 p-4 border border-[#e7f1f4] dark:border-[#2a3c40] rounded-xl hover:bg-[#f8fbfc] dark:hover:bg-background-dark transition-colors">
+<span class="material-symbols-outlined text-[#498e9c]">ios</span>
+<span class="text-xs font-bold">Apple Pay</span>
+</button>
+<button class="flex-1 flex flex-col items-center justify-center gap-2 p-4 border border-[#e7f1f4] dark:border-[#2a3c40] rounded-xl hover:bg-[#f8fbfc] dark:hover:bg-background-dark transition-colors">
+<span class="material-symbols-outlined text-[#498e9c]">account_balance_wallet</span>
+<span class="text-xs font-bold">PayPal</span>
+</button>
+</div>
+<!-- Form -->
+<div class="grid grid-cols-2 gap-4 mt-2">
+<div class="col-span-2 flex flex-col gap-2">
+<label class="text-sm font-bold text-[#498e9c]">Cardholder Name</label>
+<input class="w-full h-12 rounded-full border-[#e7f1f4] dark:border-[#2a3c40] bg-[#f8fbfc] dark:bg-background-dark px-4 focus:ring-primary focus:border-primary" placeholder="John Doe" type="text"/>
+</div>
+<div class="col-span-2 flex flex-col gap-2">
+<label class="text-sm font-bold text-[#498e9c]">Card Number</label>
+<div class="relative">
+<input class="w-full h-12 rounded-full border-[#e7f1f4] dark:border-[#2a3c40] bg-[#f8fbfc] dark:bg-background-dark px-4 pr-12 focus:ring-primary focus:border-primary" placeholder="0000 0000 0000 0000" type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-[#498e9c]">credit_card</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-[#498e9c]">Expiry Date</label>
+<input class="w-full h-12 rounded-full border-[#e7f1f4] dark:border-[#2a3c40] bg-[#f8fbfc] dark:bg-background-dark px-4 focus:ring-primary focus:border-primary" placeholder="MM/YY" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-[#498e9c]">CVV</label>
+<input class="w-full h-12 rounded-full border-[#e7f1f4] dark:border-[#2a3c40] bg-[#f8fbfc] dark:bg-background-dark px-4 focus:ring-primary focus:border-primary" placeholder="123" type="text"/>
+</div>
+</div>
+</div>
+<!-- Final Review Accordion -->
+<div class="rounded-xl border border-[#e7f1f4] dark:border-[#2a3c40] overflow-hidden">
+<div class="flex items-center justify-between p-4 bg-white dark:bg-[#1c2e32] cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">fact_check</span>
+<h3 class="text-base font-bold">Review Trip Details</h3>
+</div>
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+<div class="p-6 bg-[#f8fbfc] dark:bg-background-dark/50 border-t border-[#e7f1f4] dark:border-[#2a3c40]">
+<div class="flex gap-4 items-center">
+<div class="size-20 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Stunning coastal landscape of Bali" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpzzy9Xorv0IQrjJg2Lx-wRNaX60BQKj79Q42CTEdPn69DJ7tuVb_ihzepcsI9Ky65LZX4SHgtR9LEU-b2zbuFUUUvcpTqMne69bUcd06xO4TrkBmC6OiCgESNtxRdygdTyNqjwAU2BgyjxCDUNcLof6LGZRI-EKaW1R-yYvpZ_0iPGjSV3j0Q_1t2VYghAIJmjEPb-kyEBKR_JVyqNZX4XJTODV43QHyj58tujCCNyO-Z1qhQOkVf7B-u1ZyUG_tGqcA6HuDLqRM"/>
+</div>
+<div class="flex flex-col gap-1">
+<p class="font-bold text-[#0d191c] dark:text-white">7 Days in Bali - Custom Trip</p>
+<p class="text-sm text-[#498e9c]">Oct 12 - Oct 19, 2024 • 2 Adults</p>
+<p class="text-xs font-medium text-primary uppercase">Custom Hydra Package</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Sidebar Summary -->
+<aside class="flex flex-col gap-6">
+<div class="sticky top-28 flex flex-col gap-6">
+<!-- Order Summary Card -->
+<div class="bg-white dark:bg-[#1c2e32] p-6 rounded-xl shadow-lg border border-[#e7f1f4] dark:border-[#2a3c40] flex flex-col gap-6">
+<h3 class="text-lg font-bold font-display">Order Summary</h3>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between text-sm">
+<span class="text-[#498e9c]">Base Price</span>
+<span class="font-medium">$3,450.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-[#498e9c]">Custom Experiences</span>
+<span class="font-medium">$850.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-[#498e9c]">Service Fee</span>
+<span class="font-medium">$120.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-[#498e9c]">Taxes</span>
+<span class="font-medium">$45.00</span>
+</div>
+<div class="h-px bg-[#e7f1f4] dark:bg-[#2a3c40] my-2"></div>
+<div class="flex justify-between items-center">
+<span class="text-base font-bold">Total Amount</span>
+<span class="text-2xl font-black text-primary">$4,465.00</span>
+</div>
+</div>
+<button class="w-full h-14 bg-primary hover:bg-[#0bbbdd] text-white rounded-full font-black text-lg shadow-md transition-all flex items-center justify-center gap-2 group">
+<span>Complete Booking</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<p class="text-[10px] text-center text-[#498e9c] px-4">
+                                    By clicking 'Complete Booking', you agree to our <a class="underline" href="#">Terms of Service</a> and <a class="underline" href="#">Cancellation Policy</a>.
+                                </p>
+</div>
+<!-- Trust Badge -->
+<div class="flex items-center justify-center gap-3 p-4 bg-[#e7f1f4]/50 dark:bg-[#1c2e32]/50 rounded-xl border border-dashed border-[#498e9c]/30">
+<span class="material-symbols-outlined text-primary">lock</span>
+<div class="flex flex-col">
+<span class="text-xs font-bold uppercase tracking-widest">Secure Checkout</span>
+<span class="text-[10px] text-[#498e9c]">256-bit SSL Encrypted Payment</span>
+</div>
+</div>
+<!-- Map/Location Context -->
+<div class="rounded-xl overflow-hidden relative h-40 group">
+<img class="w-full h-full object-cover" data-alt="Stylized travel map showing Bali coastline" data-location="Bali, Indonesia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4DRCxT6F8YXt2eDgmnC98rUotyiF4arwY_sKGu6aXvn5mzbzJtez7_hUHaF2WEvkqXu37Smb4PuyuGF5mVd4c9pi1Tic1iuOgimVPhiZMOQobYu-pqHRT4X2kyqvgp_-XzTdzwtrbWLk8oY7EUBoPBnVokB1xZ2fvopbivVsiOPCWBE6FzRKE2k1hpDKt6cyqCMJe96kn3c-r50yxhT4PlYJcGcGfiyWxztKMqXe8EQJlFt-Z04tKRKgHCXvsR-aQtoSK3nPdlFI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="text-xs font-bold uppercase">Bali Destination View</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer Small -->
+<footer class="px-10 py-8 border-t border-[#e7f1f4] dark:border-[#2a3c40] text-center">
+<p class="text-sm text-[#498e9c]">© 2024 HYDRASCAPES Travel Agency. All rights reserved. Your security is our priority.</p>
+</footer>
+</div>
+</div>
+</body></html>

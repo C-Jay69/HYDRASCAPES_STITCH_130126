@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Compare Packages Overlay - HYDRASCAPES</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0dccf2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .backdrop-blur-custom { backdrop-filter: blur(8px); background-color: rgba(16, 31, 34, 0.4); }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cee4e8; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen">
+<!-- Modal Overlay Backdrop -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-custom">
+<!-- Modal Container -->
+<div class="bg-white dark:bg-[#1a2d31] w-full max-w-6xl h-[90vh] rounded-xl shadow-2xl overflow-hidden flex flex-col relative">
+<!-- Sticky Header Section -->
+<div class="bg-white dark:bg-[#1a2d31] border-b border-[#e7f1f4] dark:border-[#2a3f43] z-20">
+<!-- Top Navigation Style Header -->
+<div class="px-8 py-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-[#0d191c] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Compare Packages</h2>
+</div>
+<button class="flex size-10 items-center justify-center rounded-full bg-[#f0f5f6] dark:bg-[#2a3f43] text-[#0d191c] dark:text-white hover:bg-red-50 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Comparison Column Headers -->
+<div class="px-8 pb-6 grid grid-cols-4 gap-6">
+<div class="flex flex-col justify-end pb-4">
+<p class="text-[#498e9c] dark:text-[#7abccb] text-sm font-medium">Select up to 3 packages to compare</p>
+</div>
+<!-- Bali Bliss Column -->
+<div class="flex flex-col gap-3">
+<div class="aspect-[16/9] w-full rounded-lg overflow-hidden relative">
+<img alt="Tropical resort in Bali" class="w-full h-full object-cover" data-alt="Tropical resort in Bali" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk8ffi0Mbl8FT4meqpxt-89JsOZHvbZVKBYUhXMPoULiVVtzcxP72kQe8txaGBBTGpTVH0TfxHUcMCpATa9ziYVsRbbfqUG_8BFISNVabaIyY7JNGkFfqnwD5v5CCHoBhLQjbawkCm7vnSe6-DChkQoMkvC8fdV8mumUnYqyLxEXy9OlBs8oa72YtdsIF-V-_xU4ffWPGMMFvEU0HGtUyx8blBrrsvq_9qgwkwUddrIbthNq6M9A8oEnJejQ3s7G_EAC4aFRlH0tg"/>
+</div>
+<h3 class="text-[#0d191c] dark:text-white font-bold text-lg">Bali Bliss</h3>
+<button class="bg-[#e7f1f4] dark:bg-[#2a3f43] text-[#0d191c] dark:text-white font-bold py-2 rounded-full hover:bg-primary hover:text-white transition-all text-sm">Select Package</button>
+</div>
+<!-- Desert Dream Column (Highlighted) -->
+<div class="flex flex-col gap-3 relative">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full z-10 shadow-lg">Best Value</div>
+<div class="aspect-[16/9] w-full rounded-lg overflow-hidden border-2 border-primary shadow-lg relative">
+<img alt="Luxury desert camp at sunset" class="w-full h-full object-cover" data-alt="Luxury desert camp at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7_3bc6kuERPTWUOeNdd0Arxwg03LU8aZqyrXf2qCUwQh09AZB7IuBZJLgISyMLGMbG7h2L-euGkwdIQNxoyShSqxfqlv8pUjxARx3g2sXZUSBzwG7vPStLVjKw8ErmrO5AgPH2maT18yvAA6Ot8bQA75NH8suLtVw0Xyrw8BQWAsgwIS59rVmwXlKl_XD1cRQZck9i97nwcw5pRgXXYsCAAGulM1UlLnMtMakM5EPsZWsw22KARg18vwAELEbynUKWTUlO0vbWT4"/>
+</div>
+<h3 class="text-[#0d191c] dark:text-white font-bold text-lg flex items-center gap-2">
+                            Desert Dream
+                        </h3>
+<button class="bg-primary text-white font-bold py-2 rounded-full hover:brightness-110 shadow-md shadow-primary/20 transition-all text-sm">Select Package</button>
+</div>
+<!-- Mountain Majesty Column -->
+<div class="flex flex-col gap-3">
+<div class="aspect-[16/9] w-full rounded-lg overflow-hidden relative">
+<img alt="Swiss mountain cabin" class="w-full h-full object-cover" data-alt="Swiss mountain cabin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK6XoJhI8PfNtVkPZMTanoysls8httB74EVaiEoIfaJu5EvCzhiFfxUpi59PcYVwrDIVCwhR-6lwcAXBVuROAej8S0ODBnWjAVnyd7iIJ8xNlu0WAXGZ1HfSYS2Uc5z911Ux5XBn7t1d13m0WDLjVfWFjEIniLMjVTLjTSdMYhFSODdo9m6yaiHG1Nj4jOvpxiUVJ3PHNv2jt89XbZar1_bNkcg42Wu6x8DIuY8lCpercnVbIGXJCCn9-VYK1WfX9G3E3h8WVS_8A"/>
+</div>
+<h3 class="text-[#0d191c] dark:text-white font-bold text-lg">Mountain Majesty</h3>
+<button class="bg-[#e7f1f4] dark:bg-[#2a3f43] text-[#0d191c] dark:text-white font-bold py-2 rounded-full hover:bg-primary hover:text-white transition-all text-sm">Select Package</button>
+</div>
+</div>
+</div>
+<!-- Scrollable Body Content -->
+<div class="flex-1 overflow-y-auto custom-scrollbar bg-[#f8fbfc] dark:bg-[#15262a]">
+<div class="px-8 py-4">
+<!-- Table Section: Basic Info -->
+<div class="mb-8">
+<h4 class="text-xs font-black uppercase tracking-widest text-[#498e9c] mb-4">Core Details</h4>
+<div class="rounded-xl border border-[#cee4e8] dark:border-[#2a3f43] bg-white dark:bg-[#1a2d31] overflow-hidden">
+<table class="w-full text-left border-collapse">
+<tbody>
+<tr class="border-b border-[#cee4e8] dark:border-[#2a3f43]">
+<td class="p-4 w-1/4 text-sm font-medium text-[#498e9c]">Price</td>
+<td class="p-4 w-1/4 font-bold text-[#0d191c] dark:text-white">$1,200 <span class="text-xs font-normal text-[#498e9c]">pp</span></td>
+<td class="p-4 w-1/4 font-bold text-primary">$1,550 <span class="text-xs font-normal text-[#498e9c]">pp</span></td>
+<td class="p-4 w-1/4 font-bold text-[#0d191c] dark:text-white">$1,400 <span class="text-xs font-normal text-[#498e9c]">pp</span></td>
+</tr>
+<tr class="border-b border-[#cee4e8] dark:border-[#2a3f43]">
+<td class="p-4 w-1/4 text-sm font-medium text-[#498e9c]">Duration</td>
+<td class="p-4 w-1/4 text-sm text-[#0d191c] dark:text-white">7 Days / 6 Nights</td>
+<td class="p-4 w-1/4 text-sm text-[#0d191c] dark:text-white font-semibold">8 Days / 7 Nights</td>
+<td class="p-4 w-1/4 text-sm text-[#0d191c] dark:text-white">6 Days / 5 Nights</td>
+</tr>
+<tr class="border-b border-[#cee4e8] dark:border-[#2a3f43]">
+<td class="p-4 w-1/4 text-sm font-medium text-[#498e9c]">Accommodation</td>
+<td class="p-4 w-1/4 text-sm">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star_half</span>
+</div>
+</td>
+<td class="p-4 w-1/4 text-sm">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span>
+</div>
+</td>
+<td class="p-4 w-1/4 text-sm">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Activities Checklists -->
+<div class="mb-8">
+<h4 class="text-xs font-black uppercase tracking-widest text-[#498e9c] mb-4">Included Activities</h4>
+<div class="grid grid-cols-4 gap-6 px-4">
+<div class="text-sm font-medium text-[#498e9c] py-2">Features</div>
+<!-- Bali List -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-sm text-[#0d191c] dark:text-white">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span> Airport Transfer
+                                </div>
+<div class="flex items-center gap-2 text-sm text-[#0d191c] dark:text-white">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span> Scuba Diving
+                                </div>
+<div class="flex items-center gap-2 text-sm text-gray-400">
+<span class="material-symbols-outlined text-lg">cancel</span> Guided Trekking
+                                </div>
+</div>
+<!-- Desert List -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-sm text-[#0d191c] dark:text-white">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span> All Transfers
+                                </div>
+<div class="flex items-center gap-2 text-sm text-[#0d191c] dark:text-white">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span> Camel Safari
+                                </div>
+<div class="flex items-center gap-2 text-sm text-[#0d191c] dark:text-white">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span> Stargazing Dinner
+                                </div>
+</div>
+<!-- Mountain List -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-sm text-[#0d191c] dark:text-white">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span> Private Taxi
+                                </div>
+<div class="flex items-center gap-2 text-sm text-[#0d191c] dark:text-white">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span> Ski Pass
+                                </div>
+<div class="flex items-center gap-2 text-sm text-gray-400">
+<span class="material-symbols-outlined text-lg">cancel</span> Night Safari
+                                </div>
+</div>
+</div>
+</div>
+<!-- Vibe Match Progress -->
+<div>
+<h4 class="text-xs font-black uppercase tracking-widest text-[#498e9c] mb-4">Vibe Match</h4>
+<div class="grid grid-cols-4 gap-6 items-center">
+<div class="text-sm font-medium text-[#498e9c]">Compatibility</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end">
+<span class="text-lg font-bold text-[#0d191c] dark:text-white">85%</span>
+<span class="text-[10px] text-[#498e9c]">Relaxed</span>
+</div>
+<div class="h-2 w-full bg-[#e7f1f4] dark:bg-[#2a3f43] rounded-full">
+<div class="h-full bg-primary rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end">
+<span class="text-xl font-black text-primary">98%</span>
+<span class="text-[10px] text-primary font-bold uppercase">Perfect!</span>
+</div>
+<div class="h-3 w-full bg-[#e7f1f4] dark:bg-[#2a3f43] rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full shadow-[0_0_10px_rgba(13,204,242,0.5)]" style="width: 98%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end">
+<span class="text-lg font-bold text-[#0d191c] dark:text-white">75%</span>
+<span class="text-[10px] text-[#498e9c]">Adventurous</span>
+</div>
+<div class="h-2 w-full bg-[#e7f1f4] dark:bg-[#2a3f43] rounded-full">
+<div class="h-full bg-primary rounded-full" style="width: 75%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Meta -->
+<div class="px-8 py-4 bg-[#f0f5f6] dark:bg-[#1a2d31] border-t border-[#cee4e8] dark:border-[#2a3f43] flex justify-between items-center">
+<p class="text-xs text-[#498e9c]">Prices are subject to seasonal availability. Book now to lock in these rates.</p>
+<div class="flex gap-4">
+<button class="text-[#498e9c] text-sm font-bold hover:text-primary transition-colors">Clear All</button>
+<button class="text-[#498e9c] text-sm font-bold hover:text-primary transition-colors">Save Comparison</button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

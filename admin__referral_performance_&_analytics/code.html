@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HYDRASCAPES | Referral &amp; Analytics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d141b] dark:text-slate-200 transition-colors duration-300">
+<div class="flex h-screen overflow-hidden">
+<!-- SideNavBar -->
+<aside class="w-64 flex flex-col bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 shrink-0">
+<div class="p-6">
+<div class="flex items-center gap-3">
+<div class="bg-primary rounded-lg p-1.5">
+<span class="material-symbols-outlined text-white">water_drop</span>
+</div>
+<div>
+<h1 class="text-[#0d141b] dark:text-white text-base font-bold leading-none tracking-tight">HYDRASCAPES</h1>
+<p class="text-[#4c739a] text-[10px] font-bold uppercase tracking-wider mt-1">Admin Console</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1 overflow-y-auto">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+<span class="text-sm font-medium">Inventory</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+<span class="text-sm font-medium">Orders</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-primary/10 text-primary dark:bg-primary/20 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px] fill-current">share</span>
+<span class="text-sm font-bold">Referral Engine</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">group</span>
+<span class="text-sm font-medium">Customers</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 px-2">
+<div class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 bg-cover bg-center" data-alt="Avatar of the admin user profile" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB6jXGufrjKwmEfx64FgNWhvXMsFWAnOrWv79r9xqnMvKi99W5rGDidVlpQfHCQsp_0ER-2aYAV42qLV6-P15uJ-anLbhFHuT317i9-XXlbvqoEDzh_07Ubz2jNfcMwqrWJ4W5gbCs8vF3Bdg1WPzSGzypyx7B0YciImnAMWMaF11BK2r3PQEYmbjtR43fH_NAd4-N0-YGeCAzQAuwtv5rnkff2-mgz38NEiWzW5ZxWVbGQy-VKtoAFnQMoLQ4w8Stclod3s6V0tko')"></div>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-bold text-slate-900 dark:text-white truncate">Alex Rivers</p>
+<p class="text-[10px] text-slate-500 truncate">System Administrator</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 text-sm">logout</span>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col overflow-hidden">
+<!-- TopNavBar -->
+<header class="h-16 flex items-center justify-between px-8 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shrink-0">
+<div class="flex items-center gap-4 flex-1">
+<h2 class="text-[#0d141b] dark:text-white text-lg font-bold tracking-tight">Referral Performance &amp; Analytics</h2>
+<div class="max-w-xs w-full ml-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[20px]">search</span>
+<input class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-lg py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-slate-500" placeholder="Search advocates..." type="text"/>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 border-2 border-white dark:border-slate-900 rounded-full"></span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+<div class="h-6 w-px bg-slate-200 dark:bg-slate-700 mx-2"></div>
+<button class="flex items-center gap-2 px-3 py-1.5 bg-primary text-white text-xs font-bold rounded-lg hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-[16px]">add</span>
+                        Export Report
+                    </button>
+</div>
+</header>
+<!-- Dashboard Content Scroll Area -->
+<div class="flex-1 overflow-y-auto p-8 space-y-8">
+<!-- PageHeading -->
+<div class="flex items-end justify-between">
+<div>
+<h1 class="text-[#0d141b] dark:text-white text-3xl font-extrabold tracking-tight">Referral &amp; Rewards Manager</h1>
+<p class="text-slate-500 dark:text-slate-400 mt-1">Track viral growth and manage top brand advocates in real-time.</p>
+</div>
+<div class="flex gap-2">
+<div class="flex items-center bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-1.5 text-xs font-semibold text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-[16px] mr-2">calendar_today</span>
+                            Oct 1 - Oct 31, 2023
+                        </div>
+</div>
+</div>
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="p-2 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">group_add</span>
+</div>
+<span class="flex items-center text-green-600 dark:text-green-400 text-xs font-bold">
+<span class="material-symbols-outlined text-[14px] mr-0.5">trending_up</span> +12%
+                            </span>
+</div>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Total Referrals</p>
+<h3 class="text-3xl font-extrabold text-[#0d141b] dark:text-white mt-1">12,450</h3>
+<p class="text-[10px] text-slate-400 mt-2 uppercase font-bold tracking-widest">Global Reach</p>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="p-2 bg-purple-100 dark:bg-purple-900/30 rounded-lg text-purple-600">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<span class="flex items-center text-green-600 dark:text-green-400 text-xs font-bold">
+<span class="material-symbols-outlined text-[14px] mr-0.5">trending_up</span> +0.15
+                            </span>
+</div>
+<div class="flex items-center gap-1">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Viral Coefficient (K-factor)</p>
+<span class="material-symbols-outlined text-[16px] text-slate-400 cursor-help">info</span>
+</div>
+<h3 class="text-3xl font-extrabold text-[#0d141b] dark:text-white mt-1">1.2</h3>
+<p class="text-[10px] text-slate-400 mt-2 uppercase font-bold tracking-widest">Viral Growth Active</p>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="p-2 bg-green-100 dark:bg-green-900/30 rounded-lg text-green-600">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="flex items-center text-green-600 dark:text-green-400 text-xs font-bold">
+<span class="material-symbols-outlined text-[14px] mr-0.5">trending_up</span> +8%
+                            </span>
+</div>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Revenue from Referrals</p>
+<h3 class="text-3xl font-extrabold text-[#0d141b] dark:text-white mt-1">$45,200</h3>
+<p class="text-[10px] text-slate-400 mt-2 uppercase font-bold tracking-widest">Net Program Contribution</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Chart & Table Area -->
+<div class="lg:col-span-2 space-y-8">
+<!-- Chart Component -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h3 class="text-base font-bold text-[#0d141b] dark:text-white">Referral Growth Over Time</h3>
+<p class="text-xs text-slate-500">Comparison of referral volume vs conversions</p>
+</div>
+<div class="flex gap-2">
+<button class="text-xs font-bold px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg">Daily</button>
+<button class="text-xs font-bold px-3 py-1 text-slate-500">Weekly</button>
+</div>
+</div>
+<div class="h-64 relative">
+<!-- Abstract SVG Line Chart -->
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 800 200">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#137fec" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#137fec" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,150 C50,140 100,160 150,120 C200,80 250,100 300,60 C350,20 400,80 450,90 C500,100 550,40 600,50 C650,60 700,20 750,30 L800,10" fill="none" stroke="#137fec" stroke-linecap="round" stroke-width="3"></path>
+<path d="M0,150 C50,140 100,160 150,120 C200,80 250,100 300,60 C350,20 400,80 450,90 C500,100 550,40 600,50 C650,60 700,20 750,30 L800,10 L800,200 L0,200 Z" fill="url(#chartGradient)"></path>
+</svg>
+<div class="absolute bottom-0 left-0 w-full flex justify-between px-2 pt-2 border-t border-slate-100 dark:border-slate-800">
+<span class="text-[10px] font-bold text-slate-400">Oct 01</span>
+<span class="text-[10px] font-bold text-slate-400">Oct 08</span>
+<span class="text-[10px] font-bold text-slate-400">Oct 15</span>
+<span class="text-[10px] font-bold text-slate-400">Oct 22</span>
+<span class="text-[10px] font-bold text-slate-400">Oct 30</span>
+</div>
+</div>
+</div>
+<!-- Top Referrers List -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+<div class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+<h3 class="text-base font-bold text-[#0d141b] dark:text-white">Top Referrers</h3>
+<button class="text-xs text-primary font-bold hover:underline">View All</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-slate-50 dark:bg-slate-800/50">
+<tr>
+<th class="px-6 py-3 text-[10px] font-bold uppercase tracking-wider text-slate-500">Advocate</th>
+<th class="px-6 py-3 text-[10px] font-bold uppercase tracking-wider text-slate-500 text-center">Referrals</th>
+<th class="px-6 py-3 text-[10px] font-bold uppercase tracking-wider text-slate-500">Status</th>
+<th class="px-6 py-3 text-[10px] font-bold uppercase tracking-wider text-slate-500 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-9 rounded-full bg-cover" data-alt="Female user profile photo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdKK0lYoyzFjZmvkTn27PZn0B9K2scehDP7Yu8HzvGWcCRRgkV4ZhP3Zs_yY39fokPBQkXyV0o7vdHaZZInECOgaqDd-bYYAUk56G_4gasYdejmZVpgmmcz3jAuTZppK7wNteLERWw_hdf7KjdoMo_lS17f7LdFfa-8NpCEk-6PNZLjhMYl7trGV_l-qrT87xqf0nK1rjfa7L-X-pGPHd5_6upYCkNWuzqr91MPNlMJgMRK_HPshmRM3363iq1lAXjYPbA2UiI9Lk')"></div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Sarah Jenkins</p>
+<p class="text-xs text-slate-500">sarah.j@example.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-center">
+<p class="text-sm font-extrabold text-slate-900 dark:text-white">142</p>
+<p class="text-[10px] text-green-600 font-bold">88% Conv.</p>
+</td>
+<td class="px-6 py-4">
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-tight">Ambassador</span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md text-slate-500" title="Issue Bonus">
+<span class="material-symbols-outlined text-[18px]">card_giftcard</span>
+</button>
+<button class="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md text-slate-500" title="User Details">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-9 rounded-full bg-cover" data-alt="Male user profile photo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKLeUQahRgYUGJ42cNVzAlQ3uw7_trJzi_EqIZ8ZeDq6W0kFI_DzHR0Eyy3kr3O6e9vJzokifo64FHZ3DD1eGWztfsP3R71OOE5rGYBRmtAD08yXChgBG6dmsOu-n4jHIxDVokT2o9QKFhCH6iJzWACNPmvzvtr5TCf0sPcb2yeaZbQE7Y5G_TTb49J8DM0qgIaDaOnDRa290dAiHLjWJwrPxHm0p5xq5_jrPZPtUhztDcnsYofI19aCLFWGkefCIUHaLVfc5HNFU')"></div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Marcus Thorne</p>
+<p class="text-xs text-slate-500">m.thorne@web.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-center">
+<p class="text-sm font-extrabold text-slate-900 dark:text-white">98</p>
+<p class="text-[10px] text-green-600 font-bold">74% Conv.</p>
+</td>
+<td class="px-6 py-4">
+<span class="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] font-bold uppercase tracking-tight">Power User</span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 bg-primary/5 text-primary hover:bg-primary/10 rounded-md text-[10px] font-bold px-3">PROMOTE</button>
+<button class="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md text-slate-500">
+<span class="material-symbols-outlined text-[18px]">card_giftcard</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-9 rounded-full bg-cover" data-alt="Female user profile photo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB6QrLz6_VGb2rbQnlYBlscmHNBFaNRg9Kb8mmbVqyl8RjejjiP0TiK0pi9hKPHrqQ4xr7WLVG1KeSbVeAwMhxS906KrLF83cxTr2EgAFnXOUZvNGKxYwLYQZzfCsiXyPLgg82ADpPaN560hBmTcTNKKKoKMrnbZ_11nKIBfTYSSpKg6toUQ4z2DfnbhGUpnUpLC8g33FfzA1PTDGq99T2vI8a8C3na5pcep9jQ8gITNsAwHj059dvwpHZZh2Lxu87fNTrz9CRet1Y')"></div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Elena Rodriguez</p>
+<p class="text-xs text-slate-500">elena.rod@social.io</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-center">
+<p class="text-sm font-extrabold text-slate-900 dark:text-white">85</p>
+<p class="text-[10px] text-green-600 font-bold">92% Conv.</p>
+</td>
+<td class="px-6 py-4">
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-tight">Ambassador</span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md text-slate-500">
+<span class="material-symbols-outlined text-[18px]">card_giftcard</span>
+</button>
+<button class="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md text-slate-500">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Settings Panel -->
+<div class="space-y-6">
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm sticky top-8">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">tune</span>
+<h3 class="text-base font-bold text-[#0d141b] dark:text-white">Campaign Settings</h3>
+</div>
+<form class="space-y-4">
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Referrer Reward (USD)</label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 font-bold">$</span>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg py-2 pl-8 text-sm font-bold focus:ring-primary" type="number" value="25.00"/>
+</div>
+<p class="text-[10px] text-slate-400 mt-1">Paid after referee's first purchase.</p>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Friend Discount (%)</label>
+<div class="relative">
+<span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 font-bold">%</span>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg py-2 px-4 text-sm font-bold focus:ring-primary" type="number" value="15"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Link Expiry (Days)</label>
+<select class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg py-2 px-4 text-sm font-bold focus:ring-primary">
+<option>30 Days</option>
+<option selected="">60 Days</option>
+<option>90 Days</option>
+<option>Never</option>
+</select>
+</div>
+<div class="pt-4 space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Stackable Coupons</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Auto-Ambassador (100+)</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<button class="w-full bg-primary text-white font-bold py-2.5 rounded-lg mt-4 shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity" type="button">
+                                    Save Config
+                                </button>
+</form>
+</div>
+<!-- Special Offer Toast Mockup (Static) -->
+<div class="bg-slate-900 text-white rounded-xl p-4 flex items-start gap-4 shadow-xl">
+<div class="size-8 rounded-full bg-green-500 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-slate-400">Activity Log</p>
+<p class="text-sm font-medium mt-1">Special Bonus of <span class="text-primary font-bold">$100.00</span> issued to Sarah Jenkins.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

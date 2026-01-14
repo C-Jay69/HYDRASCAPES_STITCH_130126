@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Customer Stories &amp; Social Proof Wall | HYDRASCAPES</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid {
+                column-count: 3;
+            }
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d141b] dark:text-slate-50 antialiased transition-colors duration-300">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-solid border-[#e7edf3] dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 md:px-10 py-3">
+<div class="max-w-[1200px] mx-auto flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<h2 class="text-[#0d141b] dark:text-white text-xl font-extrabold leading-tight tracking-tight">HYDRASCAPES</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#0d141b] dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Destinations</a>
+<a class="text-[#0d141b] dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Packages</a>
+<a class="text-primary text-sm font-bold border-b-2 border-primary" href="#">Reviews</a>
+<a class="text-[#0d141b] dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#">About Us</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+                    Book Now
+                </button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCn22O3VZJycECt5foLYmsK0BaimN3UoEaZ-Q_4-aM2JNaEUcDixwVGR_oejwxnDVc0vGkFS9XjjnhYH2vuSsJvNILlGnrOHtZsKW9bo1vN0U_Myxkey4llXmFxFzaDTFj8gRUlD7-3tWIDbe_AWMJzPeXXx9jpF_N0bHzBunfHZvSwQbGAR4AuRFcBbb9427F3sSF-7FteRBPw-jTWSuz4e6ip-oPM659MTC7OE_BwR2XE7ETBEth7_yJKpQBnEx01vj4VlLAcVJg");'></div>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-4 py-8">
+<!-- Page Heading Section -->
+<section class="flex flex-col md:flex-row justify-between items-end gap-6 mb-10">
+<div class="flex flex-col gap-3 max-w-2xl">
+<h1 class="text-[#0d141b] dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">Real Stories from Real Travelers</h1>
+<p class="text-[#4c739a] dark:text-slate-400 text-lg font-medium">Join the HYDRASCAPES community and see where our travelers are headed next.</p>
+</div>
+<button class="flex items-center gap-2 min-w-[200px] cursor-pointer justify-center rounded-xl h-14 px-6 bg-primary text-white text-base font-bold shadow-xl shadow-primary/30 hover:-translate-y-1 transition-transform">
+<span class="material-symbols-outlined">photo_camera</span>
+<span>Post Your Experience</span>
+</button>
+</section>
+<!-- Rating Summary Section -->
+<section class="bg-white dark:bg-slate-900 rounded-2xl p-6 mb-10 border border-[#e7edf3] dark:border-slate-800 shadow-sm">
+<div class="flex flex-wrap gap-x-12 gap-y-8">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<p class="text-[#0d141b] dark:text-white text-5xl font-black leading-tight">4.9</p>
+<div class="flex gap-1">
+<span class="material-symbols-outlined fill text-primary">star</span>
+<span class="material-symbols-outlined fill text-primary">star</span>
+<span class="material-symbols-outlined fill text-primary">star</span>
+<span class="material-symbols-outlined fill text-primary">star</span>
+<span class="material-symbols-outlined fill text-primary">star</span>
+</div>
+<p class="text-[#4c739a] dark:text-slate-400 text-base font-semibold">1,240 verified reviews</p>
+</div>
+<div class="grid min-w-[280px] flex-1 grid-cols-[30px_1fr_50px] items-center gap-y-3">
+<p class="text-[#0d141b] dark:text-slate-300 text-sm font-bold">5</p>
+<div class="flex h-2.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800"><div class="rounded-full bg-primary" style="width: 92%;"></div></div>
+<p class="text-[#4c739a] dark:text-slate-400 text-sm font-bold text-right">92%</p>
+<p class="text-[#0d141b] dark:text-slate-300 text-sm font-bold">4</p>
+<div class="flex h-2.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800"><div class="rounded-full bg-primary" style="width: 6%;"></div></div>
+<p class="text-[#4c739a] dark:text-slate-400 text-sm font-bold text-right">6%</p>
+<p class="text-[#0d141b] dark:text-slate-300 text-sm font-bold">3</p>
+<div class="flex h-2.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800"><div class="rounded-full bg-primary" style="width: 1.5%;"></div></div>
+<p class="text-[#4c739a] dark:text-slate-400 text-sm font-bold text-right">1.5%</p>
+<p class="text-[#0d141b] dark:text-slate-300 text-sm font-bold">2</p>
+<div class="flex h-2.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800"><div class="rounded-full bg-primary" style="width: 0.3%;"></div></div>
+<p class="text-[#4c739a] dark:text-slate-400 text-sm font-bold text-right">0.3%</p>
+<p class="text-[#0d141b] dark:text-slate-300 text-sm font-bold">1</p>
+<div class="flex h-2.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800"><div class="rounded-full bg-primary" style="width: 0.2%;"></div></div>
+<p class="text-[#4c739a] dark:text-slate-400 text-sm font-bold text-right">0.2%</p>
+</div>
+</div>
+</section>
+<!-- Filter Bar & Search -->
+<section class="flex flex-col lg:flex-row gap-4 items-center justify-between mb-8">
+<div class="flex gap-2 overflow-x-auto pb-2 w-full lg:w-auto no-scrollbar">
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-5 cursor-pointer text-white">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+<p class="text-sm font-bold leading-normal">All Vibes</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-900 border border-[#e7edf3] dark:border-slate-800 px-5 cursor-pointer hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-sm">terrain</span>
+<p class="text-[#0d141b] dark:text-slate-200 text-sm font-semibold">Adventure</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-900 border border-[#e7edf3] dark:border-slate-800 px-5 cursor-pointer hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-sm">favorite</span>
+<p class="text-[#0d141b] dark:text-slate-200 text-sm font-semibold">Romance</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-900 border border-[#e7edf3] dark:border-slate-800 px-5 cursor-pointer hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-sm">groups</span>
+<p class="text-[#0d141b] dark:text-slate-200 text-sm font-semibold">Family</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-900 border border-[#e7edf3] dark:border-slate-800 px-5 cursor-pointer hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-sm">diamond</span>
+<p class="text-[#0d141b] dark:text-slate-200 text-sm font-semibold">Luxury</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-900 border border-[#e7edf3] dark:border-slate-800 px-5 cursor-pointer hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-sm">person</span>
+<p class="text-[#0d141b] dark:text-slate-200 text-sm font-semibold">Solo</p>
+</div>
+</div>
+<div class="w-full lg:w-72">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-slate-400">search</span>
+<input class="w-full h-10 pl-12 pr-4 bg-white dark:bg-slate-900 border border-[#e7edf3] dark:border-slate-800 rounded-full focus:ring-2 focus:ring-primary focus:border-primary text-sm transition-all" placeholder="Search experiences..." type="text"/>
+</div>
+</div>
+</section>
+<!-- Social Proof Masonry Wall -->
+<div class="masonry-grid">
+<!-- Card 1 -->
+<div class="masonry-item group cursor-pointer">
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-md border border-transparent hover:border-primary transition-all duration-300">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="Couple trekking the Amalfi coast at sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD9D98n05p9jJhnP_n3klLRrriqRfRaMtNWmre1PysnL74qkrXW2Qlebw30wYHnC_YraIymM89G0r7SrTgVC1R4Ozxer8hChQ2T2X9Hs4TNZhibOZwzCb1hUKX1G32z6-AXFzlsxzyZF2zDIsDVNxQNqgEoNAVE1d8xkbWnOvT0MCDVure8GXNDMRXmQnhZwSn86zUjw9BsH08gDTUQ55m64GrJhpRg1N1w2nkkfGuqDzdoob6ITV46yj9vkXgx7L1ozImgufmLq3c");'></div>
+<div class="absolute top-4 right-4 bg-white/90 dark:bg-black/70 backdrop-blur rounded-full px-3 py-1 text-xs font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined fill text-primary text-xs">star</span> 5.0
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 mb-3">
+<div class="size-6 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xs">verified</span>
+</div>
+<span class="text-xs font-bold text-primary uppercase tracking-wider">Adventure</span>
+</div>
+<p class="text-[#0d141b] dark:text-white text-base font-bold mb-2">Sarah &amp; Marc</p>
+<p class="text-[#4c739a] dark:text-slate-300 text-sm italic mb-4 leading-relaxed">"The Amalfi Coast trek was life-changing! The guides were incredible and the pace was perfect. Every sunset was a painting."</p>
+<hr class="border-[#e7edf3] dark:border-slate-800 mb-4"/>
+<div class="flex justify-between items-center">
+<a class="text-primary text-sm font-bold flex items-center gap-1 hover:underline" href="#">
+                                Amalfi Coast Trek
+                                <span class="material-symbols-outlined text-xs">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="masonry-item group cursor-pointer">
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-md border border-transparent hover:border-primary transition-all duration-300">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-[1/1] bg-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="Family enjoying a Disney themed cruise deck" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkR93mo9qzpkoPUQDsh46lkS505Tqtyk82HI1YlaF3jRa2oa-Im72hXHOK45akU2HruiPw1xRiih_3BXPmJ_df-3gbEAjxEN6KH5zhPrGPwP4oseIZLNMXQLb35q0wCLRmtBAyAh-Z49oL2x7Bbg0turvQ-Jq0hcKBFP_kh7c1ZTyOzVJU0Ww72WU6ahgdXNVzjm4PpR_v4aufRQ93qVdOSgJvGGc_Nn6UvjPpw43wXYsJN85U9NEe__0PJzfPc8pwB1q6QK05wZU");'></div>
+<div class="absolute top-4 right-4 bg-white/90 dark:bg-black/70 backdrop-blur rounded-full px-3 py-1 text-xs font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined fill text-primary text-xs">star</span> 4.9
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 mb-3">
+<div class="size-6 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xs">verified</span>
+</div>
+<span class="text-xs font-bold text-primary uppercase tracking-wider">Family</span>
+</div>
+<p class="text-[#0d141b] dark:text-white text-base font-bold mb-2">The Miller Family</p>
+<p class="text-[#4c739a] dark:text-slate-300 text-sm italic mb-4 leading-relaxed">"The kids loved the Disney Cruise. Stress-free planning by HYDRASCAPES made our first family vacation a total success."</p>
+<hr class="border-[#e7edf3] dark:border-slate-800 mb-4"/>
+<a class="text-primary text-sm font-bold flex items-center gap-1 hover:underline" href="#">
+                            Disney Cruise Med
+                        </a>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="masonry-item group cursor-pointer">
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-md border border-transparent hover:border-primary transition-all duration-300">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="Scuba diver in the Great Blue Hole of Belize" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAtYXanTlQq6YCQYXqjL-0UHCxlCA_fY3ivhwdBvcfMFy1yTNYvIlXN7fs97O1obEob7P3BZpoHSI1cmok35K7z6l6_ibejgEat9p5MLws6fpjh7t5c1GpzsgHz5rsl1_iW6j1VN2wV5nOFedB9xPCvx1ykX3FKQjvlETTZXjBrP52DaTjM8kis28RCL1ISotX_XYZesbOOkEVEVwgqN7B4KlGauvTX9f83devZyp5MYd1g8mvXcwwkAGZKAeXH-cQG4-EoQlFjQH4");'></div>
+<div class="absolute top-4 right-4 bg-white/90 dark:bg-black/70 backdrop-blur rounded-full px-3 py-1 text-xs font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined fill text-primary text-xs">star</span> 5.0
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 mb-3">
+<div class="size-6 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xs">verified</span>
+</div>
+<span class="text-xs font-bold text-primary uppercase tracking-wider">Adventure</span>
+</div>
+<p class="text-[#0d141b] dark:text-white text-base font-bold mb-2">Jackson P.</p>
+<p class="text-[#4c739a] dark:text-slate-300 text-sm italic mb-4 leading-relaxed">"Deep sea diving in Belize was intense! 10/10 recommendation for any adrenaline junkies. The logistics were handled perfectly."</p>
+<hr class="border-[#e7edf3] dark:border-slate-800 mb-4"/>
+<a class="text-primary text-sm font-bold flex items-center gap-1 hover:underline" href="#">
+                            Belize Blue Hole Dive
+                        </a>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="masonry-item group cursor-pointer">
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-md border border-transparent hover:border-primary transition-all duration-300">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="Couple enjoying wine in a Tuscan vineyard" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_g-e3ZoMV0m0SlhT9fTvvnptNGheiMCdDU4UOxZ21ydatmyN3U-PwM3rrvY-n0tQJ4pj0_rskyikQrBm3DPmuUxNyvG-R_FQF6RP3VBOoOOH8u7Pl3AdZ-lGCaK3O5NLdMrkKVbHg_ExFpQgaKR6XWMA9WL4zYH8nEJoOobSBTM4QSh4DFwMBJzSSxb8Yk83K_J3SsqDbvZ5OgiXRrsK9pmsyE_Z9X0vBLU5vopw0UGP16OAd3Iv0D7kniYF2HH1g2Url4Q85STg");'></div>
+<div class="absolute top-4 right-4 bg-white/90 dark:bg-black/70 backdrop-blur rounded-full px-3 py-1 text-xs font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined fill text-primary text-xs">star</span> 5.0
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 mb-3">
+<div class="size-6 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xs">verified</span>
+</div>
+<span class="text-xs font-bold text-primary uppercase tracking-wider">Romance</span>
+</div>
+<p class="text-[#0d141b] dark:text-white text-base font-bold mb-2">Chloe &amp; Sam</p>
+<p class="text-[#4c739a] dark:text-slate-300 text-sm italic mb-4 leading-relaxed">"Vineyard tour in Tuscany was so romantic. Truly magical moments that we will cherish forever."</p>
+<hr class="border-[#e7edf3] dark:border-slate-800 mb-4"/>
+<a class="text-primary text-sm font-bold flex items-center gap-1 hover:underline" href="#">
+                            Tuscany Wine Escape
+                        </a>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="masonry-item group cursor-pointer">
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-md border border-transparent hover:border-primary transition-all duration-300">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="Lone traveler looking at Tokyo city lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBFMkEITRo_V00hHmXwtn40xWFRxYxc8wH9JsZNNwRm7wIbGeNP12_OPNp5nAC2fpBDWH1jhobXQ6ug8_Fi8ArW52KbgymaxJecmH6jbc6kozIViJKJAOufPNVCARSHtY1t8rS3JAwzpuXQNnl_r42jzTVZfq05mQ1iepITYVmzmnBHEZ6P_RJqxSlWVqO_AeyFfN9lpicrUfg4Nl4bObIPJgNMN0GzdrmRJs-n1lt0N2WkpeEYRYmxvv-o4Ahy0NCsdhYRZF_CtJ8");'></div>
+<div class="absolute top-4 right-4 bg-white/90 dark:bg-black/70 backdrop-blur rounded-full px-3 py-1 text-xs font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined fill text-primary text-xs">star</span> 4.8
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 mb-3">
+<div class="size-6 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xs">verified</span>
+</div>
+<span class="text-xs font-bold text-primary uppercase tracking-wider">Solo</span>
+</div>
+<p class="text-[#0d141b] dark:text-white text-base font-bold mb-2">James L.</p>
+<p class="text-[#4c739a] dark:text-slate-300 text-sm italic mb-4 leading-relaxed">"Solo trip to Tokyo was seamless. Great hotel choices in the heart of Shibuya. Felt very safe and well-informed."</p>
+<hr class="border-[#e7edf3] dark:border-slate-800 mb-4"/>
+<a class="text-primary text-sm font-bold flex items-center gap-1 hover:underline" href="#">
+                            Tokyo City Lights
+                        </a>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="masonry-item group cursor-pointer">
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-md border border-transparent hover:border-primary transition-all duration-300">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-[1/1] bg-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="Jeep safari in the Kenyan savannah" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABM0gLhmOgY4voJErzuMGhkksVh_EOAPEVjBhkJRlnOmSrxteqVf5SYN7M09ZElFCMACE0YZOvZQSnrURpRdQnP7XRJiCP9Y1kF2ecdnZj7s60bM5vE89tNVyIp3EPLUHfwSDDCWf9pjsfHUFJXCEZyxpLigQshwMw94kI3OVBUt_cvyuFMeZnH1cgggzgv8ECP07WZnsyl47ADA6tB1uiecPOXGg_rPAAX8WhCoXThK0uAxQw6TP8BGSeFxtHflWERa4Ak7d0gaM");'></div>
+<div class="absolute top-4 right-4 bg-white/90 dark:bg-black/70 backdrop-blur rounded-full px-3 py-1 text-xs font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined fill text-primary text-xs">star</span> 5.0
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 mb-3">
+<div class="size-6 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xs">verified</span>
+</div>
+<span class="text-xs font-bold text-primary uppercase tracking-wider">Adventure</span>
+</div>
+<p class="text-[#0d141b] dark:text-white text-base font-bold mb-2">The Explorers Group</p>
+<p class="text-[#4c739a] dark:text-slate-300 text-sm italic mb-4 leading-relaxed">"The group safari in Kenya exceeded every expectation. Lions, elephants, and leopards - oh my! Truly incredible safari."</p>
+<hr class="border-[#e7edf3] dark:border-slate-800 mb-4"/>
+<a class="text-primary text-sm font-bold flex items-center gap-1 hover:underline" href="#">
+                            Kenya Wildlife Safari
+                        </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer CTA -->
+<section class="mt-16 mb-20 text-center py-12 bg-primary/5 rounded-3xl border border-primary/20">
+<h3 class="text-2xl md:text-3xl font-black mb-4">Ready to start your own story?</h3>
+<p class="text-[#4c739a] dark:text-slate-400 mb-8 max-w-lg mx-auto font-medium">Book your next escape today and become part of our growing community of happy travelers.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="px-10 h-14 bg-primary text-white font-bold rounded-xl shadow-xl shadow-primary/20 hover:scale-105 transition-transform">Explore All Packages</button>
+<button class="px-10 h-14 bg-white dark:bg-slate-900 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary/5 transition-colors">Talk to an Agent</button>
+</div>
+</section>
+</main>
+<!-- Floating Action Button for Mobile/Quick Access -->
+<button class="fixed bottom-8 right-8 size-16 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform lg:hidden z-40">
+<span class="material-symbols-outlined text-3xl">photo_camera</span>
+</button>
+</body></html>

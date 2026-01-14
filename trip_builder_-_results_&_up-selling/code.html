@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trip Builder - Results &amp; Up-selling | HYDRASCAPES</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0dccf2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d191c] antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-solid border-[#e7f1f4] px-10 py-3">
+<div class="max-w-[1280px] mx-auto flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-4 text-[#0d191c] dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+</div>
+<h2 class="text-lg font-extrabold leading-tight tracking-[-0.015em]">HYDRASCAPES</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-[#0d191c] dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#">Destinations</a>
+<a class="text-[#0d191c] dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#">Experiences</a>
+<a class="text-[#0d191c] dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-[#0d191c] dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#">My Trips</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-full h-10 px-5 bg-primary text-[#0d191c] text-sm font-bold tracking-wide hover:brightness-110 transition-all">
+                            Profile
+                        </button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary" data-alt="User profile avatar portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZz-UjP8gDlp9oerCajRREewZIvV8WAhR6y9MAD_tP-9VYwqq9AMK9208jB80c22iU_Ix89h3pLotIajSXKjrWVmrplVWkYNc6X3H3rDokxLuKVn11wKW55yNw2x3CVxDcYDgwPQgDtLecQqajEaa4F3JHPOw8gSOKbnlcb2VZqFhV6-MtAm9HU9uC-UR70K4zHGfE-obUvKX55T9ANWrKBMsXnWeL_iSKkUQzEl2XCGSDATeyuxnw19Y2oz55vBt_uyya13rv12U");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-[1280px] mx-auto w-full px-6 py-8">
+<!-- Progress Bar -->
+<div class="mb-10 max-w-2xl">
+<div class="flex flex-col gap-3">
+<div class="flex gap-6 justify-between items-end">
+<p class="text-[#0d191c] dark:text-white text-lg font-bold">Step 3: Results</p>
+<p class="text-primary text-sm font-bold">100%</p>
+</div>
+<div class="rounded-full bg-[#cee4e8] dark:bg-white/10 h-3 overflow-hidden">
+<div class="h-full rounded-full bg-primary" style="width: 100%;"></div>
+</div>
+<p class="text-[#498e9c] text-sm font-medium">Trip Builder Complete • 3 Matches Found</p>
+</div>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-wrap justify-between items-end gap-6 mb-10">
+<div class="flex flex-col gap-2">
+<h1 class="text-[#0d191c] dark:text-white text-5xl font-black leading-tight tracking-[-0.033em]">Your Perfect Hydrascapes Found</h1>
+<p class="text-[#498e9c] text-lg font-medium">Custom tailored for <span class="text-[#0d191c] dark:text-white px-2 py-0.5 bg-primary/20 rounded">Adventure</span> and <span class="text-[#0d191c] dark:text-white px-2 py-0.5 bg-primary/20 rounded">Luxury</span> vibes.</p>
+</div>
+<button class="flex items-center gap-2 cursor-pointer rounded-full h-12 px-6 bg-white dark:bg-white/5 border border-[#e7f1f4] dark:border-white/10 text-[#0d191c] dark:text-white text-sm font-bold shadow-sm hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+<span>Edit Preferences</span>
+</button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Recommendations Section -->
+<div class="lg:col-span-8 space-y-8">
+<h2 class="text-[#0d191c] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">stars</span>
+                        Recommended Packages
+                    </h2>
+<!-- Results Cards -->
+<div class="space-y-6">
+<!-- Best Match Card (Highlighted) -->
+<div class="group relative flex flex-col md:flex-row bg-white dark:bg-white/5 rounded-xl overflow-hidden border-2 border-primary shadow-xl shadow-primary/10 transition-transform hover:scale-[1.01]">
+<div class="absolute top-4 left-4 z-10">
+<span class="bg-primary text-[#0d191c] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest shadow-lg">Best Match</span>
+</div>
+<div class="md:w-2/5 h-64 md:h-auto overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Stunning Patagonian glaciers and mountain peaks" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKriAGcfIuuZ8EZeQLSXt72yFDE-Uer3uWpzLoP3vze72SUYGx31Lp-ZlwtdqariHjhj-pDuBuzK5X5ST5L1598PUTiJL0YK1EnU6uDSgInSmk9s5cjum5wjPk3KNhJ5SDmHbdCtPqsuZtDHYOL5FyxqQ_-76tERIP13SxX59I5Q8ShSbCtn4L7py2_pD-mtLbCREoAtZwvZ2Ar95_myC3ecC0LRCLCfi0vjvJwnYjPLClZHBkFCdmBR8zTUcsX463fX0JPEEk1B0');"></div>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl font-black text-[#0d191c] dark:text-white">Patagonian Glaciers &amp; Private Lofts</h3>
+<p class="text-primary font-bold text-xl">$12,400 <span class="text-xs text-[#498e9c] font-normal">/pp</span></p>
+</div>
+<p class="text-[#498e9c] text-sm mb-6 leading-relaxed">Experience raw nature from the comfort of a 5-star eco-loft. Private helicopter glacier tours and gourmet dining under the stars.</p>
+<ul class="grid grid-cols-2 gap-y-2 mb-6">
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> 12 Days Adventure</li>
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Private Expedition</li>
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> All-inclusive Dining</li>
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> 5-star Eco-resorts</li>
+</ul>
+</div>
+<button class="w-full bg-primary py-4 rounded-full font-bold text-[#0d191c] hover:brightness-110 shadow-lg shadow-primary/20 transition-all">Book My Custom Escape</button>
+</div>
+</div>
+<!-- Secondary Match -->
+<div class="group relative flex flex-col md:flex-row bg-white dark:bg-white/5 rounded-xl overflow-hidden border border-[#e7f1f4] dark:border-white/10 shadow-sm transition-all hover:border-primary/50">
+<div class="absolute top-4 left-4 z-10">
+<span class="bg-white/90 backdrop-blur text-[#0d191c] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border border-primary/20">Great Value</span>
+</div>
+<div class="md:w-2/5 h-64 md:h-auto overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Luxury Amazon canopy suites at sunset" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC42VEQoOC7wVgsqMErKNIh2oYyLtFF-eJukImhyDhhRNpoR-FIynIBrNbX3tR63Z4aMi6mUu_j6sLxakfcFFMADp3kUSoqw4t68RJBeLTy-GDwLuhAyNhrGGOzKmmFoD9f2Jf11aLawYubu5UsqYrzRrGMooaQs4Zamh6tUkHXsCl_cd_w1MEUIGr8GV9nMdeXfV57_EvJdfqcpQmeqvA2Q_27KMUIW_ZXeH-0eWCbX-mJRTvTVBPq8rIitFAV1nmdlGAUC0Rvzno');"></div>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl font-black text-[#0d191c] dark:text-white">Amazonian Canopy Suites</h3>
+<p class="text-primary font-bold text-xl">$8,900 <span class="text-xs text-[#498e9c] font-normal">/pp</span></p>
+</div>
+<p class="text-[#498e9c] text-sm mb-6 leading-relaxed">Immerse yourself in the heart of the rainforest with ultra-luxury suites 50ft above the floor. Private river guides included.</p>
+<ul class="grid grid-cols-2 gap-y-2 mb-6">
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> 8 Days Jungle</li>
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> 24/7 Concierge</li>
+</ul>
+</div>
+<button class="w-full border-2 border-[#0d191c] dark:border-white py-3.5 rounded-full font-bold text-[#0d191c] dark:text-white hover:bg-[#0d191c] hover:text-white dark:hover:bg-white dark:hover:text-[#0d191c] transition-all">Select This Package</button>
+</div>
+</div>
+<!-- Third Match -->
+<div class="group relative flex flex-col md:flex-row bg-white dark:bg-white/5 rounded-xl overflow-hidden border border-[#e7f1f4] dark:border-white/10 shadow-sm transition-all hover:border-primary/50">
+<div class="md:w-2/5 h-64 md:h-auto overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Heli-skiing in Icelandic Highlands" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCYPAPkYSg_8RkUIqYym1VKubLzdsL_UgD63eBtpMr0mFplxuJ2lNL8G7B44wLLFNKZmPV93O6BRWDje9WP2-XZxXpDPohkqzK8qT3E86lPDMNlFER1bpbXHnUVPf4wPvwyuoD3jmebaBay04OKr3xQXs1zcfxEUlO-ltcD53krAnkvItNCoLoDwma03mEf-rnQk2KmMqO0_iFcWoCzWp7GVZYtGqRKXNDfRLvjpZ9RCoQew_ql7Dz9ZeqfWh2bEmW47rOrUfurP3c');"></div>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl font-black text-[#0d191c] dark:text-white">Icelandic Heli-Skiing</h3>
+<p class="text-primary font-bold text-xl">$15,200 <span class="text-xs text-[#498e9c] font-normal">/pp</span></p>
+</div>
+<p class="text-[#498e9c] text-sm mb-6 leading-relaxed">The ultimate adrenaline rush. Fly by private helicopter to untouched slopes and recover in world-class thermal spas.</p>
+<ul class="grid grid-cols-2 gap-y-2 mb-6">
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> 7 Days Arctic</li>
+<li class="flex items-center gap-2 text-sm font-medium"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Elite Gear Included</li>
+</ul>
+</div>
+<button class="w-full border-2 border-[#0d191c] dark:border-white py-3.5 rounded-full font-bold text-[#0d191c] dark:text-white hover:bg-[#0d191c] hover:text-white dark:hover:bg-white dark:hover:text-[#0d191c] transition-all">Select This Package</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Up-selling Sidebar -->
+<aside class="lg:col-span-4 sticky top-24">
+<div class="flex flex-col gap-6 bg-white dark:bg-white/5 p-8 rounded-xl border border-[#e7f1f4] dark:border-white/10 shadow-lg">
+<div class="flex flex-col gap-1 border-b border-[#e7f1f4] dark:border-white/10 pb-4">
+<h2 class="text-[#0d191c] dark:text-white text-xl font-bold">Enhance Your Trip</h2>
+<p class="text-[#498e9c] text-sm font-medium">Add-ons to level up your experience</p>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Add-on 1 -->
+<div class="group flex items-center justify-between p-4 rounded-xl bg-[#f8fbfc] dark:bg-white/5 border border-[#e7f1f4] dark:border-white/10 cursor-pointer hover:border-primary transition-all">
+<div class="flex items-center gap-4">
+<div class="bg-primary/20 p-2.5 rounded-full text-primary">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div>
+<p class="text-[#0d191c] dark:text-white text-sm font-bold">Private Guide</p>
+<p class="text-[#498e9c] text-xs font-medium">+$500 / trip</p>
+</div>
+</div>
+<button class="material-symbols-outlined text-primary group-hover:bg-primary group-hover:text-[#0d191c] p-1 rounded-full transition-all">add_circle</button>
+</div>
+<!-- Add-on 2 -->
+<div class="group flex items-center justify-between p-4 rounded-xl bg-[#f8fbfc] dark:bg-white/5 border border-[#e7f1f4] dark:border-white/10 cursor-pointer hover:border-primary transition-all">
+<div class="flex items-center gap-4">
+<div class="bg-primary/20 p-2.5 rounded-full text-primary">
+<span class="material-symbols-outlined text-[24px]">photo_camera</span>
+</div>
+<div>
+<p class="text-[#0d191c] dark:text-white text-sm font-bold">Photography Package</p>
+<p class="text-[#498e9c] text-xs font-medium">+$300 / trip</p>
+</div>
+</div>
+<button class="material-symbols-outlined text-primary group-hover:bg-primary group-hover:text-[#0d191c] p-1 rounded-full transition-all">add_circle</button>
+</div>
+<!-- Add-on 3 -->
+<div class="group flex items-center justify-between p-4 rounded-xl bg-primary/10 border border-primary/30 cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="bg-primary p-2.5 rounded-full text-[#0d191c]">
+<span class="material-symbols-outlined text-[24px]">wine_bar</span>
+</div>
+<div>
+<p class="text-[#0d191c] dark:text-white text-sm font-bold">Premium Wine Tasting</p>
+<p class="text-[#498e9c] text-xs font-medium">Added to trip</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary">check_circle</span>
+</div>
+</div>
+<div class="flex flex-col gap-4 mt-4 pt-6 border-t border-[#e7f1f4] dark:border-white/10">
+<div class="flex justify-between items-center px-2">
+<span class="text-[#498e9c] font-medium">Additional Total</span>
+<span class="text-xl font-black text-[#0d191c] dark:text-white">$450.00</span>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-full h-12 px-6 bg-primary text-[#0d191c] text-sm font-black tracking-widest uppercase hover:brightness-110 shadow-lg shadow-primary/20">
+                                Add Selected to Trip
+                            </button>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[#0d191c] dark:text-white">help_outline</span>
+<p class="text-[#0d191c] dark:text-white text-xs font-bold uppercase tracking-wider">Need Help? Chat with an Expert</p>
+</div>
+</div>
+<!-- Social Proof -->
+<div class="mt-6 flex items-center justify-center gap-2 p-4">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-cover" data-alt="Customer avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBDt_ZQrFRa6obR-zJ9kulZ706BzNqRUKoGyIgCLDJUsYHLvy12jmvnD4Amsa1fu_NnDmEOIsmMtCC-K5G6Jk6a4N_2EVCYQoXEpEtZhWm3TpFhBxvQJ7xNrxpvl8xKBzmTmoUavlHDe3fgrh7qmlZRv_OeE1OmR2A0Tv0zHcPHf98DjApOBZ7BXo6-SVrIHbFqe3_Mn5X7b638Q8zHCbmt2eD7N794z-04sh-yZ_nz7UoOeI_YxKCvy8Nii10fhIiflT7WyuWrZlU');"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-cover" data-alt="Customer avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnWSqqeHFEw5fw7EffDXR1ejAKpl4jjkDfTHUufXxIzCl2pYqbwkHna0odHo7mQ4PNvqEpAyw58KHthjEw1jNLmCo0a-dvMCpHFSrVbLEixY8Pm1-bafvHyh1v3VkXVqcfzKyB2qg-CsB2noJGJW4r38NckuEto_vTAqJefQsmPa1xibvu3JX92tQcCOb_-k6zZt_nhtvXa2UngFuc45xinK5aFbGYA-AvnNggak8n27ozJO-dndCcrnIsRf8bU9Wu1H-YDgOyoao');"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-cover" data-alt="Customer avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCwXc5JY7Uap_VyGG3M0yxIi7l3eK1W0-k--iMZ9O3Wmizy4ZT5ZgaQzIwSKnIAV8Ye9GVE2nOdTjw4H1UOL2hIYHiH0o30gQTNyIIuo3NvmjZ8F_PafOUq_A9yLraw_JvQPSn27dltbjQFk7Ycvsgs_yUyCUvB7oPEAbAeIJ78h77ptV70sI-_xm-iwQmo_SfV3_y456c0mVnw16vhytuJyr2enSlbjCY0ATvnHeAJEjNCfPIjjd30rhGT29OEiDomyGFBeWXyN5k');"></div>
+</div>
+<p class="text-xs font-bold text-[#498e9c] uppercase tracking-tighter">Trusted by 5,000+ Adventurers</p>
+</div>
+</aside>
+</div>
+</main>
+<footer class="bg-white dark:bg-background-dark border-t border-[#e7f1f4] dark:border-white/10 py-12">
+<div class="max-w-[1280px] mx-auto px-6 text-center">
+<p class="text-[#498e9c] text-sm font-medium">© 2024 HYDRASCAPES Global Expeditions. Luxury meets Adventure.</p>
+</div>
+</footer>
+</div>
+</body></html>
